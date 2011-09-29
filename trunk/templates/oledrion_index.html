@@ -1,0 +1,93 @@
+<!-- Created by Instant Zero (http://www.instant-zero.com) -->
+<div id="oledrion-logo">
+  <img src="<{$smarty.const.OLEDRION_IMAGES_URL}>oledrion.png" width="235"  height="45" alt="" border="0"  />
+</div>
+
+<{if $welcome_msg != ''}>
+	<table width="100%" cellspacing="0">
+	<tr>
+		<td class="box_blue-clip_01"></td>
+		<td class="box_blue-clip_02"></td>
+		<td class="box_blue-clip_03"></td>
+	</tr>
+	<tr>
+		<td class="box_blue-clip_04"></td>
+		<td class="welcome-message"><div><div id="oledrion_welcome"><{$welcome_msg}></div></div></td>
+		<td class="box_blue-clip_05"></td>
+	</tr>
+	<tr>
+		<td class="box_blue-clip_06"></td>
+	    <td class="box_blue-clip_07"></td>
+	    <td class="box_blue-clip_08"></td>
+	</tr>
+	</table>
+<{/if}>
+
+<{if $mod_pref.advertisement != ''}>
+	<div id="oledrion_publicite">
+		<{$mod_pref.advertisement}>
+	</div>
+<{/if}>
+
+<{* ************************************ CATEGORIES LIST **************************************** *}>
+<{include file="db:oledrion_categories_list.html" categories=$categories}>
+<{* ************************************ /CATEGORIES LIST **************************************** *}>
+
+<{* **************************************** CADDY & RSS ****************************************** *}>
+<div id="oledrion_caddy" align="right">
+	<a href="<{$smarty.const.OLEDRION_URL}>caddy.php" title="<{$smarty.const._OLEDRION_CART}>"><img src="<{$smarty.const.OLEDRION_IMAGES_URL}>cart.png" alt="<{$smarty.const._OLEDRION_CART}>" border="0" /></a>&nbsp;
+	<{if $mod_pref.rss}>
+		<a href="<{$smarty.const.OLEDRION_URL}>rss.php" title="<{$smarty.const._OLEDRION_RSS_FEED}>"><img src="<{$smarty.const.OLEDRION_IMAGES_URL}>rss.gif" alt="<{$smarty.const._OLEDRION_RSS_FEED}>" border="0" /></a>
+	<{/if}>
+</div>
+
+<{* **************************************** /CADDY & RSS ****************************************** *}>
+
+<{* **************************************** RECENT PRODUCTS ******************************************** *}>
+<{if count($products) > 0}>
+	<div class="featured-blocks-titles">
+		<h2><img src="<{$smarty.const.OLEDRION_IMAGES_URL}>icon-product-person.png" alt="<{$smarty.const._OLEDRION_CART}>" border="0" /><{$smarty.const._OLEDRION_MOST_RECENT}></h2>
+	</div>
+	<table border="0" class="oledrion_productindex">
+	<tr>
+	<{foreach item=product from=$products}>	
+		<td class="oledrion_productthumb"><{if $product.product_thumb_url}><a href="<{$product.product_url_rewrited}>" title="<{$product.product_href_title}>"><img src="<{$product.product_thumb_full_url}>" alt="<{$product.product_href_title}>" border="0" /></a><{/if}></td>
+		<td class="oledrion_productssummary">
+			<table width="100%" cellspacing="0">
+			<tr>
+				<td class="page-curl_01">
+					<div class="oledrion_producttitle">
+						<{$product.product_recommended_picture}><a href="<{$product.product_url_rewrited}>" title="<{$product.product_href_title}>"><{$product.product_title}></a>
+					</div>
+					<{if $product.product_joined_manufacturers != ''}>
+						<div class="oledrion_productauthor">
+							<img src="<{$smarty.const.OLEDRION_IMAGES_URL}>author.png" alt="" border="0" /><{$smarty.const._OLEDRION_BY}> <{$product.product_joined_manufacturers}>
+						</div>
+					<{/if}>
+					<{if $mod_pref.use_price}>
+						<div class="oledrion_productprice">
+							<{if $product.product_stock > 0 }><{$smarty.const._OLEDRION_PRICE}> <a href="<{$smarty.const.OLEDRION_URL}>caddy.php?op=addproduct&product_id=<{$product.product_id}>" title="<{$smarty.const._OLEDRION_ADD_TO_CART}>"><{if $product.product_discount_price_ttc != ''}><s><{$product.product_price_ttc}></s> <{$product.product_discount_price_ttc}><{else}><{$product.product_price_ttc}><{/if}> <img src="<{$smarty.const.OLEDRION_IMAGES_URL}>cartadd.png" alt="<{$smarty.const._OLEDRION_ADD_TO_CART}>" border="0" /></a><{else}><{$mod_pref.nostock_msg}><{/if}>
+						</div>
+					<{/if}>
+				</td>
+			</tr>
+			</table>
+		</td>
+    <{if $product.product_count is div by $columnsCount}>
+    	</tr><tr>
+    <{/if}>
+	<{/foreach}>
+	</tr>
+	</table>
+<{/if}>
+<{* **************************************** /RECENT PRODUCTS ******************************************** *}>
+
+<{if $pagenav != ''}>
+	<br />
+	<div align="center"><{$pagenav}></div>
+<{/if}>
+
+
+<{* ********************************************* NOTIFICATION ******************************************* *}>
+<{include file='db:system_notification_select.html'}>
+<{* ******************************************** /NOTIFICATION ******************************************* *}>

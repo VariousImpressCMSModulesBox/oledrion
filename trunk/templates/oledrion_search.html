@@ -1,0 +1,17 @@
+<!-- Created by Instant Zero (http://www.instant-zero.com) -->
+<{$breadcrumb}>
+<br />
+<{if $global_advert != ''}>
+	<div align='center'><{$global_advert}></div>
+	<br />
+<{/if}>
+<{if $search_results}>
+	<h2><{$smarty.const._OLEDRION_SEARCHRESULTS}></h2>
+	<br />
+	<{foreach item=product from=$products}>
+		<img src='<{$smarty.const.OLEDRION_IMAGES_URL}>product.png' alt='' border='0' />&nbsp;<b><a href="<{$product.link}>" title="<{$product.href_title}>"><{$product.title}></a></b><br />
+	<{/foreach}>
+	<{if $pagenav !=''}><div style="text-align: right; margin: 10px;"><{$pagenav}></div><{/if}>
+	<br />
+<{/if}>
+<{$search_form}>

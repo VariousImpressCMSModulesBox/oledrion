@@ -1,0 +1,57 @@
+<!-- Created by Instant Zero (http://www.instant-zero.com) -->
+<{$breadcrumb}>
+<br />
+<div align='center'>
+	<{if $welcome_msg != ''}><br /><br /><div id="oledrion_welcome"><{$welcome_msg}></div><{/if}>
+	<{if $mod_pref.advertisement != ''}><br /><br /><div id="oledrion_publicite"><{$mod_pref.advertisement}></div><br /><{/if}>
+</div>
+<h2><{$smarty.const._MI_OLEDRION_SMNAME6}></h2>
+<div align="left"><i><{$smarty.const._OLEDRION_CATALOG_HLP}></i></div>
+<br />
+
+<table class="outer tablesorter" id="allProductsTable">
+<thead> 
+<tr>
+	<th><{$smarty.const._OLEDRION_TITLE}></th>
+	<th><{$smarty.const._OLEDRION_CATEGORY}></th>
+	<{if $mod_pref.use_price}><th><{$smarty.const._OLEDRION_PRICE}></th><{/if}>
+	<th><{$smarty.const._OLEDRION_ADD_TO_CART}></th>
+</tr> 
+</thead> 
+<tbody>  
+	<{foreach item=product from=$products}>
+		<tr>
+        	<td><{$product.product_recommended_picture}><a href="<{$product.product_url_rewrited}>" title="<{$product.product_href_title}>"><{$product.product_title}></a></td>
+        	<td><{$product.product_category.cat_title}></td>
+        	<{if $mod_pref.use_price}><td align='right'><{if $product.product_discount_price_ttc != ''}><{$product.product_discount_price_ttc}><{else}><{$product.product_price_ttc}><{/if}></td><{/if}>
+        	<td align="center"><{if $product.product_stock > 0 }><a href="<{$smarty.const.OLEDRION_URL}>caddy.php?op=addproduct&product_id=<{$product.product_id}>" title="<{$smarty.const._OLEDRION_ADD_TO_CART}>"><img src="<{$smarty.const.OLEDRION_IMAGES_URL}>cartadd.gif" alt="<{$smarty.const._OLEDRION_ADD_TO_CART}>" border="0" /></a><{else}><{$mod_pref.nostock_msg}><{/if}></td>
+        </tr>
+	<{/foreach}>
+</tbody>	
+</table>
+<br /><br />
+
+<script type="text/javascript"> 
+jQuery().ready(function()
+    { 
+        jQuery("#allProductsTable").tablesorter(); 
+    } 
+);
+</script>
+
+<{if $pagenav != ''}>
+	<br /><div align="center"><{$pagenav}></div><br />
+<{/if}>
+
+<{if $pdf_catalog == 1 }>
+	<br /><br />
+	<h3><{$smarty.const._OLEDRION_PDF_CATALOG}></h3>
+	<br />
+	<form name="frmCatalog" id="frmCatalog" method="post" action="<{$smarty.const.OLEDRION_URL}>pdf/catalog.php">
+	<input type="radio" name="catalogFormat" id="catalogFormat" value="0" checked="checked" /><{$smarty.const._OLEDRION_PDF_CATALOG1}>
+	<br /><input type="radio" name="catalogFormat" id="catalogFormat" value="1" /><{$smarty.const._OLEDRION_PDF_CATALOG2}>
+	<br /><input type="submit" name="btnSubmit" id="btnSubmit" value="<{$smarty.const._OLEDRION_PDF_GETIT}>" />
+	</form>
+<{/if}>
+
+<{include file='db:system_notification_select.html'}>

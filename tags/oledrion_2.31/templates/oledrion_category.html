@@ -1,0 +1,139 @@
+<!-- Created by Instant Zero (http://www.instant-zero.com) -->
+<{* *********************************************** HEADER ************************************************ *}>
+<div id="oledrion-logo">
+	<{if $category.cat_imgurl != ''}>
+		<img src="<{$category.cat_full_imgurl}>" alt="<{$category.cat_title}>" />
+	<{else}>
+		<img src="<{$smarty.const.OLEDRION_IMAGES_URL}>oledrion.png" alt="" width="235"  height="45" />
+	<{/if}>
+</div>
+<div>
+	<{* Display category's advertisement and if it does not exists, the module's advertisement *}>
+	<{if $category.cat_advertisement != ''}>
+		<div id="oledrion_publicite-category"><{$category.cat_advertisement}></div>
+	<{elseif $mod_pref.advertisement != ''}>
+		<div id="oledrion_publicite"><{$mod_pref.advertisement}></div>
+	<{/if}>
+
+	<{if $category.cat_title != ''}>
+		<table width="100%" cellspacing="0">
+  		<tr>
+	    	<td class="box_blue-clip_01"></td>
+    		<td class="box_blue-clip_02"></td>
+    		<td class="box_blue-clip_03"></td>
+  		</tr>
+  		<tr>
+		    <td class="box_blue-clip_04"></td>
+	    	<td class="oledrion_catdescription">
+				<{if isset($category) }>
+					<h2><{$category.cat_title}></h2>
+					<{if $category.cat_description != ''}><{$category.cat_description}><{/if}>
+				<{/if}>
+
+			</td>
+    		<td class="box_blue-clip_05"></td>
+  		</tr>
+  		<tr>
+		    <td class="box_blue-clip_06"></td>
+	    	<td class="box_blue-clip_07"></td>
+	    	<td class="box_blue-clip_08"></td>
+  		</tr>
+		</table>
+	<{/if}>
+</div>
+<{* *********************************************** /HEADER ************************************************ *}>
+
+<!-- Breadcrumb -->
+<table cellspacing="0" class="breadcrumbT">
+<tr>
+	<td class="breadcrumb_01"></td>
+    <td class="breadcrumb_02"><div id="productshoop_breadcrumb"><{$breadcrumb}></div></td>
+    <td class="breadcrumb_03"></td>
+</tr>
+<tr>
+    <td colspan="3" class="red-line"></td>
+</tr>
+</table>
+<!-- /Breadcrumb -->
+
+<{if count($subCategories) > 0}>
+	<br />
+	<{include file="db:oledrion_categories_list.html" categories=$subCategories}>
+	<br />
+<{elseif count($motherCategories) > 0}>
+	<br />
+	<{include file="db:oledrion_categories_list.html" categories=$motherCategories}>
+<{/if}>
+
+<{if count($products) > 0}>
+	<{if isset($pagenav) }><div style="text-align: right; margin: 10px;"><{$pagenav}></div><{/if}>
+	<table border="0" class="oledrion_productindex">
+	<tr>
+	<{foreach item=product from=$products}>
+		<td class="oledrion_productthumb"><{if $product.product_thumb_url}><a href="<{$product.product_url_rewrited}>" title="<{$product.product_href_title}>"><img src="<{$product.product_thumb_full_url}>" alt="<{$product.product_href_title}>" border="0" /></a><{/if}></td>
+		<td class="oledrion_productssummary">
+			<table width="100%" cellspacing="0">
+ 				<tr>
+   				<td class="page-curl_01">
+					<div class="oledrion_producttitle">
+						<{$product.product_recommended_picture}><a href="<{$product.product_url_rewrited}>" title="<{$product.product_href_title}>"><{$product.product_title}></a>
+					</div>
+					<{if $product.product_joined_manufacturers != ''}>
+						<div class="oledrion_productauthor">
+							<img src="<{$smarty.const.OLEDRION_IMAGES_URL}>author.png" alt="" border="0" /><{$smarty.const._OLEDRION_BY}> <{$product.product_joined_manufacturers}>
+						</div>
+					<{/if}>
+					<{if $mod_pref.use_price}><div class="oledrion_productprice"><{if $product.product_stock > 0 }><{$smarty.const._OLEDRION_PRICE}> <a href="<{$smarty.const.OLEDRION_URL}>caddy.php?op=addproduct&product_id=<{$product.product_id}>" title="<{$smarty.const._OLEDRION_ADD_TO_CART}>"><{if $product.product_discount_price_ttc != ''}><s><{$product.product_price_ttc}></s> <{$product.product_discount_price_ttc}><{else}><{$product.product_price_ttc}><{/if}> <img src="<{$smarty.const.OLEDRION_IMAGES_URL}>cartadd.png" alt="<{$smarty.const._OLEDRION_ADD_TO_CART}>" border="0" /></a><{else}><{$mod_pref.nostock_msg}><{/if}></div><{/if}>
+					<div class="oledrion_description"><{$product.product_summary}></div>
+					<div class="oledrion_read-more"><a href="<{$product.product_url_rewrited}>" title="<{$smarty.const._OLEDRION_READ_MORE}> <{$product.product_href_title}>"><{$smarty.const._OLEDRION_READ_MORE}></a></div>
+				</td>
+			</tr>
+			</table>
+		</td>
+	    <{if $product.product_count is div by $columnsCount}>
+    		</tr><tr>
+    	<{/if}>		
+	<{/foreach}>
+	</tr>
+	</table>
+	<{if isset($pagenav) }><div style="text-align: left; margin: 10px;"><{$pagenav}></div><{/if}>
+<{else}>
+	<h2><{$smarty.const._OLEDRION_SORRY_NO_PRODUCT}></h2>
+<{/if}>
+
+<{if count($chunk1) > 0 || count($chunk2) > 0 || count($chunk3) > 0 || count($chunk4) > 0}>
+	<{if count($chunk1) > 0}>
+		<{include file="db:oledrion_chunk.html" products=$chunk1 title=$chunk1Title}>
+	<{/if}>
+	<{if count($chunk2) > 0}>
+		<{include file="db:oledrion_chunk.html" products=$chunk2 title=$chunk2Title}>
+	<{/if}>
+	<{if count($chunk3) > 0}>
+		<{include file="db:oledrion_chunk.html" products=$chunk3 title=$chunk3Title}>
+	<{/if}>
+	<{if count($chunk4) > 0}>
+		<{include file="db:oledrion_chunk.html" products=$chunk4 title=$chunk4Title}>
+	<{/if}>
+<{/if}>
+
+
+<{* **************************************** CADDY & RSS ****************************************** *}>
+<div id="oledrion_caddy" align="right">
+	<a href="<{$smarty.const.OLEDRION_URL}>caddy.php" title="<{$smarty.const._OLEDRION_CART}>"><img src="<{$smarty.const.OLEDRION_IMAGES_URL}>cart.png" alt="<{$smarty.const._OLEDRION_CART}>" border="0" /></a>&nbsp;
+	<{if $mod_pref.rss}>
+		<a href="<{$smarty.const.OLEDRION_URL}>rss.php<{if $category.cat_cid > 0}>?cat_cid=<{$category.cat_cid}><{/if}>" title="<{$smarty.const._OLEDRION_RSS_FEED}>"><img src="<{$smarty.const.OLEDRION_IMAGES_URL}>rss.gif" alt="<{$smarty.const._OLEDRION_RSS_FEED}>" border="0" /></a>
+	<{/if}>
+</div>
+<{* **************************************** /CADDY & RSS ****************************************** *}>
+
+<{* ************************************** CATEGORY'S FOOTER **************************************** *}>
+<{if $category.cat_footer != ''}>
+	<div class="oledrion_publicite">
+		<{$category.cat_footer}>
+	</div>
+<{/if}>
+<{* ************************************* /CATEGORY'S FOOTER **************************************** *}>
+
+<{* ********************************************* NOTIFICATION ******************************************* *}>
+<{include file='db:system_notification_select.html'}>
+<{* ******************************************** /NOTIFICATION ******************************************* *}>

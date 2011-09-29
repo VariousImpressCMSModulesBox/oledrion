@@ -1,0 +1,23 @@
+<!-- Created by Instant Zero (http://www.instant-zero.com) -->
+<{$breadcrumb}>
+<br />
+<{if $global_advert != ''}>
+	<div align='center'><{$global_advert}></div>
+	<br />
+<{/if}>
+
+<div id="oledrion-logo">
+	<img src="<{$smarty.const.OLEDRION_IMAGES_URL}>oledrion.png" width="235"  height="45" alt="" border="0"  />
+</div>
+<br />
+<{if $success }>
+	<h3><{$smarty.const._OLEDRION_THANK_YOU}></h3>
+	<br />
+	<br />
+	<h4><{$smarty.const._OLEDRION_TRANSACTION_FINSIHED}></h4>
+<{else}>
+	<h3><{$smarty.const._OLEDRION_GATEWAY_FAILED}></h3>
+<{/if}>
+<br />
+<br />
+<a href="<{$smarty.const.OLEDRION_URL}>"><{$smarty.const._OLEDRION_CONTINUE_SHOPPING}></a>

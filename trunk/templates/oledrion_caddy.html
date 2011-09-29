@@ -1,0 +1,122 @@
+<!-- Created by Instant Zero (http://www.instant-zero.com) -->
+<{$breadcrumb}>
+<br />
+<{if $global_advert != ''}>
+	<div align='center'><{$global_advert}></div>
+	<br />
+<{/if}>
+
+<div align="center"><h2><img src="<{$smarty.const.OLEDRION_IMAGES_URL}>add-to-basket.png" alt="" border="0" /><{$smarty.const._MI_OLEDRION_SMNAME1}></h2></div>
+
+<{if $emptyCart}>
+	<i><{$smarty.const._OLEDRION_CART_IS_EMPTY}></i>
+	<{if $isCartExists}>
+		<br /><br /><a href="<{$smarty.const.OLEDRION_URL}>caddy.php?op=reload"><{$smarty.const._OLEDRION_RELOAD_PERSISTENT}></a>
+	<{/if}>
+<{else}>
+	<form method="post" name="frmUpdate" id="frmUpdate" action="<{$smarty.const.OLEDRION_URL}>caddy.php" style="margin:0; padding:0; border: 0px; display: inline;">
+	<table cellspacing="0" id="oledrion_caddy">
+	<tr>
+		<th><span class="oledrion_caddy-titles"><{$smarty.const._OLEDRION_ITEMS}></span></th>
+		<th><span class="oledrion_caddy-titles"><{$smarty.const._OLEDRION_UNIT_PRICE}></span></th>
+		<th><span class="oledrion_caddy-titles"><{$smarty.const._OLEDRION_UNIT_PRICE2}></span></th>
+		<th><span class="oledrion_caddy-titles"><{$smarty.const._OLEDRION_QUANTITY}></span></th>
+		<th><span class="oledrion_caddy-titles"><{$smarty.const._OLEDRION_CART1}></span></th>
+		<th><span class="oledrion_caddy-titles"><{$smarty.const._OLEDRION_CART2}></span></th>
+		<th><span class="oledrion_caddy-titles"><{$smarty.const._OLEDRION_CART3}></th>
+		<th><span class="oledrion_caddy-titles"><{$smarty.const._OLEDRION_SHIPPING_PRICE}></span></th>
+		<th colspan="2"><span class="oledrion_caddy-titles"><{$smarty.const._OLEDRION_PRICE}></span></th>
+	</tr>
+	<{foreach item=product from=$caddieProducts}>
+	<tr>
+		<td>
+			<div class="oledrion_producttitle">
+				<a href="<{$product.product_url_rewrited}>" title="<{$product.product_href_title}>"><{$product.product_title}><{if $product.reduction != ''}><sup style="color: #FF0000;"><{$product.number}></sup><{/if}></a>
+			</div>
+			<div class="oledrion_productauthor"><{if $product.manufacturersJoinList != ''}><{$smarty.const._OLEDRION_BY}> <{$product.manufacturersJoinList}><{/if}></div>
+		</td>
+		<td><div class="oledrion_productprice" align="right"><{$product.unitBasePriceFormated}></div></td>
+		<td><div class="oledrion_productprice" align="right"><{$product.discountedPriceFormated}></div></td>
+		<td align="center"><input type="text" name="qty_<{$product.number}>" id="qty_<{$product.number}>" value="<{$product.product_qty}>" size="3" /></td>
+		<td><div class="oledrion_productprice" align="right"><{$product.discountedPriceWithQuantityFormated}></div></td>
+		<td align='right'><{$product.vatRate}></td>
+		<td><div class="oledrion_productprice" align="right"><{$product.vatAmountFormated}></div></td>
+		<td><div class="oledrion_productprice" align="right"><{$product.discountedShippingFormated}></div></td>
+		<td ><div class="oledrion_productprice" align="right"><{$product.totalPriceFormated}></div></td>
+		<td><a href="<{$smarty.const.OLEDRION_URL}>caddy.php?op=delete&product_id=<{$product.number}>" <{$confirm_delete_item}> title="<{$smarty.const._OLEDRION_REMOVE_ITEM}>"><img src="<{$smarty.const.OLEDRION_IMAGES_URL}>cartdelete.png" alt="<{$smarty.const._OLEDRION_REMOVE_ITEM}>" border="0" /></td>
+	</tr>
+	<{if count($product.attributes) > 0}>
+		<tr>
+			<td colspan="10">
+				<ul>
+				<{foreach item=attribute from=$product.attributes}>
+					<li><{$attribute.attribute_title}>
+					<{foreach item=option from=$attribute.attribute_options}>
+						<br /><{$option.option_name}> : <{$option.option_price_ht_formated}> (<{$option.option_vat_formated}>), <{$option.option_ttc_formated}> 
+					<{/foreach}>
+					</li>
+					<br />
+				<{/foreach}>
+				</ul>
+			</td>
+		</tr>
+	<{/if}>	
+	<{/foreach}>
+	<tr class="oledrion_carttotal">
+		<td colspan="4"><h3><{$smarty.const._OLEDRION_TOTAL}></h3></td>
+		<td align="right" valign="middle"><{$commandAmount}></td>
+		<td>&nbsp;</td>
+		<td align="right" valign="middle"><{$vatAmount}></td>
+		<td align="right" valign="middle"><{$shippingAmount}></td>
+		<td colspan="2" align="right" valign="middle"><{$commandAmountTTC}></td>
+	</tr>
+	<tr>
+		<td colspan="8">
+			<{$smarty.const._OLEDRION_QTE_MODIFIED}>
+				<input type="hidden" name="op" id="op" value="update" />
+				<input type="submit" name="btnUpdate" id="btnUpdate" value="<{$smarty.const._OLEDRION_UPDATE}>" />
+			</form>
+			<form method="post" name="frmEmpty" id="frmEmpty" action="<{$smarty.const.OLEDRION_URL}>caddy.php" <{$confEmpty}> style="margin:0; padding:0; border: 0px; display: inline;">
+				<input type="hidden" name="op" id="op" value="empty" />
+				<input type="submit" name="btnEmpty" id="btnEmpty" value="<{$smarty.const._OLEDRION_EMPTY_CART}>" />
+			</form>
+			<form method="post" name="frmGoOn" id="frmGoOn" action="<{$goOn}>" style="margin:0; padding:0; border: 0px; display: inline;">
+				<input type="submit" name="btnGoOn" id="btnGoOn" value="<{$smarty.const._OLEDRION_GO_ON}>" />
+			</form>
+		</td>
+		<td colspan="2" align="center">
+			<{if $showOrderButton}>
+				<form method="post" name="frmCheckout" id="frmCheckout" action="<{$smarty.const.OLEDRION_URL}>checkout.php" style="margin:0; padding:0; border: 0px; display: inline;">
+					<input type="submit" name="btnCheckout" id="btnCheckout" value="<{$smarty.const._OLEDRION_CHECKOUT}>" />
+				</form>
+			<{/if}>
+		</td>
+	</tr>
+	</table>
+
+	<{if $showRegistredOnly && trim($restrict_orders_text) != ''}>
+		<br />
+		<div class="oledrion_alert">
+			<{$restrict_orders_text}>
+		</div>
+	<{/if}>
+
+	<{if $discountsCount > 0}>
+		<div class="oledrion_discounts">
+			<h3><{$smarty.const._OLEDRION_CART4}></h3>
+			<ul>
+			<{foreach item=product from=$caddieProducts}>
+				<{if $product.reduction != ''}><li class="oledrion_discount-description"><sup style="color: #FF0000;"><{$product.number}></sup> <{$product.reduction}></li><{/if}>
+			<{/foreach}>
+			</ul>
+
+			<{if count($discountsDescription) > 0}>
+				<ul>
+				<{foreach item=discount from=$discountsDescription}>
+					<li class="oledrion_discount-description"><{$discount}></li>
+				<{/foreach}>
+				</ul>
+			<{/if}>
+		</div>
+	<{/if}>
+<{/if}>

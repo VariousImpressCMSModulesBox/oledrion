@@ -1,0 +1,12 @@
+<!-- Created by Instant Zero (http://www.instant-zero.com) -->
+<ul>
+<{foreach item=list from=$block.my_lists}>
+	<li>
+       	<a href="<{$list.list_url_rewrited}>" title="<{$list.list_href_title}>"><{$list.list_title}></a> <small><{$list.list_formated_count}></small>
+	</li>
+<{/foreach}>
+</ul>
+<br />
+<div align="center">
+	<a href="<{$smarty.const.OLEDRION_URL}>my-lists.php" href="<{$smarty.const._MI_OLEDRION_SMNAME10}>"><{$smarty.const._MI_OLEDRION_SMNAME10}></a>
+</div>
