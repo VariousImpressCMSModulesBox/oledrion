@@ -1,1 +1,0 @@
-var confirmDelete = "¿Desea realmente eliminar este elemento?";
