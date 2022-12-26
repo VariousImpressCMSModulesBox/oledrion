@@ -11,66 +11,65 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- *
- * Version : $Id:
- * ****************************************************************************
+ * @copyright Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ *        
+ *         Version : $Id:
+ *         ****************************************************************************
  */
-
-define("_AM_OLEDRION_GO_TO_MODULE","Spustit modul");
-define("_AM_OLEDRION_PREFERENCES","Nastavení");
-define("_AM_OLEDRION_ADMINISTRATION","Administrace");
-define("_AM_OLEDRION_CATEGORIES","Kategorie");
-define("_AM_OLEDRION_CATEG_CONFIG","Konfigurace stránek kategorií");
-define("_AM_OLEDRION_CHUNK","Rozsahy");
-define("_AM_OLEDRION_POSITION","Pozice & Viditelnost");
-define("_AM_OLEDRION_INVISIBLE","Neviditelné");
-define("_AM_OLEDRION_OK","Ok");
-define("_AM_OLEDRION_SAVE_OK","Data byla úspěšně uložena");
-define("_AM_OLEDRION_SAVE_PB","Při ukládání dat se vyskytl problém");
-define("_AM_OLEDRION_ACTION","Akce");
-define("_AM_OLEDRION_ADD_ITEM","Přidat položku");
-define("_AM_OLEDRION_CONF_DELITEM","Opravdu chcete smazat tuto položku?");
-define("_AM_OLEDRION_LIST","Přehled");
-define("_AM_OLEDRION_ID","Id");
-define("_AM_OLEDRION_RATE","Sazba");
+define("_AM_OLEDRION_GO_TO_MODULE", "Spustit modul");
+define("_AM_OLEDRION_PREFERENCES", "Nastavení");
+define("_AM_OLEDRION_ADMINISTRATION", "Administrace");
+define("_AM_OLEDRION_CATEGORIES", "Kategorie");
+define("_AM_OLEDRION_CATEG_CONFIG", "Konfigurace stránek kategorií");
+define("_AM_OLEDRION_CHUNK", "Rozsahy");
+define("_AM_OLEDRION_POSITION", "Pozice & Viditelnost");
+define("_AM_OLEDRION_INVISIBLE", "Neviditelné");
+define("_AM_OLEDRION_OK", "Ok");
+define("_AM_OLEDRION_SAVE_OK", "Data byla úspěšně uložena");
+define("_AM_OLEDRION_SAVE_PB", "Při ukládání dat se vyskytl problém");
+define("_AM_OLEDRION_ACTION", "Akce");
+define("_AM_OLEDRION_ADD_ITEM", "Přidat položku");
+define("_AM_OLEDRION_CONF_DELITEM", "Opravdu chcete smazat tuto položku?");
+define("_AM_OLEDRION_LIST", "Přehled");
+define("_AM_OLEDRION_ID", "Id");
+define("_AM_OLEDRION_RATE", "Sazba");
 define("_AM_OLEDRION_MAINTAIN", "Údržba tabulek a cache");
 
-define("_AM_OLEDRION_ADD_VAT","Přidat DPH");
-define("_AM_OLEDRION_EDIT_VAT","Upravit DPH");
+define("_AM_OLEDRION_ADD_VAT", "Přidat DPH");
+define("_AM_OLEDRION_EDIT_VAT", "Upravit DPH");
 
-define("_AM_OLEDRION_ADD_CATEG","Přidat kategorii");
-define("_AM_OLEDRION_EDIT_CATEG","Upravit kategorii");
+define("_AM_OLEDRION_ADD_CATEG", "Přidat kategorii");
+define("_AM_OLEDRION_EDIT_CATEG", "Upravit kategorii");
 
-define("_AM_OLEDRION_ADD_VENDOR","Přidat prodejce");
-define("_AM_OLEDRION_EDIT_VENDOR","Upravit prodejce");
+define("_AM_OLEDRION_ADD_VENDOR", "Přidat prodejce");
+define("_AM_OLEDRION_EDIT_VENDOR", "Upravit prodejce");
 
-define("_AM_OLEDRION_ADD_FILE","Přidat soubor");
-define("_AM_OLEDRION_EDIT_FILE","Upravit soubor");
+define("_AM_OLEDRION_ADD_FILE", "Přidat soubor");
+define("_AM_OLEDRION_EDIT_FILE", "Upravit soubor");
 
-define("_AM_OLEDRION_ADD_MANUFACTURER","Přidat výrobce");
-define("_AM_OLEDRION_EDIT_MANUFACTURER","Upravit výrobce");
+define("_AM_OLEDRION_ADD_MANUFACTURER", "Přidat výrobce");
+define("_AM_OLEDRION_EDIT_MANUFACTURER", "Upravit výrobce");
 
-define("_AM_OLEDRION_ADD_PRODUCT","Přidat zboží");
-define("_AM_OLEDRION_EDIT_PRODUCT","Upravit zboží");
+define("_AM_OLEDRION_ADD_PRODUCT", "Přidat zboží");
+define("_AM_OLEDRION_EDIT_PRODUCT", "Upravit zboží");
 
-define("_AM_OLEDRION_ADD_DSICOUNT","Přidat slevu");
-define("_AM_OLEDRION_EDIT_DISCOUNT","Upravit slevu");
+define("_AM_OLEDRION_ADD_DSICOUNT", "Přidat slevu");
+define("_AM_OLEDRION_EDIT_DISCOUNT", "Upravit slevu");
 
-define("_AM_OLEDRION_ERROR_1","Chyba, nespecifikováno žádné ID");
-define("_AM_OLEDRION_ERROR_2","Chyba, není možné smazat tuto sazbu DPH, je stále přiřazena ke zboží");
-define("_AM_OLEDRION_ERROR_3","Chyba při nahrávání souboru ");
-define("_AM_OLEDRION_ERROR_4","Chyba, není možné smazat tuto kategorii, obsahuje zboží");
-define("_AM_OLEDRION_ERROR_5","chyba, není možné smazat tohoto výrobce, je stále přiřazen u zboží");
-define("_AM_OLEDRION_ERROR_6","Chyba, není možné smazat tohoto prodejce, je stále přiřazen ke zboží");
-define("_AM_OLEDRION_ERROR_7","Chyba, není možné vytvořit exportní soubor");
-define("_AM_OLEDRION_ERROR_8","Chyba, před vložením zboží vytvořte nejprve alespoň jednu kategorii");
-define("_AM_OLEDRION_ERROR_9","Chyba, před vložením zboží nastavte alespoň jednu sazbu DPH");
-define("_AM_OLEDRION_ERROR_10","Chyba, neznámá kategorie");
-define("_AM_OLEDRION_ERROR_11","Chyba, neznámý formát exportu");
+define("_AM_OLEDRION_ERROR_1", "Chyba, nespecifikováno žádné ID");
+define("_AM_OLEDRION_ERROR_2", "Chyba, není možné smazat tuto sazbu DPH, je stále přiřazena ke zboží");
+define("_AM_OLEDRION_ERROR_3", "Chyba při nahrávání souboru ");
+define("_AM_OLEDRION_ERROR_4", "Chyba, není možné smazat tuto kategorii, obsahuje zboží");
+define("_AM_OLEDRION_ERROR_5", "chyba, není možné smazat tohoto výrobce, je stále přiřazen u zboží");
+define("_AM_OLEDRION_ERROR_6", "Chyba, není možné smazat tohoto prodejce, je stále přiřazen ke zboží");
+define("_AM_OLEDRION_ERROR_7", "Chyba, není možné vytvořit exportní soubor");
+define("_AM_OLEDRION_ERROR_8", "Chyba, před vložením zboží vytvořte nejprve alespoň jednu kategorii");
+define("_AM_OLEDRION_ERROR_9", "Chyba, před vložením zboží nastavte alespoň jednu sazbu DPH");
+define("_AM_OLEDRION_ERROR_10", "Chyba, neznámá kategorie");
+define("_AM_OLEDRION_ERROR_11", "Chyba, neznámý formát exportu");
 define("_AM_OLEDRION_NOT_FOUND", "Chyba, položka nebyla nalezena");
 define("_AM_OLEDRION_CONF_DEL_CATEG", "Opravdu chcete smazat tuto kategorii a její podkategorie?<br />%s");
 
@@ -107,7 +106,7 @@ define("_AM_OLEDRION_TOTAL_SHIPP", "Celkem / Doprava");
 define('_AM_OLEDRION_NEWSLETTER_BETWEEN', 'Vybrat zboží vložené mezi');
 define('_AM_OLEDRION_EXPORT_AND', ' a ');
 define('_AM_OLEDRION_IN_CATEGORY', 'V následujících kategoriích');
-define('_AM_OLEDRION_REMOVE_BR',"Konvertovat HTML &lt;br&gt; tag do nové řádky?");
+define('_AM_OLEDRION_REMOVE_BR', "Konvertovat HTML &lt;br&gt; tag do nové řádky?");
 define('_AM_OLEDRION_NEWSLETTER_HTML_TAGS', "Odstranit HTML tagy?");
 define('_AM_OLEDRION_NEWSLETTER_HEADER', "Hlavička");
 define('_AM_OLEDRION_NEWSLETTER_FOOTER', "Patička");

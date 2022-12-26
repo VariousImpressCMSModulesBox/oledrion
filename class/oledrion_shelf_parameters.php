@@ -2,7 +2,7 @@
 /**
  * ****************************************************************************
  * oledrion - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * Copyright (c) Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
  *
  * You may not change or alter any portion of this comment or credits
  * of supporting developers from this source code or any supporting source code
@@ -11,46 +11,43 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- *
- * Version : $Id:
- * ****************************************************************************
+ * @copyright Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ *        
+ *         Version : $Id:
+ *         ****************************************************************************
  */
 
 /**
- * Classe interne dont le but est de passer des paramètres à la classe oeldrion_shelf
+ * Classe interne dont le but est de passer des paramï¿½tres ï¿½ la classe oeldrion_shelf
  */
 if (!defined('ICMS_ROOT_PATH')) {
 	die("XOOPS root path not defined");
 }
 
 /**
- * Utilisé comme paramètre dans la façcade oledrion_shelf
+ * Utilisï¿½ comme paramï¿½tre dans la faï¿½cade oledrion_shelf
  */
-class oledrion_shelf_parameters
-{
-    /**
-     * Le conteneur de paramètres
-     *
-     * @var array
-     */
-    private $parameters = array();
+class oledrion_shelf_parameters {
+	/**
+	 * Le conteneur de paramï¿½tres
+	 *
+	 * @var array
+	 */
+	private $parameters = array();
 
-	function __construct()
-	{
+	function __construct() {
 		$this->resetDefaultValues();
 	}
 
 	/**
-	 * Réinitialisation des valeurs
+	 * Rï¿½initialisation des valeurs
 	 *
 	 * @return object
 	 */
-	function resetDefaultValues()
-	{
+	function resetDefaultValues() {
 		$this->parameters['start'] = 0;
 		$this->parameters['limit'] = 0;
 		$this->parameters['category'] = 0;
@@ -65,60 +62,55 @@ class oledrion_shelf_parameters
 		return $this;
 	}
 
-    /**
-     * Retourne le tableau des paramètres
-     *
-     * @return array
-     */
-	function getParameters()
-	{
+	/**
+	 * Retourne le tableau des paramï¿½tres
+	 *
+	 * @return array
+	 */
+	function getParameters() {
 		return $this->parameters;
 	}
 
-    /**
-     * Positione la valeur de début
-     *
-     * @param integer $value
-     * @return object
-     */
-	function setStart($value)
-	{
+	/**
+	 * Positione la valeur de dï¿½but
+	 *
+	 * @param integer $value
+	 * @return object
+	 */
+	function setStart($value) {
 		$this->parameters['start'] = intval($value);
 		return $this;
 	}
 
 	/**
-	 * Fixe le nombre maximum d'enregistrements à retourner
+	 * Fixe le nombre maximum d'enregistrements ï¿½ retourner
 	 *
 	 * @param integer $value
 	 * @return object
 	 */
-	function setLimit($value)
-	{
+	function setLimit($value) {
 		$this->parameters['limit'] = intval($value);
 		return $this;
 	}
 
-    /**
-     * Fixe la catégorie à utiliser
-     *
-     * @param integer $value
-     * @return object
-     */
-	function setCategory($value)
-	{
+	/**
+	 * Fixe la catï¿½gorie ï¿½ utiliser
+	 *
+	 * @param integer $value
+	 * @return object
+	 */
+	function setCategory($value) {
 		$this->parameters['category'] = $value;
 		return $this;
 	}
 
-    /**
-     * Fixe la zone qui sert de tri
-     *
-     * @param string $value
-     * @return object
-     */
-	function setSort($value)
-	{
+	/**
+	 * Fixe la zone qui sert de tri
+	 *
+	 * @param string $value
+	 * @return object
+	 */
+	function setSort($value) {
 		$this->parameters['sort'] = $value;
 		return $this;
 	}
@@ -129,32 +121,29 @@ class oledrion_shelf_parameters
 	 * @param string $value
 	 * @return array
 	 */
-	function setOrder($value)
-	{
+	function setOrder($value) {
 		$this->parameters['order'] = $value;
 		return $this;
 	}
 
-    /**
-     * Fixe la liste des produits à exclure
-     *
-     * @param mixed $value
-     * @return string
-     */
-	function setExcluded($value)
-	{
+	/**
+	 * Fixe la liste des produits ï¿½ exclure
+	 *
+	 * @param mixed $value
+	 * @return string
+	 */
+	function setExcluded($value) {
 		$this->parameters['excluded'] = $value;
 		return $this;
 	}
 
-    /**
-     * Indique s'il faut retourner les utilisateurs Xoops
-     *
-     * @param boolean $value
-     * @return object
-     */
-	function setWithXoopsUser($value)
-	{
+	/**
+	 * Indique s'il faut retourner les utilisateurs Xoops
+	 *
+	 * @param boolean $value
+	 * @return object
+	 */
+	function setWithXoopsUser($value) {
 		$this->parameters['withXoopsUser'] = $value;
 		return $this;
 	}
@@ -165,32 +154,29 @@ class oledrion_shelf_parameters
 	 * @param boolean $value
 	 * @return object
 	 */
-	function setWithRelatedProducts($value)
-	{
+	function setWithRelatedProducts($value) {
 		$this->parameters['withRelatedProducts'] = $value;
 		return $this;
 	}
 
 	/**
-	 * Indique s'il faut retourner les quantités
+	 * Indique s'il faut retourner les quantitï¿½s
 	 *
 	 * @param boolean $value
 	 * @return object
 	 */
-	function setWithQuantity($value)
-	{
+	function setWithQuantity($value) {
 		$this->parameters['withQuantity'] = $value;
 		return $this;
 	}
 
 	/**
-	 * Fixe le type de produits à retourner
+	 * Fixe le type de produits ï¿½ retourner
 	 *
 	 * @param string $value
 	 * @return object
 	 */
-	function setProductsType($value)
-	{
+	function setProductsType($value) {
 		$this->parameters['productsType'] = $value;
 		return $this;
 	}
@@ -201,8 +187,7 @@ class oledrion_shelf_parameters
 	 * @param boolean $value
 	 * @return object
 	 */
-	function setThisMonthOnly($value)
-	{
+	function setThisMonthOnly($value) {
 		$this->parameters['thisMonthOnly'] = $value;
 		return $this;
 	}

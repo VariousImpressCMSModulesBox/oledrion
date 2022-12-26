@@ -1,8 +1,8 @@
 <?php
-$newsletterTemplate =<<<contentend
-Product's title : %ÇáÚäæÇä%
-Category : %ÇáÞÓã%
-Manufacturer(s) : %ÇáßÇÊÈ%
+$newsletterTemplate = <<<contentend
+Product's title : %ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½%
+Category : %ï¿½ï¿½ï¿½ï¿½ï¿½%
+Manufacturer(s) : %ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½%
 Publication's date : %published%
 Price : %published% %money%
 

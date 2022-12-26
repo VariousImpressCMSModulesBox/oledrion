@@ -2,7 +2,7 @@
 /**
  * ****************************************************************************
  * oledrion - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * Copyright (c) Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
  *
  * You may not change or alter any portion of this comment or credits
  * of supporting developers from this source code or any supporting source code
@@ -11,13 +11,13 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- *
- * Version : $Id:
- * ****************************************************************************
+ * @copyright Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ *        
+ *         Version : $Id:
+ *         ****************************************************************************
  */
 
 /**
@@ -25,14 +25,14 @@
  */
 
 // Location of attached files (url and physical path on your disk)
-if(!defined("OLEDRION_ATTACHED_FILES_URL")) {
+if (!defined("OLEDRION_ATTACHED_FILES_URL")) {
 	// Define here the place where files attached to products are saved
-	define("OLEDRION_ATTACHED_FILES_URL", XOOPS_UPLOAD_URL);		// WITHOUT Trailing slash
-	define("OLEDRION_ATTACHED_FILES_PATH", XOOPS_UPLOAD_PATH);	// WITHOUT Trailing slash
+	define("OLEDRION_ATTACHED_FILES_URL", XOOPS_UPLOAD_URL); // WITHOUT Trailing slash
+	define("OLEDRION_ATTACHED_FILES_PATH", XOOPS_UPLOAD_PATH); // WITHOUT Trailing slash
 
 	// Define here where pictures are saved
-	define("OLEDRION_PICTURES_URL", XOOPS_UPLOAD_URL);		// WITHOUT Trailing slash
-	define("OLEDRION_PICTURES_PATH", XOOPS_UPLOAD_PATH);		// WITHOUT Trailing slash
+	define("OLEDRION_PICTURES_URL", XOOPS_UPLOAD_URL); // WITHOUT Trailing slash
+	define("OLEDRION_PICTURES_PATH", XOOPS_UPLOAD_PATH); // WITHOUT Trailing slash
 
 	// Maximum length of product's summary for pages (in characters)
 	define("OLEDRION_SUMMARY_MAXLENGTH", 150);
@@ -48,9 +48,9 @@ if(!defined("OLEDRION_ATTACHED_FILES_URL")) {
 	define("OLEDRION_MAX_PRODUCTS_POPUP_HEIGHT", 600);
 
 	// Newsletter URL (the folder must be writable)
-	define("OLEDRION_NEWSLETTER_URL", ICMS_URL.'/uploads/oledrion_newsletter.txt');
+	define("OLEDRION_NEWSLETTER_URL", ICMS_URL . '/uploads/oledrion_newsletter.txt');
 	// Newsletter PATH (the folder must be writable)
-	define("OLEDRION_NEWSLETTER_PATH", ICMS_ROOT_PATH.'/uploads/oledrion_newsletter.txt');
+	define("OLEDRION_NEWSLETTER_PATH", ICMS_ROOT_PATH . '/uploads/oledrion_newsletter.txt');
 
 	// CSV path (the folder must be writable)
 	define("OLEDRION_CSV_PATH", XOOPS_UPLOAD_PATH);
@@ -60,7 +60,7 @@ if(!defined("OLEDRION_ATTACHED_FILES_URL")) {
 	define("OLEDRION_CSV_SEP", ';');
 
 	// Gateway log's path (must be writable)
-	define("OLEDRION_GATEWAY_LOG_PATH", XOOPS_UPLOAD_PATH.'/loggateway_oledrion.php');
+	define("OLEDRION_GATEWAY_LOG_PATH", XOOPS_UPLOAD_PATH . '/loggateway_oledrion.php');
 
 	// Do you want to show the list of main categories on the category page when user is on category.php (without specifying a category to see)
 	define("OLEDRION_SHOW_MAIN_CATEGORIES", true);
@@ -81,11 +81,11 @@ if(!defined("OLEDRION_ATTACHED_FILES_URL")) {
 	define("OLEDRION_MAX_ATTACHMENTS", 20);
 
 	// Define the MP3 player's dimensions (dewplayer)
-	define("OLEDRION_DEWPLAYER_WIDTH", 240);		// I do not recommend to go lower than 240 pixels !!!!
+	define("OLEDRION_DEWPLAYER_WIDTH", 240); // I do not recommend to go lower than 240 pixels !!!!
 	define("OLEDRION_DEWPLAYER_HEIGHT", 20);
 
 	// Place for the "duplicated" text inside the product's title
-	define("OLEDRION_DUPLICATED_PLACE", 'right');    // or 'left'
+	define("OLEDRION_DUPLICATED_PLACE", 'right'); // or 'left'
 
 	// Define the excluded tabs in the module's administration
 	// '' = don't remove anything
@@ -97,13 +97,13 @@ if(!defined("OLEDRION_ATTACHED_FILES_URL")) {
 	// When this option is set to true, Product A and Product B display each other as two related products even if Product A was not set as a related product to Product A.
 	define("OLEDRION_RELATED_BOTH", true);
 
-	// Do we resize pictures when they are smaller than defined dimensions  ?
+	// Do we resize pictures when they are smaller than defined dimensions ?
 	define("OLEDRION_DONT_RESIZE_IF_SMALLER", true);
 
 	// Do you want to automatically fill the manual date when you create a new product ?
 	define("OLEDRION_AUTO_FILL_MANUAL_DATE", true);
 
-    // Set this option to true if you can't see the products when you add them to your cart
+	// Set this option to true if you can't see the products when you add them to your cart
 	define("OLEDRION_CART_BUG", false);
 
 	// Set this option to true if your theme uses jQuery, else, set it to false

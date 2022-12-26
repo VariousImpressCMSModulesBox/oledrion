@@ -1,8 +1,9 @@
 <?php
+
 /**
  * ****************************************************************************
  * oledrion - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * Copyright (c) Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
  *
  * You may not change or alter any portion of this comment or credits
  * of supporting developers from this source code or any supporting source code
@@ -11,99 +12,96 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- *
- * Version : $Id:
- * ****************************************************************************
+ * @copyright Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ *        
+ *         Version : $Id:
+ *         ****************************************************************************
  */
 
 /**
  * Class used for parameters passing to classes methods
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @copyright Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
  * @version 1.0
- *
- * Example :
- *
- * // Instanciate it like this
- * $param = new oledrion_parameters();
- *
- * // Create several parameters in one time:
- * $param->setLimit(10)->setSort('manu_name');
- *
- * // Set a parameter with the array convention:
- * $param['sort'] = 'first_name';
- *
- * // Set a parameter as a class property:
- * $param->order = 'DESC';
- *
- * // Display a parameter, first way:
- * echo "<br />value=".$param['sort'];	// DESC
- *
- * // Another method to show it, as a class method:
- * echo $param->limit();	// 10
- *
- * // Set the default values
- * $newParameters = $param->extend(new oledrion_parameters(array('sort' => 'firstName', 'start' => 0, 'limit' => 15, 'showAll' => true)));
- *
+ *         
+ *          Example :
+ *         
+ *          // Instanciate it like this
+ *          $param = new oledrion_parameters();
+ *         
+ *          // Create several parameters in one time:
+ *          $param->setLimit(10)->setSort('manu_name');
+ *         
+ *          // Set a parameter with the array convention:
+ *          $param['sort'] = 'first_name';
+ *         
+ *          // Set a parameter as a class property:
+ *          $param->order = 'DESC';
+ *         
+ *          // Display a parameter, first way:
+ *          echo "<br />value=".$param['sort']; // DESC
+ *         
+ *          // Another method to show it, as a class method:
+ *          echo $param->limit(); // 10
+ *         
+ *          // Set the default values
+ *          $newParameters = $param->extend(new oledrion_parameters(array('sort' => 'firstName', 'start' => 0, 'limit' => 15, 'showAll' => true)));
+ *         
  */
-class oledrion_parameters extends ArrayObject
-{
-    /**
-     * Permet de valoriser un indice de la classe comme si c'était une propriété de la classe
-     *
-     * @example $enregistrement->nom_du_champ = 'ma chaine'
-     *
-     * @param string $key	Le nom du champ à traiter
-     * @param mixed $value	La valeur à lui attribuer
-     * @return object
-     */
-    function __set($key, $value)
-    {
-		parent::offsetSet($key, $value);
-		return $this;
-    }
+class oledrion_parameters extends ArrayObject {
 
 	/**
-	 * Valorisation d'un indice de la classe en utilisant un appel de fonction basé sur le principe suivant :
-	 * 		$maClasse->setLimit(10);
+	 * Permet de valoriser un indice de la classe comme si c'ï¿½tait une propriï¿½tï¿½ de la classe
+	 *
+	 * @example $enregistrement->nom_du_champ = 'ma chaine'
+	 *         
+	 * @param string $key Le nom du champ ï¿½ traiter
+	 * @param mixed $value La valeur ï¿½ lui attribuer
+	 * @return object
+	 */
+	function __set($key, $value) {
+		parent::offsetSet($key, $value);
+		return $this;
+	}
+
+	/**
+	 * Valorisation d'un indice de la classe en utilisant un appel de fonction basï¿½ sur le principe suivant :
+	 * $maClasse->setLimit(10);
 	 * Il est possible de chainer comme ceci : $maClasse->setStart(0)->setLimit(10);
 	 *
 	 * @param string $method
 	 * @param mixed $args
 	 * @return object
 	 */
-    function __call($method, $args)
-    {
-		if(substr($method, 0, 3) == 'set') {
-			parent::offsetSet(strtolower(substr($method, 3, 1)).substr($method, 4), $args[0]);
+	function __call($method, $args) {
+		if (substr($method, 0, 3) == 'set') {
+			parent::offsetSet(strtolower(substr($method, 3, 1)) . substr($method, 4), $args[0]);
 			return $this;
-		} else {	// Affichage de la valeur
+		} else { // Affichage de la valeur
 			return parent::offsetGet($method);
 		}
-    }
+	}
 
 	/**
-	 * Méthode qui essaye de faire la même chose que la méthode extend() de jQuery
+	 * Mï¿½thode qui essaye de faire la mï¿½me chose que la mï¿½thode extend() de jQuery
 	 *
-	 * On lui passe les valeurs par défaut que l'on attend et la méthode les compare avec les valeurs actuelles
-	 * Si des valeurs manquent, elles sont ajoutées
+	 * On lui passe les valeurs par dï¿½faut que l'on attend et la mï¿½thode les compare avec les valeurs actuelles
+	 * Si des valeurs manquent, elles sont ajoutï¿½es
 	 *
 	 * @param oledrion_parameters $defaultValues
 	 * @return oledrion_parameters
 	 */
-	function extend(self $defaultValues)
-	{
-		$result = new self;
+	function extend(self $defaultValues) {
+		$result = new self();
 		$result = $this;
-		foreach($defaultValues as $key => $value) {
-			if(!isset($result[$key])) {
+		foreach ($defaultValues as $key => $value) {
+			if (!isset($result[$key])) {
 				$result[$key] = $value;
 			}
 		}

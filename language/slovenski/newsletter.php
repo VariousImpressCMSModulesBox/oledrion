@@ -1,5 +1,5 @@
 <?php
-$newsletterTemplate =<<<contentend
+$newsletterTemplate = <<<contentend
 Naziv artikla : %title%
 Kategorija : %category%
 Proizvajalec(-i) : %author%
@@ -9,7 +9,7 @@ Cena : %published% %money%
 Predstavitev :
 %hometext%
 
-Beri veè : %link%
+Beri veï¿½ : %link%
  ----------------------------------------------------------------------------
 
 contentend;

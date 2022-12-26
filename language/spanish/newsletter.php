@@ -1,15 +1,15 @@
 <?php
-$newsletterTemplate =<<<contentend
-Título de los artículos : %title%
-Categorías : %category%
+$newsletterTemplate = <<<contentend
+Tï¿½tulo de los artï¿½culos : %title%
+Categorï¿½as : %category%
 Marcas/Proveedores : %author%
-Fecha de publicación : %published%
+Fecha de publicaciï¿½n : %published%
 Precio : %published% %money%
 
-Introducción :
+Introducciï¿½n :
 %hometext%
 
-Leer más : %link%
+Leer mï¿½s : %link%
  ----------------------------------------------------------------------------
 
 contentend;

@@ -1,4 +1,10 @@
- img, .box_blue-clip_01, .box_blue-clip_03, .box_blue-clip_06, .box_blue-clip_08, .oledrion_productthumb, .view-product-shad1_01, .view-product-shad1_02, .view-product-shad1_03, .view-product-shad2_01, .view-product-shad2_02, .view-product-shad2_03, .breadcrumb_01, .breadcrumb_03 { behavior: url('include/iepngfix.htc') }
+img, .box_blue-clip_01, .box_blue-clip_03, .box_blue-clip_06,
+	.box_blue-clip_08, .oledrion_productthumb, .view-product-shad1_01,
+	.view-product-shad1_02, .view-product-shad1_03, .view-product-shad2_01,
+	.view-product-shad2_02, .view-product-shad2_03, .breadcrumb_01,
+	.breadcrumb_03 {
+	behavior: url('include/iepngfix.htc')
+}
 
 .oledrion_productdescription {
 	width: auto;
@@ -15,88 +21,92 @@
 	font-weight: bold;
 	width: 10px;
 }
+
 .oledrion_lettrine-L {
 	color: #D26502;
 }
 
 /* Start layout CSS */
-.tableWidget_headerCell,.tableWigdet_headerCellOver,.tableWigdet_headerCellDown{	/* General rules for both standard column header and mouse on header of sortable columns */
-	cursor:pointer;
-	border-bottom:3px solid #C5C2B2;
-	border-right:1px solid #ACA899;
-	border-left:1px solid #FFF;
+.tableWidget_headerCell, .tableWigdet_headerCellOver,
+	.tableWigdet_headerCellDown {
+	/* General rules for both standard column header and mouse on header of sortable columns */
+	cursor: pointer;
+	border-bottom: 3px solid #C5C2B2;
+	border-right: 1px solid #ACA899;
+	border-left: 1px solid #FFF;
 	background-color: #ECE9D8;
 }
 
-.tableWidget_headerCell{	/* Standard column header */
-	border-top:2px solid #ECE9D8;
+.tableWidget_headerCell { /* Standard column header */
+	border-top: 2px solid #ECE9D8;
 }
 
-.tableWigdet_headerCellOver{	/* Rollover on sortable column header */
-	border-top:2px solid #FFC83C;
-}
-.tableWidget tbody .tableWidget_dataRollOver{	/* Rollover style on mouse over (Data) */
-	background-color:#FFF;	/* No mouseover color in this example - specify another color if you want this */
+.tableWigdet_headerCellOver { /* Rollover on sortable column header */
+	border-top: 2px solid #FFC83C;
 }
 
-.tableWigdet_headerCellDown{
-	border-top:2px solid #FFC83C;
-	background-color:#DBD8C5;
-	border-left:1px solid #ACA899;
-	border-right:1px solid #FFF;
+.tableWidget tbody .tableWidget_dataRollOver {
+	/* Rollover style on mouse over (Data) */
+	background-color: #FFF;
+	/* No mouseover color in this example - specify another color if you want this */
 }
 
-.tableWidget td{
-	margin:0px;
-	padding:2px;
-	border-bottom:1px solid #EAE9E1;	/* Border bottom of table data cells */
+.tableWigdet_headerCellDown {
+	border-top: 2px solid #FFC83C;
+	background-color: #DBD8C5;
+	border-left: 1px solid #ACA899;
+	border-right: 1px solid #FFF;
 }
 
-.tableWidget tbody{
-	background-color:#FFF;
+.tableWidget td {
+	margin: 0px;
+	padding: 2px;
+	border-bottom: 1px solid #EAE9E1;
+	/* Border bottom of table data cells */
 }
-.tableWidget{
-	font-family:arial;
-	font-size:12px;
-	width:400px;
+
+.tableWidget tbody {
+	background-color: #FFF;
+}
+
+.tableWidget {
+	font-family: arial;
+	font-size: 12px;
+	width: 400px;
 }
 
 /* End layout CSS */
-
-
 div.widget_tableDiv {
-	border:1px solid #ACA899;	/* Border around entire widget */
+	border: 1px solid #ACA899; /* Border around entire widget */
 	height: 200px;
-	overflow:auto;
-	overflow-y:auto;
-	overflow:-moz-scrollbars-vertical;
-	width:400px;
+	overflow: auto;
+	overflow-y: auto;
+	overflow: -moz-scrollbars-vertical;
+	width: 400px;
 }
 
 html>body div.widget_tableDiv {
 	overflow: hidden;
-	width:400px;
+	width: 400px;
 }
 
-.tableWidget thead{
-	position:relative;
-}
-.tableWidget thead tr{
-	position:relative;
-	top:0px;
-	bottom:0px;
+.tableWidget thead {
+	position: relative;
 }
 
-
-.tableWidget .scrollingContent{
-	overflow-y:auto;
-	overflow:-moz-scrollbars-vertical;
-	width:100%;
+.tableWidget thead tr {
+	position: relative;
+	top: 0px;
+	bottom: 0px;
 }
 
+.tableWidget .scrollingContent {
+	overflow-y: auto;
+	overflow: -moz-scrollbars-vertical;
+	width: 100%;
+}
 
 /* New styles */
-
 .box_blue-clip_01 {
 	background-image: url('../images/welcome/welcome_01.png');
 	background-repeat: no-repeat;
@@ -104,12 +114,14 @@ html>body div.widget_tableDiv {
 	height: 52px;
 	width: 44px;
 }
+
 .box_blue-clip_02 {
 	background-image: url('../images/welcome/welcome_02.gif');
 	background-repeat: repeat-x;
 	background-position: left top;
 	height: 19px;
 }
+
 .box_blue-clip_03 {
 	background-image: url('../images/welcome/welcome_03.png');
 	background-repeat: no-repeat;
@@ -117,18 +129,21 @@ html>body div.widget_tableDiv {
 	height: 52px;
 	width: 33px;
 }
+
 .box_blue-clip_04 {
 	background-image: url('../images/welcome/welcome_04.gif');
 	background-repeat: repeat-y;
 	background-position: left top;
 	width: 44px;
 }
+
 .box_blue-clip_05 {
 	background-image: url('../images/welcome/welcome_05.gif');
 	background-repeat: repeat-y;
 	background-position: right top;
 	width: 33px;
 }
+
 .box_blue-clip_06 {
 	background-image: url('../images/welcome/welcome_06.png');
 	background-repeat: no-repeat;
@@ -136,12 +151,14 @@ html>body div.widget_tableDiv {
 	height: 24px;
 	width: 44px;
 }
+
 .box_blue-clip_07 {
 	background-image: url('../images/welcome/welcome_07.gif');
 	background-repeat: repeat-x;
 	background-position: left bottom;
 	height: 17px;
 }
+
 .box_blue-clip_08 {
 	background-image: url('../images/welcome/welcome_08.png');
 	background-repeat: no-repeat;
@@ -183,10 +200,11 @@ html>body div.widget_tableDiv {
 }
 
 .oledrion_productssummary {
-	padding: 0px 10px 10px  10px;
+	padding: 0px 10px 10px 10px;
 }
 
-.oledrion_productssummary_view-product h3, .oledrion_description_view-product h3, .oledrion_otherinf h3 {
+.oledrion_productssummary_view-product h3,
+	.oledrion_description_view-product h3, .oledrion_otherinf h3 {
 	color: #000000;
 	margin-top: 0px;
 }
@@ -195,6 +213,7 @@ html>body div.widget_tableDiv {
 	font-size: 120%;
 	padding: 10px 78px 5px 10px;
 }
+
 .oledrion_producttitle  a {
 	text-decoration: underline;
 }
@@ -213,17 +232,20 @@ html>body div.widget_tableDiv {
 	font-size: 90%;
 }
 
-.oledrion_productauthor_view-product, .oledrion_producttranslators_view-product {
+.oledrion_productauthor_view-product,
+	.oledrion_producttranslators_view-product {
 	font-weight: bold;
 	font-size: 90%;
 	padding-top: 10px;
 }
 
-.oledrion_productauthor_view-product a, .oledrion_producttranslators_view-product a {
+.oledrion_productauthor_view-product a,
+	.oledrion_producttranslators_view-product a {
 	text-decoration: underline;
 }
 
-.oledrion_productauthor_view-product a:hover, .oledrion_producttranslators_view-product a:hover {
+.oledrion_productauthor_view-product a:hover,
+	.oledrion_producttranslators_view-product a:hover {
 	text-decoration: none;
 }
 
@@ -247,7 +269,6 @@ html>body div.widget_tableDiv {
 	padding: 0px 14px 10px 10px;
 }
 
-
 #oledrion_publicite-category {
 	border: 1px solid #E9E9E9;
 	background-color: #F7F7F7;
@@ -258,22 +279,21 @@ html>body div.widget_tableDiv {
 .oledrion_catdescription h2 {
 	text-align: center;
 }
+
 .oledrion_description {
 	padding: 0px 15px 10px 10px;
 }
-
 
 .oledrion_read-more {
 	text-align: right;
 	padding: 0px 15px 10px 10px;
 }
 
-.oledrion_catdescription h2, .featured-blocks-titles h2  {
+.oledrion_catdescription h2, .featured-blocks-titles h2 {
 	margin-top: 0px;
 }
 
 /* View product*/
-
 .view-product-shad1_01 {
 	background-image: url(../images/view-product/view-product-shad1_01.png);
 	background-repeat: no-repeat;
@@ -281,18 +301,21 @@ html>body div.widget_tableDiv {
 	height: 4px;
 	width: 4px;
 }
+
 .view-product-shad1_02 {
 	background-image: url(../images/view-product/view-product-shad1_02.png);
 	background-repeat: no-repeat;
 	background-position: left bottom;
 	height: 4px;
 }
+
 .view-product-shad1_03 {
 	background-image: url(../images/view-product/view-product-shad1_03.png);
 	background-repeat: no-repeat;
 	background-position: right top;
 	width: 4px;
 }
+
 .view-product-shad2_01 {
 	background-image: url(../images/view-product/view-product-shad2_01.png);
 	background-repeat: no-repeat;
@@ -300,12 +323,14 @@ html>body div.widget_tableDiv {
 	height: 4px;
 	width: 4px;
 }
+
 .view-product-shad2_02 {
 	background-image: url(../images/view-product/view-product-shad2_02.png);
 	background-repeat: no-repeat;
 	background-position: right top;
 	height: 4px;
 }
+
 .view-product-shad2_03 {
 	background-image: url(../images/view-product/view-product-shad2_03.png);
 	background-position: left bottom;
@@ -313,9 +338,7 @@ html>body div.widget_tableDiv {
 	background-repeat: no-repeat;
 }
 
-
 /* end view product */
-
 .oledrion_productdescription {
 	background-color: #FFFFFF;
 	padding: 0px 10px 10px 10px;
@@ -330,7 +353,7 @@ html>body div.widget_tableDiv {
 #productshoop_breadcrumb {
 	color: #8B310A;
 	padding: 3px;
-	font-weight: bold;	/*margin: 10px 0px 10px 0px;*/
+	font-weight: bold; /*margin: 10px 0px 10px 0px;*/
 }
 
 #productshoop_breadcrumb a {
@@ -341,6 +364,7 @@ html>body div.widget_tableDiv {
 #productshoop_breadcrumb a:hover {
 	text-decoration: none;
 }
+
 .breadcrumbT {
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
@@ -348,17 +372,20 @@ html>body div.widget_tableDiv {
 	margin-top: 5px;
 	margin-bottom: 5px;
 }
+
 .breadcrumb_01 {
 	background-image: url(../images/breadcrumb_01.png);
 	background-repeat: no-repeat;
 	background-position: left top;
 	width: 10px;
 }
+
 .breadcrumb_02 {
 	background-image: url(../images/breadcrumb_02.gif);
 	background-repeat: repeat-x;
 	background-position: left top;
 }
+
 .breadcrumb_03 {
 	background-image: url(../images/breadcrumb_03.png);
 	background-repeat: no-repeat;
@@ -407,10 +434,12 @@ html>body div.widget_tableDiv {
 .oledrion_alphabet {
 	text-align: center;
 }
+
 .oledrion_alphabet a {
 	font-size: 120%;
 	text-decoration: none;
 }
+
 .oledrion_alphabet a:hover {
 	text-decoration: underline;
 }
@@ -432,13 +461,13 @@ html>body div.widget_tableDiv {
 	height: 1.5em;
 }
 
-.oledrion_cat-map li a{
+.oledrion_cat-map li a {
 	font-weight: normal;
 	text-decoration: none;
 	height: 1.5em;
 }
 
-.oledrion_cat-map li a:hover{
+.oledrion_cat-map li a:hover {
 	text-decoration: underline;
 }
 
@@ -538,42 +567,50 @@ html>body div.widget_tableDiv {
 
 /* For the "all products" page */
 table.tablesorter {
-	font-family:arial;
+	font-family: arial;
 	background-color: #CDCDCD;
-	margin:10px 0pt 15px;
+	margin: 10px 0pt 15px;
 	font-size: 8pt;
 	width: 100%;
 	text-align: left;
 }
+
 table.tablesorter thead tr th, table.tablesorter tfoot tr th {
 	background-color: #e6EEEE;
 	border: 1px solid #FFF;
 	font-size: 8pt;
 	padding: 4px;
 }
+
 table.tablesorter thead tr .header {
 	background-image: url(../images/bg.gif);
 	background-repeat: no-repeat;
 	background-position: center right;
 	cursor: pointer;
 }
+
 table.tablesorter tbody td {
 	color: #3D3D3D;
 	padding: 4px;
 	background-color: #FFF;
 	vertical-align: top;
 }
+
 table.tablesorter tbody tr.odd td {
-	background-color:#F0F0F6;
+	background-color: #F0F0F6;
 }
+
 table.tablesorter thead tr .headerSortUp {
 	background-image: url(../images/asc.gif);
 }
+
 table.tablesorter thead tr .headerSortDown {
 	background-image: url(../images/desc.gif);
 }
-table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
-background-color: #8dbdd8;
+
+table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp
+	{
+	background-color: #8dbdd8;
 }
 
 .productpriceindex a {

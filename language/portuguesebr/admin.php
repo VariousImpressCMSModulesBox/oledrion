@@ -11,68 +11,67 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @copyright Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
  * @Translator   GibaPhp
  * @Revision for translation  http://x-trad.org
  *
  * Version : $Id:
  * ****************************************************************************
  */
-
-define("_AM_OLEDRION_GO_TO_MODULE","Vá ao módulo");
-define("_AM_OLEDRION_PREFERENCES","Preferências");
-define("_AM_OLEDRION_ADMINISTRATION","Administração");
-define("_AM_OLEDRION_CATEGORIES","Categorias");
-define("_AM_OLEDRION_CATEG_CONFIG","Pedaços de configurações sobre as páginas de categorias");
-define("_AM_OLEDRION_CHUNK","Pedaços");
-define("_AM_OLEDRION_POSITION","Visibilidade e Posicionamento");
-define("_AM_OLEDRION_INVISIBLE","Invisível");
-define("_AM_OLEDRION_OK","Ok");
-define("_AM_OLEDRION_SAVE_OK","Os dados foram salvos com sucesso");
-define("_AM_OLEDRION_SAVE_PB","Houve um problema ao salvar os dados");
-define("_AM_OLEDRION_ACTION","Ação");
-define("_AM_OLEDRION_ADD_ITEM","Incluir item");
-define("_AM_OLEDRION_CONF_DELITEM","Você realmente deseja excluir este item?");
-define("_AM_OLEDRION_LIST","Lista");
-define("_AM_OLEDRION_ID","Id");
-define("_AM_OLEDRION_RATE","Pontuar");
+define("_AM_OLEDRION_GO_TO_MODULE", "Vá ao módulo");
+define("_AM_OLEDRION_PREFERENCES", "Preferências");
+define("_AM_OLEDRION_ADMINISTRATION", "Administração");
+define("_AM_OLEDRION_CATEGORIES", "Categorias");
+define("_AM_OLEDRION_CATEG_CONFIG", "Pedaços de configurações sobre as páginas de categorias");
+define("_AM_OLEDRION_CHUNK", "Pedaços");
+define("_AM_OLEDRION_POSITION", "Visibilidade e Posicionamento");
+define("_AM_OLEDRION_INVISIBLE", "Invisível");
+define("_AM_OLEDRION_OK", "Ok");
+define("_AM_OLEDRION_SAVE_OK", "Os dados foram salvos com sucesso");
+define("_AM_OLEDRION_SAVE_PB", "Houve um problema ao salvar os dados");
+define("_AM_OLEDRION_ACTION", "Ação");
+define("_AM_OLEDRION_ADD_ITEM", "Incluir item");
+define("_AM_OLEDRION_CONF_DELITEM", "Você realmente deseja excluir este item?");
+define("_AM_OLEDRION_LIST", "Lista");
+define("_AM_OLEDRION_ID", "Id");
+define("_AM_OLEDRION_RATE", "Pontuar");
 define("_AM_OLEDRION_MAINTAIN", "Manter tabelas e cache");
 
-define("_AM_OLEDRION_ADD_VAT","Incluir VAT");
-define("_AM_OLEDRION_EDIT_VAT","Editar VAT");
+define("_AM_OLEDRION_ADD_VAT", "Incluir VAT");
+define("_AM_OLEDRION_EDIT_VAT", "Editar VAT");
 
-define("_AM_OLEDRION_ADD_CATEG","Incluir categoria");
-define("_AM_OLEDRION_EDIT_CATEG","Editar categoria");
+define("_AM_OLEDRION_ADD_CATEG", "Incluir categoria");
+define("_AM_OLEDRION_EDIT_CATEG", "Editar categoria");
 
-define("_AM_OLEDRION_ADD_VENDOR","Incluir vendedor");
-define("_AM_OLEDRION_EDIT_VENDOR","Editar vendedor");
+define("_AM_OLEDRION_ADD_VENDOR", "Incluir vendedor");
+define("_AM_OLEDRION_EDIT_VENDOR", "Editar vendedor");
 
-define("_AM_OLEDRION_ADD_FILE","Incluir arquivo");
-define("_AM_OLEDRION_EDIT_FILE","Editar arquivo");
+define("_AM_OLEDRION_ADD_FILE", "Incluir arquivo");
+define("_AM_OLEDRION_EDIT_FILE", "Editar arquivo");
 
-define("_AM_OLEDRION_ADD_MANUFACTURER","Incluir Fabricante");
-define("_AM_OLEDRION_EDIT_MANUFACTURER","Editar Fabricante");
+define("_AM_OLEDRION_ADD_MANUFACTURER", "Incluir Fabricante");
+define("_AM_OLEDRION_EDIT_MANUFACTURER", "Editar Fabricante");
 
-define("_AM_OLEDRION_ADD_PRODUCT","Incluir produto");
-define("_AM_OLEDRION_EDIT_PRODUCT","Editar produto");
+define("_AM_OLEDRION_ADD_PRODUCT", "Incluir produto");
+define("_AM_OLEDRION_EDIT_PRODUCT", "Editar produto");
 
-define("_AM_OLEDRION_ADD_DSICOUNT","incluir desconto");
-define("_AM_OLEDRION_EDIT_DISCOUNT","Editar desconto");
+define("_AM_OLEDRION_ADD_DSICOUNT", "incluir desconto");
+define("_AM_OLEDRION_EDIT_DISCOUNT", "Editar desconto");
 
-define("_AM_OLEDRION_ERROR_1","Erro, não informou o ID");
-define("_AM_OLEDRION_ERROR_2","Erro, foi impossível eliminar este vat, que está sendo utilizado por alguns produtos");
-define("_AM_OLEDRION_ERROR_3","Erro durante o envio do arquivo ");
-define("_AM_OLEDRION_ERROR_4","Erro, impossível apagar esta categoria, que está sendo utilizada por alguns produtos");
-define("_AM_OLEDRION_ERROR_5","Erro, impossível eliminação deste fabricante, ele é usado por alguns produtos");
-define("_AM_OLEDRION_ERROR_6","Erro, impossível eliminar este vendedor, está sendo utilizado por um produto");
-define("_AM_OLEDRION_ERROR_7","Erro, impossível criar o arquivo de exportação");
-define("_AM_OLEDRION_ERROR_8","Erro, queira criar pelo menos uma categoria antes de criar um produto");
-define("_AM_OLEDRION_ERROR_9","Erro, crie pelo menos um VAT antes de criar um produto");
-define("_AM_OLEDRION_ERROR_10","Erro, categoria desconhecida");
-define("_AM_OLEDRION_ERROR_11","Erro, formato de exportação não reconhecido");
+define("_AM_OLEDRION_ERROR_1", "Erro, não informou o ID");
+define("_AM_OLEDRION_ERROR_2", "Erro, foi impossível eliminar este vat, que está sendo utilizado por alguns produtos");
+define("_AM_OLEDRION_ERROR_3", "Erro durante o envio do arquivo ");
+define("_AM_OLEDRION_ERROR_4", "Erro, impossível apagar esta categoria, que está sendo utilizada por alguns produtos");
+define("_AM_OLEDRION_ERROR_5", "Erro, impossível eliminação deste fabricante, ele é usado por alguns produtos");
+define("_AM_OLEDRION_ERROR_6", "Erro, impossível eliminar este vendedor, está sendo utilizado por um produto");
+define("_AM_OLEDRION_ERROR_7", "Erro, impossível criar o arquivo de exportação");
+define("_AM_OLEDRION_ERROR_8", "Erro, queira criar pelo menos uma categoria antes de criar um produto");
+define("_AM_OLEDRION_ERROR_9", "Erro, crie pelo menos um VAT antes de criar um produto");
+define("_AM_OLEDRION_ERROR_10", "Erro, categoria desconhecida");
+define("_AM_OLEDRION_ERROR_11", "Erro, formato de exportação não reconhecido");
 define("_AM_OLEDRION_NOT_FOUND", "Erro, item não encontrado");
 define("_AM_OLEDRION_CONF_DEL_CATEG", "Você realmente deseja apagar esta categoria e as suas sub-categorias?<br />%s");
 
@@ -89,7 +88,7 @@ define("_AM_OLEDRION_ALL", "Tudo");
 define("_AM_OLEDRION_LIMIT_TO", "Filtrar");
 define("_AM_OLEDRION_FILTER", "Filtrar");
 define("_AM_OLEDRION_INDEX_PAGE", "Página Inicial");
-define("_AM_OLEDRION_RELATED_HELP", "Atenção, não tecle enter até que todos os produtos tenham sido informados"); //GibaPhp - tá esquisito isto aqui ???
+define("_AM_OLEDRION_RELATED_HELP", "Atenção, não tecle enter até que todos os produtos tenham sido informados"); // GibaPhp - tá esquisito isto aqui ???
 define("_AM_OLEDRION_SUBDATE_HELP", "Digite a data, no formato AAAA-MM-DD");
 define("_AM_OLEDRION_IMAGE1_HELP", "Grande foto atual");
 define("_AM_OLEDRION_IMAGE2_HELP", "Foto atual do thumb");
@@ -109,7 +108,7 @@ define("_AM_OLEDRION_TOTAL_SHIPP", "Total / Remessa");
 define('_AM_OLEDRION_NEWSLETTER_BETWEEN', 'Selecione produtos publicados entre');
 define('_AM_OLEDRION_EXPORT_AND', ' e ');
 define('_AM_OLEDRION_IN_CATEGORY', 'Nas seguintes categorias');
-define('_AM_OLEDRION_REMOVE_BR',"Converter o html &lt;br&gt; tag para uma nova linha?");
+define('_AM_OLEDRION_REMOVE_BR', "Converter o html &lt;br&gt; tag para uma nova linha?");
 define('_AM_OLEDRION_NEWSLETTER_HTML_TAGS', "Remover tags HTML?");
 define('_AM_OLEDRION_NEWSLETTER_HEADER', "Cabeçalho");
 define('_AM_OLEDRION_NEWSLETTER_FOOTER', "Rodapé");
@@ -151,8 +150,8 @@ define("_AM_OLEDRION_DISCOUNT_DESCRIPTION", "Descrição do Desconto (para seus 
 define("_AM_OLEDRION_DISCOUNT_PERIOD", "Para o período");
 define("_AM_OLEDRION_DISCOUNT_PERFROM", "De");
 define("_AM_OLEDRION_DISCOUNT_PERTO", "para");
-define("_AM_OLEDRION_DISCOUNT_WHOWHAT", "Para que nem ao que se aplica a redução?"); //GibaPhp - tenho dúvidas aqui...
-define("_AM_OLEDRION_DISCOUNT_XOOPS_GROUP", "Se o grupo é ImpressCMS"); //Se o grupo é Xoops - para xoops
+define("_AM_OLEDRION_DISCOUNT_WHOWHAT", "Para que nem ao que se aplica a redução?"); // GibaPhp - tenho dúvidas aqui...
+define("_AM_OLEDRION_DISCOUNT_XOOPS_GROUP", "Se o grupo é ImpressCMS"); // Se o grupo é Xoops - para xoops
 define("_AM_OLEDRION_DISCOUNT_CATEGORY", "Se a categoria é");
 define("_AM_OLEDRION_DISCOUNT_MANUFACTURER", "Fabricante");
 define("_AM_OLEDRION_DISCOUNT_VENDOR", "Vendedor");
@@ -162,10 +161,10 @@ define("_AM_OLEDRION_DISCOUNT_REDUCTION_TYPE", "Aplicar a redução");
 define("_AM_OLEDRION_DISCOUNT_QUANTITY_FROM", "De");
 define("_AM_OLEDRION_DISCOUNT_QUANTITY_TO", "para");
 define("_AM_OLEDRION_DISCOUNT_QUANTITY_INCLUDED", "produtos (incluidos)");
-define("_AM_OLEDRION_DISCOUNT_DEGRESSIV", "Degressiv"); //GibaPhp - dúvidas aqui, sem tradução
+define("_AM_OLEDRION_DISCOUNT_DEGRESSIV", "Degressiv"); // GibaPhp - dúvidas aqui, sem tradução
 define("_AM_OLEDRION_DISCOUNT_AMOUNT_PERCENT", "Montante ou percentagem de desconto sobre o preço");
 define("_AM_OLEDRION_DISCOUNT_PERCENT", "Percentagem");
-define("_AM_OLEDRION_DISCOUNT_ON", "Sur"); //GibaPhp - dúvidas aqui, sem tradução
+define("_AM_OLEDRION_DISCOUNT_ON", "Sur"); // GibaPhp - dúvidas aqui, sem tradução
 define("_AM_OLEDRION_DISCOUNT_THE_PRODUCT", "O produto");
 define("_AM_OLEDRION_DISCOUNT_THE_CART", "O carrinho");
 define("_AM_OLEDRION_DISCOUNT_IN_WHICH_CASE", "Em que casos?");
@@ -174,7 +173,7 @@ define("_AM_OLEDRION_DISCOUNT_FIRST_PURCHASE", "Se esta é a primeira compra do 
 define("_AM_OLEDRION_DISCOUNT_NEVER_BOUGHT", "Se o produto nunca foi comprado");
 define("_AM_OLEDRION_DISCOUNT_QUANTITY_IS", "Se a quantidade do produto é");
 define("_AM_OLEDRION_DISCOUNT_SHIPPING_REDUCTIONS", "Reduções sobre o transporte marítimo");
-define("_AM_OLEDRION_DISCOUNT_SHIPPINGS_ARE", "Porcentagens são"); //GibaPhp - dúvidas aqui, sem tradução
+define("_AM_OLEDRION_DISCOUNT_SHIPPINGS_ARE", "Porcentagens são"); // GibaPhp - dúvidas aqui, sem tradução
 define("_AM_OLEDRION_DISCOUNT_FULL_PAY", "Pagável na íntegra");
 define("_AM_OLEDRION_DISCOUNT_SHIPPING_FREE", "São totalmente livres");
 define("_AM_OLEDRION_DISCOUNT_ORDER_OVER", "se um cliente com mais encomendas");
@@ -182,7 +181,7 @@ define("_AM_OLEDRION_DISCOUNT_REDUCED_FOR", "Porcentagens são reduzidas em");
 define("_AM_OLEDRION_DISCOUNT_REDUCED_IF", "se a ordem de pagamento for maior que ");
 
 define("_AM_OLEDRION_DISCOUNT_HELP1", "Não é necessário especificar uma categoria e/ou um vendedor se você escolher um produto");
-define("_AM_OLEDRION_DISCOUNT_HELP2", "Se você especificar um grupo ImpressCMS na sequência, a redução só se aplica a eles."); //GibaPhp - se xoops mudar aqui.
+define("_AM_OLEDRION_DISCOUNT_HELP2", "Se você especificar um grupo ImpressCMS na sequência, a redução só se aplica a eles."); // GibaPhp - se xoops mudar aqui.
 define("_AM_OLEDRION_DISCOUNT_HELP3", "Se você precisar de uma categoria, então a redução é válida somente para os produtos desta categoria.");
 define("_AM_OLEDRION_DISCOUNT_HELP4", "Se você especificar um vendedor, só os produtos deste vendedor irão se beneficiar desta redução.");
 define("_AM_OLEDRION_DISCOUNT_HELP5", "Se você especificar um vendedor e uma categoria, apenas os produtos do vendedor e da presente categoria irão se beneficiar desta redução.");

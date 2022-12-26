@@ -2,7 +2,7 @@
 /**
  * ****************************************************************************
  * oledrion - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * Copyright (c) Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
  *
  * You may not change or alter any portion of this comment or credits
  * of supporting developers from this source code or any supporting source code
@@ -11,13 +11,13 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- *
- * Version : $Id:
- * ****************************************************************************
+ * @copyright Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ *        
+ *         Version : $Id:
+ *         ****************************************************************************
  */
 
 /**
@@ -27,45 +27,44 @@ if (!defined('ICMS_ROOT_PATH')) {
 	die("XOOPS root path not defined");
 }
 
-class oledrion_csv_export extends oledrion_export
-{
-    function __construct($parameters = '')
-    {
-        if(!is_array($parameters)) {
-            $this->separator = OLEDRION_CSV_SEP;
-            $this->filename = 'oledrion.csv';
-            $this->folder = OLEDRION_CSV_PATH;
-            $this->url = OLEDRION_CSV_URL;
-            $this->orderType = OLEDRION_STATE_VALIDATED;
-        }
-        parent::__construct($parameters);
-    }
+class oledrion_csv_export extends oledrion_export {
+
+	function __construct($parameters = '') {
+		if (!is_array($parameters)) {
+			$this->separator = OLEDRION_CSV_SEP;
+			$this->filename = 'oledrion.csv';
+			$this->folder = OLEDRION_CSV_PATH;
+			$this->url = OLEDRION_CSV_URL;
+			$this->orderType = OLEDRION_STATE_VALIDATED;
+		}
+		parent::__construct($parameters);
+	}
 
 	/**
-	 * Export des données
-	 * @return boolean	Vrai si l'export a réussi sinon faux
+	 * Export des donnï¿½es
+	 *
+	 * @return boolean Vrai si l'export a rï¿½ussi sinon faux
 	 */
-    function export()
-    {
-		$fp = fopen($this->folder.DIRECTORY_SEPARATOR.$this->filename, 'w');
-		if(!$fp) {
-		    $this->success = false;
-		    return false;
+	function export() {
+		$fp = fopen($this->folder . DIRECTORY_SEPARATOR . $this->filename, 'w');
+		if (!$fp) {
+			$this->success = false;
+			return false;
 		}
 
-		// Création de l'entête du fichier
+		// Crï¿½ation de l'entï¿½te du fichier
 		$entete1 = $entete2 = array();
 		$s = $this->separator;
 		$cmd = new oledrion_commands();
-		foreach($cmd->getVars() as $fieldName => $properties) {
+		foreach ($cmd->getVars() as $fieldName => $properties) {
 			$entete1[] = $fieldName;
 		}
 		// Ajout des infos de caddy
 		$cart = new oledrion_caddy();
-		foreach($cart->getVars() as $fieldName => $properties) {
+		foreach ($cart->getVars() as $fieldName => $properties) {
 			$entete2[] = $fieldName;
 		}
-		fwrite($fp, implode($s, array_merge($entete1, $entete2))."\n");
+		fwrite($fp, implode($s, array_merge($entete1, $entete2)) . "\n");
 
 		$criteria = new CriteriaCompo();
 		$criteria->add(new Criteria('cmd_id', 0, '<>'));
@@ -73,46 +72,45 @@ class oledrion_csv_export extends oledrion_export
 		$criteria->setSort('cmd_date');
 		$criteria->setOrder('DESC');
 		$orders = $this->handlers->h_oledrion_commands->getObjects($criteria);
-		foreach($orders as $order) {
+		foreach ($orders as $order) {
 			$carts = array();
 			$carts = $this->handlers->h_oledrion_caddy->getObjects(new Criteria('caddy_cmd_id', $order->getVar('cmd_id'), '='));
 			$ligne = array();
-			foreach($carts as $cart) {
-			    $ligne = array();
-				foreach($entete1 as $commandField) {
+			foreach ($carts as $cart) {
+				$ligne = array();
+				foreach ($entete1 as $commandField) {
 					$ligne[] = $order->getVar($commandField);
 				}
-				foreach($entete2 as $cartField) {
+				foreach ($entete2 as $cartField) {
 					$ligne[] = $cart->getVar($cartField);
 				}
 			}
-			fwrite($fp, implode($s, $ligne)."\n");
+			fwrite($fp, implode($s, $ligne) . "\n");
 		}
 		fclose($fp);
 		$this->success = true;
 		return true;
-    }
+	}
 
 	/**
-	 * Retourne le lien à utiliser pour télécharger le fichier d'export
-	 * @return string	Le lien à utiliser
+	 * Retourne le lien ï¿½ utiliser pour tï¿½lï¿½charger le fichier d'export
+	 *
+	 * @return string Le lien ï¿½ utiliser
 	 */
-    function getDownloadUrl()
-    {
-        if($this->success) {
-            return $this->url.'/'.$this->filename;
-        } else {
-            return false;
-        }
-    }
+	function getDownloadUrl() {
+		if ($this->success) {
+			return $this->url . '/' . $this->filename;
+		} else {
+			return false;
+		}
+	}
 
-    function getDownloadPath()
-    {
-        if($this->success) {
-            return $this->folder.DIRECTORY_SEPARATOR.$this->filename;
-        } else {
-            return false;
-        }
-    }
+	function getDownloadPath() {
+		if ($this->success) {
+			return $this->folder . DIRECTORY_SEPARATOR . $this->filename;
+		} else {
+			return false;
+		}
+	}
 }
 ?>

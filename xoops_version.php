@@ -2,7 +2,7 @@
 /**
  * ****************************************************************************
  * oledrion - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * Copyright (c) Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
  *
  * You may not change or alter any portion of this comment or credits
  * of supporting developers from this source code or any supporting source code
@@ -11,15 +11,14 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- *
- * Version : $Id:
- * ****************************************************************************
+ * @copyright Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ *        
+ *         Version : $Id:
+ *         ****************************************************************************
  */
-
 if (!defined('ICMS_ROOT_PATH')) {
 	die('XOOPS root path not defined');
 }
@@ -27,8 +26,8 @@ if (!defined('ICMS_ROOT_PATH')) {
 $modversion['name'] = _MI_OLEDRION_NAME;
 $modversion['version'] = 2.31;
 $modversion['description'] = _MI_OLEDRION_DESC;
-$modversion['author'] = "Hervé Thouzard of Instant Zero (http://www.instant-zero.com)";
-$modversion['credits'] = "Don Curioso, Voltan, Bezoops, Mariane Antoun, Defkon1, Feichtl, Carlos Pérez, JardaR and all the other";
+$modversion['author'] = "Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)";
+$modversion['credits'] = "Don Curioso, Voltan, Bezoops, Mariane Antoun, Defkon1, Feichtl, Carlos Pï¿½rez, JardaR and all the other";
 $modversion['help'] = '';
 $modversion['license'] = 'GPL';
 $modversion['official'] = 0;
@@ -65,19 +64,19 @@ $cptb = 0;
 /**
  * Recent products block
  */
-$cptb++;
+$cptb++ ;
 $modversion['blocks'][$cptb]['file'] = 'oledrion_new.php';
 $modversion['blocks'][$cptb]['name'] = _MI_OLEDRION_BNAME1;
 $modversion['blocks'][$cptb]['description'] = 'Shows recently added products titles';
 $modversion['blocks'][$cptb]['show_func'] = 'b_oledrion_new_show';
 $modversion['blocks'][$cptb]['edit_func'] = 'b_oledrion_new_edit';
-$modversion['blocks'][$cptb]['options'] = '10|0|0';	// Voir 10 produits, pour toutes les catégories, uniquement les produits du mois ?
+$modversion['blocks'][$cptb]['options'] = '10|0|0'; // Voir 10 produits, pour toutes les catï¿½gories, uniquement les produits du mois ?
 $modversion['blocks'][$cptb]['template'] = 'oledrion_block_new.html';
 
 /**
  * Most viewed products block
  */
-$cptb++;
+$cptb++ ;
 $modversion['blocks'][$cptb]['file'] = 'oledrion_top.php';
 $modversion['blocks'][$cptb]['name'] = _MI_OLEDRION_BNAME2;
 $modversion['blocks'][$cptb]['description'] = 'Shows most viewed products titles';
@@ -89,31 +88,31 @@ $modversion['blocks'][$cptb]['template'] = 'oledrion_block_top.html';
 /**
  * Categories block
  */
-$cptb++;
+$cptb++ ;
 $modversion['blocks'][$cptb]['file'] = 'oledrion_categories.php';
 $modversion['blocks'][$cptb]['name'] = _MI_OLEDRION_BNAME3;
 $modversion['blocks'][$cptb]['description'] = 'Show categories in relation with the category page';
 $modversion['blocks'][$cptb]['show_func'] = 'b_oledrion_category_show';
 $modversion['blocks'][$cptb]['edit_func'] = 'b_oledrion_category_edit';
-$modversion['blocks'][$cptb]['options'] = '0';	// 0 = en relation avec la page, 1=classique, 2=Déplié
+$modversion['blocks'][$cptb]['options'] = '0'; // 0 = en relation avec la page, 1=classique, 2=Dï¿½pliï¿½
 $modversion['blocks'][$cptb]['template'] = 'oledrion_block_categories.html';
 
 /**
  * Best sellers block
  */
-$cptb++;
+$cptb++ ;
 $modversion['blocks'][$cptb]['file'] = 'oledrion_best_sales.php';
 $modversion['blocks'][$cptb]['name'] = _MI_OLEDRION_BNAME4;
 $modversion['blocks'][$cptb]['description'] = 'Show most solded products';
 $modversion['blocks'][$cptb]['show_func'] = 'b_oledrion_bestsales_show';
 $modversion['blocks'][$cptb]['edit_func'] = 'b_oledrion_bestsales_edit';
-$modversion['blocks'][$cptb]['options'] = '10|0';	// Voir 10 produits, pour toutes les catégories
+$modversion['blocks'][$cptb]['options'] = '10|0'; // Voir 10 produits, pour toutes les catï¿½gories
 $modversion['blocks'][$cptb]['template'] = 'oledrion_block_bestsales.html';
 
 /**
  * Top rated products
  */
-$cptb++;
+$cptb++ ;
 $modversion['blocks'][$cptb]['file'] = 'oledrion_rated.php';
 $modversion['blocks'][$cptb]['name'] = _MI_OLEDRION_BNAME5;
 $modversion['blocks'][$cptb]['description'] = 'Shows best rated product';
@@ -125,19 +124,19 @@ $modversion['blocks'][$cptb]['template'] = 'oledrion_block_rated.html';
 /**
  * Random product(s) block
  */
-$cptb++;
+$cptb++ ;
 $modversion['blocks'][$cptb]['file'] = 'oledrion_random.php';
 $modversion['blocks'][$cptb]['name'] = _MI_OLEDRION_BNAME6;
 $modversion['blocks'][$cptb]['description'] = 'Shows a random product';
 $modversion['blocks'][$cptb]['show_func'] = 'b_oledrion_random_show';
 $modversion['blocks'][$cptb]['edit_func'] = 'b_oledrion_random_edit';
-$modversion['blocks'][$cptb]['options'] = '1|0|0';	// Nombre de produits, catégorie, produits du mois uniquement ?
+$modversion['blocks'][$cptb]['options'] = '1|0|0'; // Nombre de produits, catï¿½gorie, produits du mois uniquement ?
 $modversion['blocks'][$cptb]['template'] = 'oledrion_block_random.html';
 
 /**
  * Products with a discount block
  */
-$cptb++;
+$cptb++ ;
 $modversion['blocks'][$cptb]['file'] = 'oledrion_promotion.php';
 $modversion['blocks'][$cptb]['name'] = _MI_OLEDRION_BNAME7;
 $modversion['blocks'][$cptb]['description'] = 'Shows products in promotion';
@@ -149,19 +148,19 @@ $modversion['blocks'][$cptb]['template'] = 'oledrion_block_promotion.html';
 /**
  * Cart block
  */
-$cptb++;
+$cptb++ ;
 $modversion['blocks'][$cptb]['file'] = 'oledrion_cart.php';
 $modversion['blocks'][$cptb]['name'] = _MI_OLEDRION_BNAME8;
 $modversion['blocks'][$cptb]['description'] = 'Shows cart';
 $modversion['blocks'][$cptb]['show_func'] = 'b_oledrion_cart_show';
 $modversion['blocks'][$cptb]['edit_func'] = 'b_oledrion_cart_edit';
-$modversion['blocks'][$cptb]['options'] = '4';	// Maximum count of items to show
+$modversion['blocks'][$cptb]['options'] = '4'; // Maximum count of items to show
 $modversion['blocks'][$cptb]['template'] = 'oledrion_block_cart.html';
 
 /**
  * Recommended products
  */
-$cptb++;
+$cptb++ ;
 $modversion['blocks'][$cptb]['file'] = 'oledrion_recommended.php';
 $modversion['blocks'][$cptb]['name'] = _MI_OLEDRION_BNAME9;
 $modversion['blocks'][$cptb]['description'] = "Shows last recommanded products";
@@ -173,157 +172,153 @@ $modversion['blocks'][$cptb]['template'] = 'oledrion_block_recommended.html';
 /**
  * Recently Sold
  */
-$cptb++;
+$cptb++ ;
 $modversion['blocks'][$cptb]['file'] = 'oledrion_recentlysold.php';
 $modversion['blocks'][$cptb]['name'] = _MI_OLEDRION_BNAME10;
 $modversion['blocks'][$cptb]['description'] = "Shows Recently Sold products";
 $modversion['blocks'][$cptb]['show_func'] = 'b_oledrion_recentlysold_show';
 $modversion['blocks'][$cptb]['edit_func'] = 'b_oledrion_recentlysold_edit';
-$modversion['blocks'][$cptb]['options'] = '10';    // Nombre maximum de produits à voir
+$modversion['blocks'][$cptb]['options'] = '10'; // Nombre maximum de produits ï¿½ voir
 $modversion['blocks'][$cptb]['template'] = 'oledrion_block_recentlysold.html';
 
 /**
  * Last lists
  */
-$cptb++;
+$cptb++ ;
 $modversion['blocks'][$cptb]['file'] = 'oledrion_recent_lists.php';
 $modversion['blocks'][$cptb]['name'] = _MI_OLEDRION_BNAME11;
 $modversion['blocks'][$cptb]['description'] = "Shows recent public lists";
 $modversion['blocks'][$cptb]['show_func'] = 'b_oledrion_recent_lists_show';
 $modversion['blocks'][$cptb]['edit_func'] = 'b_oledrion_recent_lists_edit';
-$modversion['blocks'][$cptb]['options'] = '10|0';    // Nombre maximum de listes à voir, Type de listes (0 = les 2, 1 = liste cadeaux, 2 = produits recommandés)
+$modversion['blocks'][$cptb]['options'] = '10|0'; // Nombre maximum de listes ï¿½ voir, Type de listes (0 = les 2, 1 = liste cadeaux, 2 = produits recommandï¿½s)
 $modversion['blocks'][$cptb]['template'] = 'oledrion_block_recent_lists.html';
 
 /**
  * My lists
  */
-$cptb++;
+$cptb++ ;
 $modversion['blocks'][$cptb]['file'] = 'oledrion_my_lists.php';
 $modversion['blocks'][$cptb]['name'] = _MI_OLEDRION_BNAME12;
 $modversion['blocks'][$cptb]['description'] = "Shows user's lists";
 $modversion['blocks'][$cptb]['show_func'] = 'b_oledrion_my_lists_show';
 $modversion['blocks'][$cptb]['edit_func'] = 'b_oledrion_my_lists_edit';
-$modversion['blocks'][$cptb]['options'] = '10';	// Nombre maximum de listes à afficher
+$modversion['blocks'][$cptb]['options'] = '10'; // Nombre maximum de listes ï¿½ afficher
 $modversion['blocks'][$cptb]['template'] = 'oledrion_block_my_lists.html';
 
 /**
  * Lists of the current category ("according to the current category")
  */
-$cptb++;
+$cptb++ ;
 $modversion['blocks'][$cptb]['file'] = 'oledrion_categoy_lists.php';
 $modversion['blocks'][$cptb]['name'] = _MI_OLEDRION_BNAME13;
 $modversion['blocks'][$cptb]['description'] = "Shows recent public lists according to the current category";
 $modversion['blocks'][$cptb]['show_func'] = 'b_oledrion_category_lists_show';
 $modversion['blocks'][$cptb]['edit_func'] = 'b_oledrion_category_lists_edit';
-$modversion['blocks'][$cptb]['options'] = '10|0';    // Nombre maximum de listes à voir, Type de listes (0 = les 2, 1 = liste cadeaux, 2 = produits recommandés)
+$modversion['blocks'][$cptb]['options'] = '10|0'; // Nombre maximum de listes ï¿½ voir, Type de listes (0 = les 2, 1 = liste cadeaux, 2 = produits recommandï¿½s)
 $modversion['blocks'][$cptb]['template'] = 'oledrion_block_category_lists.html';
 
 /**
  * Random lists
  */
-$cptb++;
+$cptb++ ;
 $modversion['blocks'][$cptb]['file'] = 'oledrion_random_lists.php';
 $modversion['blocks'][$cptb]['name'] = _MI_OLEDRION_BNAME14;
 $modversion['blocks'][$cptb]['description'] = "Shows random lists";
 $modversion['blocks'][$cptb]['show_func'] = 'b_oledrion_random_lists_show';
 $modversion['blocks'][$cptb]['edit_func'] = 'b_oledrion_random_lists_edit';
-$modversion['blocks'][$cptb]['options'] = '10|0';    // Nombre maximum de listes à voir, Type de listes (0 = les 2, 1 = liste cadeaux, 2 = produits recommandés)
+$modversion['blocks'][$cptb]['options'] = '10|0'; // Nombre maximum de listes ï¿½ voir, Type de listes (0 = les 2, 1 = liste cadeaux, 2 = produits recommandï¿½s)
 $modversion['blocks'][$cptb]['template'] = 'oledrion_block_random_lists.html';
 
 /**
  * Most viewed lists
  */
-$cptb++;
+$cptb++ ;
 $modversion['blocks'][$cptb]['file'] = 'oledrion_mostviewed_lists.php';
 $modversion['blocks'][$cptb]['name'] = _MI_OLEDRION_BNAME15;
 $modversion['blocks'][$cptb]['description'] = "Shows most viewd lists";
 $modversion['blocks'][$cptb]['show_func'] = 'b_oledrion_mostviewed_lists_show';
 $modversion['blocks'][$cptb]['edit_func'] = 'b_oledrion__mostviewed_lists_edit';
-$modversion['blocks'][$cptb]['options'] = '10|0';    // Nombre maximum de listes à voir, Type de listes (0 = les 2, 1 = liste cadeaux, 2 = produits recommandés)
+$modversion['blocks'][$cptb]['options'] = '10|0'; // Nombre maximum de listes ï¿½ voir, Type de listes (0 = les 2, 1 = liste cadeaux, 2 = produits recommandï¿½s)
 $modversion['blocks'][$cptb]['template'] = 'oledrion_block_mostviewed_lists.html';
 
+/*
+ * $options:
+ * $options[0] - number of tags to display
+ * $options[1] - time duration, in days, 0 for all the time
+ * $options[2] - max font size (px or %)
+ * $options[3] - min font size (px or %)
+ */
+$modversion['blocks'][] = array(
+	'file' => 'oledrion_block_tag.php',
+	'name' => _MI_OLEDRION_TAG_CLOUD,
+	'description' => 'Show tag cloud',
+	'show_func' => 'oledrion_tag_block_cloud_show',
+	'edit_func' => 'oledrion_tag_block_cloud_edit',
+	'options' => '100|0|150|80',
+	'template' => 'oledrion_tag_block_cloud.html');
 
 /*
  * $options:
- *					$options[0] - number of tags to display
- *					$options[1] - time duration, in days, 0 for all the time
- *					$options[2] - max font size (px or %)
- *					$options[3] - min font size (px or %)
+ * $options[0] - number of tags to display
+ * $options[1] - time duration, in days, 0 for all the time
+ * $options[2] - sort: a - alphabet; c - count; t - time
  */
-$modversion['blocks'][]	= array(
-	'file'			=> 'oledrion_block_tag.php',
-	'name'			=> _MI_OLEDRION_TAG_CLOUD,
-	'description'	=> 'Show tag cloud',
-	'show_func'		=> 'oledrion_tag_block_cloud_show',
-	'edit_func'		=> 'oledrion_tag_block_cloud_edit',
-	'options'		=> '100|0|150|80',
-	'template'		=> 'oledrion_tag_block_cloud.html',
-	);
-
-/*
- * $options:
- *					$options[0] - number of tags to display
- *					$options[1] - time duration, in days, 0 for all the time
- *					$options[2] - sort: a - alphabet; c - count; t - time
- */
-$modversion['blocks'][]	= array(
-	'file'			=> 'oledrion_block_tag.php',
-	'name'			=> _MI_OLEDRION_TOP_TAGS,
-	'description'	=> 'Show top tags',
-	'show_func'		=> 'oledrion_tag_block_top_show',
-	'edit_func'		=> 'oledrion_tag_block_top_edit',
-	'options'		=> '50|30|c',
-	'template'		=> 'oledrion_tag_block_top.html',
-	);
-
+$modversion['blocks'][] = array(
+	'file' => 'oledrion_block_tag.php',
+	'name' => _MI_OLEDRION_TOP_TAGS,
+	'description' => 'Show top tags',
+	'show_func' => 'oledrion_tag_block_top_show',
+	'edit_func' => 'oledrion_tag_block_top_edit',
+	'options' => '50|30|c',
+	'template' => 'oledrion_tag_block_top.html');
 
 // Menu
 $modversion['hasMain'] = 1;
 $cptm = 0;
 require_once 'class/oledrion_utils.php';
-if(oledrion_utils::getModuleOption('use_price')) {
-	$cptm++;
+if (oledrion_utils::getModuleOption('use_price')) {
+	$cptm++ ;
 	$modversion['sub'][$cptm]['name'] = _MI_OLEDRION_SMNAME1;
 	$modversion['sub'][$cptm]['url'] = 'caddy.php';
 }
 
-$cptm++;
+$cptm++ ;
 $modversion['sub'][$cptm]['name'] = _MI_OLEDRION_SMNAME3;
 $modversion['sub'][$cptm]['url'] = 'category.php';
-$cptm++;
+$cptm++ ;
 $modversion['sub'][$cptm]['name'] = _MI_OLEDRION_SMNAME4;
 $modversion['sub'][$cptm]['url'] = 'categories-map.php';
-$cptm++;
+$cptm++ ;
 $modversion['sub'][$cptm]['name'] = _MI_OLEDRION_SMNAME5;
 $modversion['sub'][$cptm]['url'] = 'whoswho.php';
-$cptm++;
+$cptm++ ;
 $modversion['sub'][$cptm]['name'] = _MI_OLEDRION_SMNAME6;
 $modversion['sub'][$cptm]['url'] = 'all-products.php';
-$cptm++;
+$cptm++ ;
 $modversion['sub'][$cptm]['name'] = _MI_OLEDRION_SMNAME9;
 $modversion['sub'][$cptm]['url'] = 'recommended.php';
-$cptm++;
+$cptm++ ;
 $modversion['sub'][$cptm]['name'] = _MI_OLEDRION_SMNAME7;
 $modversion['sub'][$cptm]['url'] = 'search.php';
-$cptm++;
+$cptm++ ;
 $modversion['sub'][$cptm]['name'] = _MI_OLEDRION_SMNAME8;
 $modversion['sub'][$cptm]['url'] = 'cgv.php';
-$cptm++;
+$cptm++ ;
 $modversion['sub'][$cptm]['name'] = _MI_OLEDRION_SMNAME10;
 $modversion['sub'][$cptm]['url'] = 'my-lists.php';
-$cptm++;
+$cptm++ ;
 $modversion['sub'][$cptm]['name'] = _MI_OLEDRION_SMNAME11;
 $modversion['sub'][$cptm]['url'] = 'all-lists.php';
 
-// Ajout des catégories mères en sous menu ********************************************************
+// Ajout des catï¿½gories mï¿½res en sous menu ********************************************************
 global $xoopsModule;
 if (is_object($xoopsModule) && $xoopsModule->getVar('dirname') == $modversion['dirname'] && $xoopsModule->getVar('isactive')) {
-	if(!isset($h_oledrion_cat)) {
+	if (!isset($h_oledrion_cat)) {
 		$h_oledrion_cat = xoops_getmodulehandler('oledrion_cat', 'oledrion');
 	}
 	$categories = $h_oledrion_cat->getMotherCategories();
-	foreach($categories as $category) {
-		$cptm++;
+	foreach ($categories as $category) {
+		$cptm++ ;
 		$modversion['sub'][$cptm]['name'] = $category->getVar('cat_title');
 		$modversion['sub'][$cptm]['url'] = basename($category->getLink());
 	}
@@ -347,123 +342,123 @@ $modversion['comments']['callback']['update'] = 'oledrion_com_update';
 // Templates
 $cptt = 0;
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_product_price.html';
 $modversion['templates'][$cptt]['description'] = "Used in Ajax to display product's price";
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_chunk.html';
 $modversion['templates'][$cptt]['description'] = '';
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_categories_list.html';
 $modversion['templates'][$cptt]['description'] = '';
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_index.html';
 $modversion['templates'][$cptt]['description'] = '';
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_category.html';
 $modversion['templates'][$cptt]['description'] = '';
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_product.html';
 $modversion['templates'][$cptt]['description'] = '';
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_bill.html';
 $modversion['templates'][$cptt]['description'] = '';
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_caddy.html';
 $modversion['templates'][$cptt]['description'] = '';
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_command.html';
 $modversion['templates'][$cptt]['description'] = '';
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_thankyou.html';
 $modversion['templates'][$cptt]['description'] = '';
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_cgv.html';
 $modversion['templates'][$cptt]['description'] = 'General Conditions Of Sale';
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_search.html';
 $modversion['templates'][$cptt]['description'] = '';
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_rss.html';
 $modversion['templates'][$cptt]['description'] = '';
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_map.html';
 $modversion['templates'][$cptt]['description'] = '';
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_whoswho.html';
 $modversion['templates'][$cptt]['description'] = '';
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_allproducts.html';
 $modversion['templates'][$cptt]['description'] = '';
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_manufacturer.html';
 $modversion['templates'][$cptt]['description'] = '';
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_rate_product.html';
 $modversion['templates'][$cptt]['description'] = '';
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_pdf_catalog.html';
 $modversion['templates'][$cptt]['description'] = '';
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_purchaseorder.html';
 $modversion['templates'][$cptt]['description'] = '';
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_cancelpurchase.html';
 $modversion['templates'][$cptt]['description'] = '';
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_recommended.html';
 $modversion['templates'][$cptt]['description'] = 'Latest recommended products';
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_admin_discounts.html';
 $modversion['templates'][$cptt]['description'] = '';
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_attribute_radio.html';
 $modversion['templates'][$cptt]['description'] = "Template for attributes of type radio";
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_attribute_checkbox.html';
 $modversion['templates'][$cptt]['description'] = "Template for attributes of type checkbox";
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_attribute_select.html';
 $modversion['templates'][$cptt]['description'] = "Template for attributes of type select (listbox)";
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_all_lists.html';
 $modversion['templates'][$cptt]['description'] = "List of all lists";
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_list.html';
 $modversion['templates'][$cptt]['description'] = "Show a list content";
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_mylists.html';
 $modversion['templates'][$cptt]['description'] = "Enable user to manage his/her lists";
 
-$cptt++;
+$cptt++ ;
 $modversion['templates'][$cptt]['file'] = 'oledrion_productsselector.html';
 $modversion['templates'][$cptt]['description'] = "Used to select products";
 
@@ -472,7 +467,7 @@ $modversion['templates'][$cptt]['description'] = "Used to select products";
 // ********************************************************************************************************************
 $cpto = 0;
 
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'newproducts';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_NEWLINKS';
 $modversion['config'][$cpto]['description'] = '_MI_OLEDRION_NEWLINKSDSC';
@@ -480,7 +475,7 @@ $modversion['config'][$cpto]['formtype'] = 'textbox';
 $modversion['config'][$cpto]['valuetype'] = 'int';
 $modversion['config'][$cpto]['default'] = 10;
 
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'perpage';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_PERPAGE';
 $modversion['config'][$cpto]['description'] = '_MI_OLEDRION_PERPAGEDSC';
@@ -491,7 +486,7 @@ $modversion['config'][$cpto]['default'] = 10;
 /**
  * Enable offline payment ?
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'offline_payment';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_OFFLINE_PAYMENT';
 $modversion['config'][$cpto]['description'] = '_MI_OLEDRION_OFF_PAY_DSC';
@@ -502,7 +497,7 @@ $modversion['config'][$cpto]['default'] = 1;
 /**
  * Money, full label
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'money_full';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_MONEY_F';
 $modversion['config'][$cpto]['description'] = '';
@@ -513,18 +508,18 @@ $modversion['config'][$cpto]['default'] = 'euro(s)';
 /**
  * Money, short label
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'money_short';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_MONEY_S';
 $modversion['config'][$cpto]['description'] = '';
 $modversion['config'][$cpto]['formtype'] = 'textbox';
 $modversion['config'][$cpto]['valuetype'] = 'text';
-$modversion['config'][$cpto]['default'] = '€';
+$modversion['config'][$cpto]['default'] = 'ï¿½';
 
 /**
  * Decimals count
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'decimals_count';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_DECIMAL';
 $modversion['config'][$cpto]['description'] = '';
@@ -535,7 +530,7 @@ $modversion['config'][$cpto]['default'] = '2';
 /**
  * Monnaie's place (left or right) ?
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'monnaie_place';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_CONF00';
 $modversion['config'][$cpto]['description'] = '_MI_OLEDRION_CONF00_DSC';
@@ -546,7 +541,7 @@ $modversion['config'][$cpto]['default'] = 1;
 /**
  * Thousands separator
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'thousands_sep';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_CONF04';
 $modversion['config'][$cpto]['description'] = '';
@@ -557,7 +552,7 @@ $modversion['config'][$cpto]['default'] = '[space]';
 /**
  * Decimal separator
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'decimal_sep';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_CONF05';
 $modversion['config'][$cpto]['description'] = '';
@@ -565,11 +560,10 @@ $modversion['config'][$cpto]['formtype'] = 'textbox';
 $modversion['config'][$cpto]['valuetype'] = 'text';
 $modversion['config'][$cpto]['default'] = ',';
 
-
 /**
  * Do you want to use URL rewriting ?
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'urlrewriting';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_URL_REWR';
 $modversion['config'][$cpto]['description'] = '';
@@ -577,33 +571,32 @@ $modversion['config'][$cpto]['formtype'] = 'yesno';
 $modversion['config'][$cpto]['valuetype'] = 'int';
 $modversion['config'][$cpto]['default'] = 0;
 
-
 /**
  * Editor to use
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'bl_form_options';
 $modversion['config'][$cpto]['title'] = "_MI_OLEDRION_FORM_OPTIONS";
 $modversion['config'][$cpto]['description'] = '_MI_OLEDRION_FORM_OPTIONS_DESC';
 $modversion['config'][$cpto]['formtype'] = 'select';
 $modversion['config'][$cpto]['valuetype'] = 'text';
 $modversion['config'][$cpto]['options'] = array(
-											_MI_OLEDRION_FORM_DHTML=>'dhtmltextarea',
-											_MI_OLEDRION_FORM_COMPACT=>'textarea',
-											_MI_OLEDRION_FORM_HTMLAREA=>'htmlarea',
-											_MI_OLEDRION_FORM_KOIVI=>'koivi',
-											_MI_OLEDRION_FORM_FCK=>'fckeditor',
-											_MI_OLEDRION_FORM_TINYEDITOR=>'tinyeditor',
-											'tinymce' => 'tinymce'
-											);
+	_MI_OLEDRION_FORM_DHTML => 'dhtmltextarea',
+	_MI_OLEDRION_FORM_COMPACT => 'textarea',
+	_MI_OLEDRION_FORM_HTMLAREA => 'htmlarea',
+	_MI_OLEDRION_FORM_KOIVI => 'koivi',
+	_MI_OLEDRION_FORM_FCK => 'fckeditor',
+	_MI_OLEDRION_FORM_TINYEDITOR => 'tinyeditor',
+	'tinymce' => 'tinymce');
 $modversion['config'][$cpto]['default'] = 'dhtmltextarea';
 
 /**
  * Tooltips, or infotips are some small textes you can see when you
- * move your mouse over an article's title. This text contains the
+ * move your mouse over an article's title.
+ * This text contains the
  * first (x) characters of the story
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'infotips';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_INFOTIPS';
 $modversion['config'][$cpto]['description'] = '_MI_OLEDRION_INFOTIPS_DES';
@@ -614,7 +607,7 @@ $modversion['config'][$cpto]['default'] = '0';
 /**
  * MAX Filesize Upload in kilo bytes
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'maxuploadsize';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_UPLOADFILESIZE';
 $modversion['config'][$cpto]['description'] = '';
@@ -622,13 +615,13 @@ $modversion['config'][$cpto]['formtype'] = 'textbox';
 $modversion['config'][$cpto]['valuetype'] = 'int';
 $modversion['config'][$cpto]['default'] = 1048576;
 
-
 /**
  * If you set this option to yes then you will see two links at the bottom
- * of each item. The first link will enable you to go to the previous
+ * of each item.
+ * The first link will enable you to go to the previous
  * item and the other link will bring you to the next item
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'showprevnextlink';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_PREVNEX_LINK';
 $modversion['config'][$cpto]['description'] = '_MI_OLEDRION_PREVNEX_LINK_DESC';
@@ -639,7 +632,7 @@ $modversion['config'][$cpto]['default'] = 0;
 /**
  * Display a summary table of the last published products (in all categories) ?
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'summarylast';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_SUMMARY1_SHOW';
 $modversion['config'][$cpto]['description'] = '_MI_OLEDRION_SUMMARY1_SHOW_DESC';
@@ -650,7 +643,7 @@ $modversion['config'][$cpto]['default'] = 10;
 /**
  * Display a summary table of the last published products in the same category ?
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'summarycategory';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_SUMMARY2_SHOW';
 $modversion['config'][$cpto]['description'] = '_MI_OLEDRION_SUMMARY2_SHOW_DESC';
@@ -658,11 +651,10 @@ $modversion['config'][$cpto]['formtype'] = 'textbox';
 $modversion['config'][$cpto]['valuetype'] = 'int';
 $modversion['config'][$cpto]['default'] = 10;
 
-
 /**
  * Better Together ?
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'better_together';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_BEST_TOGETHER';
 $modversion['config'][$cpto]['description'] = '';
@@ -673,7 +665,7 @@ $modversion['config'][$cpto]['default'] = 0;
 /**
  * Display unpublished products ?
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'show_unpublished';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_UNPUBLISHED';
 $modversion['config'][$cpto]['description'] = '';
@@ -681,11 +673,10 @@ $modversion['config'][$cpto]['formtype'] = 'yesno';
 $modversion['config'][$cpto]['valuetype'] = 'int';
 $modversion['config'][$cpto]['default'] = 0;
 
-
 /**
  * METAGEN, Max count of keywords to create
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'metagen_maxwords';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_OPT23';
 $modversion['config'][$cpto]['description'] = '_MI_OLEDRION_OPT23_DSC';
@@ -696,19 +687,22 @@ $modversion['config'][$cpto]['default'] = 40;
 /**
  * METAGEN - Keywords order
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'metagen_order';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_OPT24';
 $modversion['config'][$cpto]['description'] = '';
 $modversion['config'][$cpto]['formtype'] = 'select';
 $modversion['config'][$cpto]['valuetype'] = 'int';
 $modversion['config'][$cpto]['default'] = 5;
-$modversion['config'][$cpto]['options'] = array('_MI_OLEDRION_OPT241' => 0, '_MI_OLEDRION_OPT242' => 1, '_MI_OLEDRION_OPT243' => 2);
+$modversion['config'][$cpto]['options'] = array(
+	'_MI_OLEDRION_OPT241' => 0,
+	'_MI_OLEDRION_OPT242' => 1,
+	'_MI_OLEDRION_OPT243' => 2);
 
 /**
  * METAGEN - Black list
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'metagen_blacklist';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_OPT25';
 $modversion['config'][$cpto]['description'] = '_MI_OLEDRION_OPT25_DSC';
@@ -719,7 +713,7 @@ $modversion['config'][$cpto]['default'] = '';
 /**
  * Do you want to enable your visitors to rate products ?
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'rateproducts';
 $modversion['config'][$cpto]['title'] = "_MI_OLEDRION_RATE";
 $modversion['config'][$cpto]['description'] = '';
@@ -730,7 +724,7 @@ $modversion['config'][$cpto]['default'] = 0;
 /**
  * Global module's Advertisement
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'advertisement';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_ADVERTISEMENT';
 $modversion['config'][$cpto]['description'] = '_MI_OLEDRION_ADV_DESCR';
@@ -738,12 +732,11 @@ $modversion['config'][$cpto]['formtype'] = 'textarea';
 $modversion['config'][$cpto]['valuetype'] = 'text';
 $modversion['config'][$cpto]['default'] = '';
 
-
 /**
  * Mime Types
  * Default values : Web pictures (png, gif, jpeg), zip, pdf, gtar, tar, pdf
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'mimetypes';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_MIMETYPES';
 $modversion['config'][$cpto]['description'] = '';
@@ -751,11 +744,10 @@ $modversion['config'][$cpto]['formtype'] = 'textarea';
 $modversion['config'][$cpto]['valuetype'] = 'text';
 $modversion['config'][$cpto]['default'] = "image/gif\nimage/jpeg\nimage/pjpeg\nimage/x-png\nimage/png\napplication/x-zip-compressed\napplication/zip\napplication/pdf\napplication/x-gtar\napplication/x-tar";
 
-
 /**
  * Group of users to which send an email when a product's stock is low (if nothing is typed then there's no alert)
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'stock_alert_email';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_STOCK_EMAIL';
 $modversion['config'][$cpto]['description'] = '_MI_OLEDRION_STOCK_EMAIL_DSC';
@@ -763,35 +755,32 @@ $modversion['config'][$cpto]['formtype'] = 'group';
 $modversion['config'][$cpto]['valuetype'] = 'int';
 $modversion['config'][$cpto]['default'] = 0;
 
-
 /**
  * Group of users to wich send an email when a product is sold
  */
-$cpto++;
-$modversion['config'][$cpto]['name']= 'grp_sold';
+$cpto++ ;
+$modversion['config'][$cpto]['name'] = 'grp_sold';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_GRP_SOLD';
 $modversion['config'][$cpto]['description'] = '';
 $modversion['config'][$cpto]['formtype'] = 'group';
 $modversion['config'][$cpto]['valuetype'] = 'int';
 $modversion['config'][$cpto]['default'] = 0;
 
-
 /**
  * Group of users authorized to modify products quantities from the product page
  */
-$cpto++;
-$modversion['config'][$cpto]['name']= 'grp_qty';
+$cpto++ ;
+$modversion['config'][$cpto]['name'] = 'grp_qty';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_GRP_QTY';
 $modversion['config'][$cpto]['description'] = '';
 $modversion['config'][$cpto]['formtype'] = 'group';
 $modversion['config'][$cpto]['valuetype'] = 'int';
 $modversion['config'][$cpto]['default'] = 0;
 
-
 /**
  * Display products when there are no more products ?
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'nostock_display';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_NO_MORE';
 $modversion['config'][$cpto]['description'] = '';
@@ -802,7 +791,7 @@ $modversion['config'][$cpto]['default'] = 1;
 /**
  * Message to display when there's not more quantity for a product ?
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'nostock_msg';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_MSG_NOMORE';
 $modversion['config'][$cpto]['description'] = '';
@@ -813,7 +802,7 @@ $modversion['config'][$cpto]['default'] = '';
 /**
  * Use RSS Feeds ?
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'use_rss';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_OPT7';
 $modversion['config'][$cpto]['description'] = '_MI_OLEDRION_OPT7_DSC';
@@ -824,7 +813,7 @@ $modversion['config'][$cpto]['default'] = 1;
 /**
  * Enable PDF Catalog ?
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'pdf_catalog';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_PDF_CATALOG';
 $modversion['config'][$cpto]['description'] = '';
@@ -835,7 +824,7 @@ $modversion['config'][$cpto]['default'] = 1;
 /**
  * Enter meta data manually ?
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'manual_meta';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_MANUAL_META';
 $modversion['config'][$cpto]['description'] = '';
@@ -846,7 +835,7 @@ $modversion['config'][$cpto]['default'] = 0;
 /**
  * Count of visible items in the module's administration
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'items_count';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_ITEMSCNT';
 $modversion['config'][$cpto]['description'] = '';
@@ -857,7 +846,7 @@ $modversion['config'][$cpto]['default'] = 15;
 /**
  * Use the price field ?
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'use_price';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_USE_PRICE';
 $modversion['config'][$cpto]['description'] = '_MI_OLEDRION_USE_PRICE_DSC';
@@ -868,7 +857,7 @@ $modversion['config'][$cpto]['default'] = 1;
 /**
  * Use the persistent cart ?
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'persistent_cart';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_PERSISTENT_CART';
 $modversion['config'][$cpto]['description'] = '_MI_OLEDRION_PERSISTENT_CART_DSC';
@@ -879,7 +868,7 @@ $modversion['config'][$cpto]['default'] = 1;
 /**
  * Restrict orders to registred users ?
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'restrict_orders';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_RESTRICT_ORDERS';
 $modversion['config'][$cpto]['description'] = '_MI_OLEDRION_RESTRICT_ORDERS_DSC';
@@ -890,7 +879,7 @@ $modversion['config'][$cpto]['default'] = 0;
 /**
  * Do you want to automatically resize the main picture of each product ?
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'resize_main';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_RESIZE_MAIN';
 $modversion['config'][$cpto]['description'] = '_MI_OLEDRION_RESIZE_MAIN_DSC';
@@ -901,7 +890,7 @@ $modversion['config'][$cpto]['default'] = 0;
 /**
  * Create thumbs automatically ?
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'create_thumbs';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_CREATE_THUMBS';
 $modversion['config'][$cpto]['description'] = '_MI_OLEDRION_CREATE_THUMBS_DSC';
@@ -912,32 +901,30 @@ $modversion['config'][$cpto]['default'] = 0;
 /**
  * Images width
  */
-$cpto++;
-$modversion['config'][$cpto]['name']= 'images_width';
+$cpto++ ;
+$modversion['config'][$cpto]['name'] = 'images_width';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_IMAGES_WIDTH';
 $modversion['config'][$cpto]['description'] = '';
 $modversion['config'][$cpto]['formtype'] = 'textbox';
 $modversion['config'][$cpto]['valuetype'] = 'int';
 $modversion['config'][$cpto]['default'] = 150;
 
-
 /**
  * Images height
  */
-$cpto++;
-$modversion['config'][$cpto]['name']= 'images_height';
+$cpto++ ;
+$modversion['config'][$cpto]['name'] = 'images_height';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_IMAGES_HEIGHT';
 $modversion['config'][$cpto]['description'] = '';
 $modversion['config'][$cpto]['formtype'] = 'textbox';
 $modversion['config'][$cpto]['valuetype'] = 'int';
 $modversion['config'][$cpto]['default'] = 150;
 
-
 /**
  * Thumbs width
  */
-$cpto++;
-$modversion['config'][$cpto]['name']= 'thumbs_width';
+$cpto++ ;
+$modversion['config'][$cpto]['name'] = 'thumbs_width';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_THUMBS_WIDTH';
 $modversion['config'][$cpto]['description'] = '';
 $modversion['config'][$cpto]['formtype'] = 'textbox';
@@ -947,8 +934,8 @@ $modversion['config'][$cpto]['default'] = 80;
 /**
  * Thumbs height
  */
-$cpto++;
-$modversion['config'][$cpto]['name']= 'thumbs_height';
+$cpto++ ;
+$modversion['config'][$cpto]['name'] = 'thumbs_height';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_THUMBS_HEIGHT';
 $modversion['config'][$cpto]['description'] = '';
 $modversion['config'][$cpto]['formtype'] = 'textbox';
@@ -958,7 +945,7 @@ $modversion['config'][$cpto]['default'] = 80;
 /**
  * Do you also want to resize categories'pictures to the above dimensions ?
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'resize_others';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_RESIZE_CATEGORIES';
 $modversion['config'][$cpto]['description'] = '';
@@ -969,7 +956,7 @@ $modversion['config'][$cpto]['default'] = 0;
 /**
  * Multiply Shipping by product's quantity ?
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'shipping_quantity';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_SHIPPING_QUANTITY';
 $modversion['config'][$cpto]['description'] = '';
@@ -980,7 +967,7 @@ $modversion['config'][$cpto]['default'] = 1;
 /**
  * Use tags ?
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'use_tags';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_USE_TAGS';
 $modversion['config'][$cpto]['description'] = '';
@@ -990,9 +977,10 @@ $modversion['config'][$cpto]['default'] = 0;
 
 /**
  * Ask for VAT number ?
+ *
  * @since 2.3.2009.03.09
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'ask_vatnumber';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_ASK_VAT_NUMBER';
 $modversion['config'][$cpto]['description'] = '';
@@ -1002,9 +990,10 @@ $modversion['config'][$cpto]['default'] = 0;
 
 /**
  * Use stocks in products attributes ?
+ *
  * @since 2.3.2009.03.11
  */
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'attributes_stocks';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_USE_STOCK_ATTRIBUTES';
 $modversion['config'][$cpto]['description'] = '';
@@ -1012,7 +1001,7 @@ $modversion['config'][$cpto]['formtype'] = 'yesno';
 $modversion['config'][$cpto]['valuetype'] = 'int';
 $modversion['config'][$cpto]['default'] = 1;
 
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'index_colums';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_COLUMNS_INDEX';
 $modversion['config'][$cpto]['description'] = '';
@@ -1020,7 +1009,7 @@ $modversion['config'][$cpto]['formtype'] = 'textbox';
 $modversion['config'][$cpto]['valuetype'] = 'int';
 $modversion['config'][$cpto]['default'] = 1;
 
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'catagory_colums';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_COLUMNS_CATEGORY';
 $modversion['config'][$cpto]['description'] = '';
@@ -1028,7 +1017,7 @@ $modversion['config'][$cpto]['formtype'] = 'textbox';
 $modversion['config'][$cpto]['valuetype'] = 'int';
 $modversion['config'][$cpto]['default'] = 1;
 
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'max_products';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_ADAPTED_LIST';
 $modversion['config'][$cpto]['description'] = '';
@@ -1039,7 +1028,7 @@ $modversion['config'][$cpto]['default'] = 200;
 // ************************************************************************************************
 // ************************* Hidden settings ******************************************************
 // ************************************************************************************************
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'chunk1';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_CHUNK1';
 $modversion['config'][$cpto]['description'] = '';
@@ -1047,7 +1036,7 @@ $modversion['config'][$cpto]['formtype'] = 'hidden';
 $modversion['config'][$cpto]['valuetype'] = 'int';
 $modversion['config'][$cpto]['default'] = 1;
 
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'chunk2';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_CHUNK2';
 $modversion['config'][$cpto]['description'] = '';
@@ -1055,7 +1044,7 @@ $modversion['config'][$cpto]['formtype'] = 'hidden';
 $modversion['config'][$cpto]['valuetype'] = 'int';
 $modversion['config'][$cpto]['default'] = 2;
 
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'chunk3';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_CHUNK3';
 $modversion['config'][$cpto]['description'] = '';
@@ -1063,7 +1052,7 @@ $modversion['config'][$cpto]['formtype'] = 'hidden';
 $modversion['config'][$cpto]['valuetype'] = 'int';
 $modversion['config'][$cpto]['default'] = 3;
 
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'chunk4';
 $modversion['config'][$cpto]['title'] = '_MI_OLEDRION_CHUNK4';
 $modversion['config'][$cpto]['description'] = '';
@@ -1071,14 +1060,13 @@ $modversion['config'][$cpto]['formtype'] = 'hidden';
 $modversion['config'][$cpto]['valuetype'] = 'int';
 $modversion['config'][$cpto]['default'] = 4;
 
-$cpto++;
+$cpto++ ;
 $modversion['config'][$cpto]['name'] = 'used_gateway';
 $modversion['config'][$cpto]['title'] = "Gateway used by the module";
 $modversion['config'][$cpto]['description'] = '';
 $modversion['config'][$cpto]['formtype'] = 'hidden';
 $modversion['config'][$cpto]['valuetype'] = 'text';
 $modversion['config'][$cpto]['default'] = 'paypal';
-
 
 // ************************************************************************************************
 // Notifications **********************************************************************************
@@ -1090,7 +1078,12 @@ $modversion['notification']['lookup_func'] = 'oledrion_notify_iteminfo';
 $modversion['notification']['category'][1]['name'] = 'global';
 $modversion['notification']['category'][1]['title'] = _MI_OLEDRION_GLOBAL_NOTIFY;
 $modversion['notification']['category'][1]['description'] = _MI_OLEDRION_GLOBAL_NOTIFYDSC;
-$modversion['notification']['category'][1]['subscribe_from'] = array('index.php','category.php','product.php', 'categories-map.php', 'all-products.php');
+$modversion['notification']['category'][1]['subscribe_from'] = array(
+	'index.php',
+	'category.php',
+	'product.php',
+	'categories-map.php',
+	'all-products.php');
 
 $modversion['notification']['event'][1]['name'] = 'new_category';
 $modversion['notification']['event'][1]['category'] = 'global';

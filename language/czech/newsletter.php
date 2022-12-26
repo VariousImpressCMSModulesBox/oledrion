@@ -1,5 +1,5 @@
 <?php
-$newsletterTemplate =<<<contentend
+$newsletterTemplate = <<<contentend
 Název zboží : %title%
 Kategorie : %category%
 Výrobce : %author%

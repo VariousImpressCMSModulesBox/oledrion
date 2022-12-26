@@ -1,8 +1,9 @@
 <?php
+
 /**
  * ****************************************************************************
  * oledrion - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * Copyright (c) Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
  *
  * You may not change or alter any portion of this comment or credits
  * of supporting developers from this source code or any supporting source code
@@ -11,114 +12,112 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- *
- * Version : $Id:
- * ****************************************************************************
+ * @copyright Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ *        
+ *         Version : $Id:
+ *         ****************************************************************************
  */
 
 /**
- * Calcul du panier et de ses réductions en fonction des règles de remises
- * Cette classe ne gère pas de fichier (elle sert uniquement aux calculs)
+ * Calcul du panier et de ses rï¿½ductions en fonction des rï¿½gles de remises
+ * Cette classe ne gï¿½re pas de fichier (elle sert uniquement aux calculs)
  *
- * Détail des tableaux :
- * categoriesProductsCount => Nombre de produits par catégorie
- * [clé] = Id Catégorie, [valeur] = Nombre de produits
+ * Dï¿½tail des tableaux :
+ * categoriesProductsCount => Nombre de produits par catï¿½gorie
+ * [clï¿½] = Id Catï¿½gorie, [valeur] = Nombre de produits
  *
- * categoriesProductsQuantities => Quantités de produits par catégorie
- * [clé] = Id Catégorie, [valeur] = Quantité de produits
+ * categoriesProductsQuantities => Quantitï¿½s de produits par catï¿½gorie
+ * [clï¿½] = Id Catï¿½gorie, [valeur] = Quantitï¿½ de produits
  *
- * totalProductsQuantities => Quantité totale de tous les produits
+ * totalProductsQuantities => Quantitï¿½ totale de tous les produits
  *
  * associatedManufacturers => Contient la liste des ID uniques de produits
- * [clé] = Id Produit, [valeur] = Id produit
+ * [clï¿½] = Id Produit, [valeur] = Id produit
  *
  * associatedVendors => Contient la liste des vendeurs de produits
- * [clé] = Id Vendeur, [valeur] = Id Vendeur
+ * [clï¿½] = Id Vendeur, [valeur] = Id Vendeur
  *
  * associatedAttributesPerProduct => Contient les attributs de chaque produit
- * [clé] = Id Produit, [valeurS] = Tous les attributs du produit sous la forme d'objets de type Attributs
+ * [clï¿½] = Id Produit, [valeurS] = Tous les attributs du produit sous la forme d'objets de type Attributs
  *
- * associatedCategories => Contient la liste des ID de catégories
- * [clé] = Id Catégorie, [valeur] = Id Catégorie
+ * associatedCategories => Contient la liste des ID de catï¿½gories
+ * [clï¿½] = Id Catï¿½gorie, [valeur] = Id Catï¿½gorie
  *
- * totalAmountBeforeDiscounts => Montant total de la commande avant les réductions
+ * totalAmountBeforeDiscounts => Montant total de la commande avant les rï¿½ductions
  *
  * associatedManufacturersPerProduct => Contient la liste des ID des fabricants par produit
- * [clé] = Id produit, [valeur] = array(Ids des fabricants)
+ * [clï¿½] = Id produit, [valeur] = array(Ids des fabricants)
  *
- * Les 3 tableaux suivants évoluent ensuite comme ceci :
+ * Les 3 tableaux suivants ï¿½voluent ensuite comme ceci :
  * associatedManufacturers => Tableau d'objets de type Fabricants
- * [clé] = id Fabricant [valeur] = Fabricant sous la forme d'un objet
+ * [clï¿½] = id Fabricant [valeur] = Fabricant sous la forme d'un objet
  *
  * associatedVendors => Tableau d'ojets de type Vendeurs
- * [clé] = Id Vendeur [valeur] = Vendeur sous la forme d'un objet
+ * [clï¿½] = Id Vendeur [valeur] = Vendeur sous la forme d'un objet
  *
  * associatedCategories => Tableau d'objets de type Categories
- * [clé] = Id Catégorie [valeur] = Catéagorie sous la forme d'un objet
- *
+ * [clï¿½] = Id Catï¿½gorie [valeur] = Catï¿½agorie sous la forme d'un objet
  */
-class oledrion_reductions
-{
-	// Ne contient que la liste des règles actives au moment du calcul
+class oledrion_reductions {
+	// Ne contient que la liste des rï¿½gles actives au moment du calcul
 	private $allActiveRules = array();
 
-	// Nombre de produits par catégorie
+	// Nombre de produits par catï¿½gorie
 	private $categoriesProductsCount = array();
 
-	// Quantité de produits par catégorie
+	// Quantitï¿½ de produits par catï¿½gorie
 	private $categoriesProductsQuantities = array();
 
 	/**
-	 * le caddy en mémoire
-	 * 	$cart['number'] = Indice du produit
-	 * 	$cart['id'] = Identifiant du produit
-	 * 	$cart['qty'] = Quantité voulue
-	 *  $cart['product'] = L'objet produit correspondant au panier
+	 * le caddy en mï¿½moire
+	 * $cart['number'] = Indice du produit
+	 * $cart['id'] = Identifiant du produit
+	 * $cart['qty'] = Quantitï¿½ voulue
+	 * $cart['product'] = L'objet produit correspondant au panier
 	 */
 	private $cart = array();
 
 	/**
-	 * Le caddy pour le template. Consulter les détails du caddy dans la métode ComputeCart
+	 * Le caddy pour le template.
+	 * Consulter les dï¿½tails du caddy dans la mï¿½tode ComputeCart
 	 */
 	private $cartForTemplate = array();
 
 	/**
-	 * Les règles à appliquer à la fin, sur l'intégralité du panier
+	 * Les rï¿½gles ï¿½ appliquer ï¿½ la fin, sur l'intï¿½gralitï¿½ du panier
 	 */
 	private $rulesForTheWhole = array();
 
-	// Le total des quantités de produits avant les réductions
+	// Le total des quantitï¿½s de produits avant les rï¿½ductions
 	private $totalProductsQuantities = 0;
-	// Montant total de la commande avant les réductions
+	// Montant total de la commande avant les rï¿½ductions
 	private $totalAmountBeforeDiscounts = 0;
 
 	// Handlers vers les tables du module
 	private $handlers;
 
-	// Les fabricants associés aux produits du panier
+	// Les fabricants associï¿½s aux produits du panier
 	private $associatedManufacturers = array();
 
-	// Les vendeur associés aux produits du panier
+	// Les vendeur associï¿½s aux produits du panier
 	private $associatedVendors = array();
 
-	// Les catégories associées aux produits du panier
+	// Les catï¿½gories associï¿½es aux produits du panier
 	private $associatedCategories = array();
 
-	// Fabricants associés par produit du panier
+	// Fabricants associï¿½s par produit du panier
 	private $associatedManufacturersPerProduct = array();
 
 	// Attributs par produit du panier
 	private $associatedAttributesPerProduct = array();
 
 	/**
-	 * Chargement des handlers et des règles actives
+	 * Chargement des handlers et des rï¿½gles actives
 	 */
-	function __construct()
-	{
+	function __construct() {
 		$this->initHandlers();
 		$this->loadAllActiveRules();
 	}
@@ -126,17 +125,14 @@ class oledrion_reductions
 	/**
 	 * Chargement des handlers
 	 */
-	private function initHandlers()
-	{
+	private function initHandlers() {
 		$this->handlers = oledrion_handler::getInstance();
 	}
 
-
 	/**
-	 * Chargement de toutes les règles actives de réductions (sans date définie ou avec une période correspondante à aujourd'hui)
+	 * Chargement de toutes les rï¿½gles actives de rï¿½ductions (sans date dï¿½finie ou avec une pï¿½riode correspondante ï¿½ aujourd'hui)
 	 */
-	function loadAllActiveRules()
-	{
+	function loadAllActiveRules() {
 		$critere = new CriteriaCompo();
 		$critere1 = new CriteriaCompo();
 		$critere1->add(new Criteria('disc_date_from', 0, '='));
@@ -151,100 +147,93 @@ class oledrion_reductions
 		$this->allActiveRules = $this->handlers->h_oledrion_discounts->getObjects($critere);
 	}
 
-
 	/**
-	 * Calcul des quantités de produits par catégorie et du nombre de produits par catégorie
+	 * Calcul des quantitï¿½s de produits par catï¿½gorie et du nombre de produits par catï¿½gorie
 	 *
 	 * @param oledrion_products $product
 	 * @param integer $quantity
 	 */
-	function computePerCategories(oledrion_products $product, $quantity)
-	{
-        // Nombre de produits par catégories
-		if(isset($this->categoriesProductsCount[$product->product_cid])) {
+	function computePerCategories(oledrion_products $product, $quantity) {
+		// Nombre de produits par catï¿½gories
+		if (isset($this->categoriesProductsCount[$product->product_cid])) {
 			$this->categoriesProductsCount[$product->product_cid] += 1;
 		} else {
 			$this->categoriesProductsCount[$product->product_cid] = 1;
 		}
 
-		// Mise à jour des quantités par catégories
-		if(isset($this->categoriesProductsQuantities[$product->product_cid])) {
+		// Mise ï¿½ jour des quantitï¿½s par catï¿½gories
+		if (isset($this->categoriesProductsQuantities[$product->product_cid])) {
 			$this->categoriesProductsQuantities[$product->product_cid] += $quantity;
 		} else {
 			$this->categoriesProductsQuantities[$product->product_cid] = $quantity;
 		}
-		$this->totalProductsQuantities += $quantity;	// Quantité totale de tous les produits
+		$this->totalProductsQuantities += $quantity; // Quantitï¿½ totale de tous les produits
 	}
 
 	/**
-	 * Ajoute à un tableau interne, le fabricant associé à un produit
+	 * Ajoute ï¿½ un tableau interne, le fabricant associï¿½ ï¿½ un produit
 	 *
 	 * @param oledrion_products $product
 	 */
-	private function addAssociatedManufacturers(oledrion_products $product)
-	{
-		if(!isset($this->associatedManufacturers[$product->product_id])) {
+	private function addAssociatedManufacturers(oledrion_products $product) {
+		if (!isset($this->associatedManufacturers[$product->product_id])) {
 			$this->associatedManufacturers[$product->product_id] = $product->product_id;
 		}
 	}
 
 	/**
-	 * Recherche des attributs associés à chaque produit
+	 * Recherche des attributs associï¿½s ï¿½ chaque produit
 	 *
 	 * @param oledrion_products $product
 	 * @param attray $attributes
 	 * @since 2.3
 	 */
-	private function addAssociatedAttributes(oledrion_products $product, $attributes)
-	{
-		if(!isset($this->associatedAttributesPerProduct[$product->product_id])) {
+	private function addAssociatedAttributes(oledrion_products $product, $attributes) {
+		if (!isset($this->associatedAttributesPerProduct[$product->product_id])) {
 			$this->associatedAttributesPerProduct[$product->product_id] = $product->getProductsAttributesList($attributes);
 		}
 	}
 
 	/**
-	 * Ajoute à un tableau interne, le vendeur associé à un produit
+	 * Ajoute ï¿½ un tableau interne, le vendeur associï¿½ ï¿½ un produit
 	 *
 	 * @param oledrion_products $product
 	 */
-	private function addAssociatedVendors(oledrion_products $product)
-	{
-		if(!isset($this->associatedVendors[$product->product_vendor_id])) {
+	private function addAssociatedVendors(oledrion_products $product) {
+		if (!isset($this->associatedVendors[$product->product_vendor_id])) {
 			$this->associatedVendors[$product->product_vendor_id] = $product->product_vendor_id;
 		}
 	}
 
 	/**
-	 * Ajoute à un tableau interne, la catégorie associée à un produit
+	 * Ajoute ï¿½ un tableau interne, la catï¿½gorie associï¿½e ï¿½ un produit
 	 *
 	 * @param oledrion_products $product
 	 */
-	private function addAssociatedCategories(oledrion_products $product)
-	{
-		if(!isset($this->associatedCategories[$product->product_cid])) {
+	private function addAssociatedCategories(oledrion_products $product) {
+		if (!isset($this->associatedCategories[$product->product_cid])) {
 			$this->associatedCategories[$product->product_cid] = $product->product_cid;
 		}
 	}
 
 	/**
-	 * Charge les fabricants associés aux produits du panier
+	 * Charge les fabricants associï¿½s aux produits du panier
 	 */
-	private function loadAssociatedManufacturers()
-	{
-		if(count($this->associatedManufacturers) > 0) {
+	private function loadAssociatedManufacturers() {
+		if (count($this->associatedManufacturers) > 0) {
 			sort($this->associatedManufacturers);
 			$productsIds = $this->associatedManufacturers;
-			$this->associatedManufacturers = array();	// au cas où cela échouerait
+			$this->associatedManufacturers = array(); // au cas oï¿½ cela ï¿½chouerait
 			$productsManufacturers = $manufacturersIds = array();
 			$productsManufacturers = $this->handlers->h_oledrion_productsmanu->getFromProductsIds($productsIds);
-			if(count($productsManufacturers) > 0) {
-				foreach($productsManufacturers as $productManufacturer) {
-					if(!isset($manufacturersIds[$productManufacturer->pm_manu_id])) {
+			if (count($productsManufacturers) > 0) {
+				foreach ($productsManufacturers as $productManufacturer) {
+					if (!isset($manufacturersIds[$productManufacturer->pm_manu_id])) {
 						$manufacturersIds[$productManufacturer->pm_manu_id] = $productManufacturer->pm_manu_id;
 					}
 					$this->associatedManufacturersPerProduct[$productManufacturer->pm_product_id][] = $productManufacturer->pm_manu_id;
 				}
-				if(count($manufacturersIds) > 0) {
+				if (count($manufacturersIds) > 0) {
 					sort($manufacturersIds);
 					$this->associatedManufacturers = $this->handlers->h_oledrion_manufacturer->getManufacturersFromIds($manufacturersIds);
 				}
@@ -253,11 +242,10 @@ class oledrion_reductions
 	}
 
 	/**
-	 * Charge la liste des vendeurs associés aux produits
+	 * Charge la liste des vendeurs associï¿½s aux produits
 	 */
-	private function loadAssociatedVendors()
-	{
-		if(count($this->associatedVendors) > 0) {
+	private function loadAssociatedVendors() {
+		if (count($this->associatedVendors) > 0) {
 			sort($this->associatedVendors);
 			$ids = $this->associatedVendors;
 			$this->associatedVendors = $this->handlers->h_oledrion_vendors->getVendorsFromIds($ids);
@@ -265,11 +253,10 @@ class oledrion_reductions
 	}
 
 	/**
-	 * Charge les catégories associées aux produits du panier
+	 * Charge les catï¿½gories associï¿½es aux produits du panier
 	 */
-	private function loadAssociatedCategories()
-	{
-		if(count($this->associatedCategories) > 0) {
+	private function loadAssociatedCategories() {
+		if (count($this->associatedCategories) > 0) {
 			sort($this->associatedCategories);
 			$ids = $this->associatedCategories;
 			$this->associatedCategories = $this->handlers->h_oledrion_cat->getCategoriesFromIds($ids);
@@ -277,22 +264,20 @@ class oledrion_reductions
 	}
 
 	/**
-	 * Recherche les fabricants, catégories et vendeurs associés à chaque produit
+	 * Recherche les fabricants, catï¿½gories et vendeurs associï¿½s ï¿½ chaque produit
 	 */
-	function loadElementsAssociatedToProducts()
-	{
+	function loadElementsAssociatedToProducts() {
 		$this->loadAssociatedManufacturers();
 		$this->loadAssociatedVendors();
 		$this->loadAssociatedCategories();
 	}
 
 	/**
-	 * Recherche les (objets) produits associés à chaque produit du panier (et lance le calcul des quantités)
+	 * Recherche les (objets) produits associï¿½s ï¿½ chaque produit du panier (et lance le calcul des quantitï¿½s)
 	 */
-	function loadProductsAssociatedToCart()
-	{
+	function loadProductsAssociatedToCart() {
 		$newCart = array();
-		foreach($this->cart as $cartProduct) {
+		foreach ($this->cart as $cartProduct) {
 			$data = array();
 			$data['id'] = $cartProduct['id'];
 			$data['number'] = $cartProduct['number'];
@@ -301,28 +286,28 @@ class oledrion_reductions
 
 			$product = null;
 			$product = $this->handlers->h_oledrion_products->get($data['id']);
-			if(!is_object($product)) {
+			if (!is_object($product)) {
 				trigger_error(_OLEDRION_ERROR9);
-				continue;	// Pour éviter le cas de la suppression d'un produit (dans l'admin) alors qu'un client l'a toujours dans son panier (et donc en session)
+				continue; // Pour ï¿½viter le cas de la suppression d'un produit (dans l'admin) alors qu'un client l'a toujours dans son panier (et donc en session)
 			}
 			$data['product'] = $product;
-			// Mise à jour des calculs par catégorie
+			// Mise ï¿½ jour des calculs par catï¿½gorie
 			$this->computePerCategories($product, $data['qty']);
-			// Recherche des éléments associés à chaque produit
+			// Recherche des ï¿½lï¿½ments associï¿½s ï¿½ chaque produit
 			$this->addAssociatedManufacturers($product);
 			$this->addAssociatedVendors($product);
 			$this->addAssociatedAttributes($product, $data['attributes']);
 			$this->addAssociatedCategories($product);
 
-			// Calcul du total de la commande avant réductions
-			if(floatval($product->getVar('product_discount_price', 'n')) > 0) {
+			// Calcul du total de la commande avant rï¿½ductions
+			if (floatval($product->getVar('product_discount_price', 'n')) > 0) {
 				$ht = floatval($product->getVar('product_discount_price', 'n'));
 			} else {
 				$ht = floatval($product->getVar('product_price', 'n'));
 			}
 			// S'il y a des options, on rajoute leur montant
-			if(is_array($data['attributes']) && count($data['attributes']) > 0) {
-                $ht += $this->handlers->h_oledrion_attributes->getProductOptionsPrice($data['attributes'], $product->getVar('product_vat_id'));
+			if (is_array($data['attributes']) && count($data['attributes']) > 0) {
+				$ht += $this->handlers->h_oledrion_attributes->getProductOptionsPrice($data['attributes'], $product->getVar('product_vat_id'));
 			}
 
 			$this->totalAmountBeforeDiscounts += ($data['qty'] * $ht);
@@ -334,22 +319,20 @@ class oledrion_reductions
 	}
 
 	/**
-	 * Calcul du montant HT auquel on applique un pourcentage de réduction
+	 * Calcul du montant HT auquel on applique un pourcentage de rï¿½duction
 	 *
-	 * @param float $price	Le prix auquel appliquer la réduction
-	 * @param integer $discount	Le pourcentage de réduction
-	 * @return float	Le montant réduit
+	 * @param float $price Le prix auquel appliquer la rï¿½duction
+	 * @param integer $discount Le pourcentage de rï¿½duction
+	 * @return float Le montant rï¿½duit
 	 */
-	private function getDiscountedPrice($price, $discount)
-	{
-		return floatval($price - ($price * ($discount/100)));
+	private function getDiscountedPrice($price, $discount) {
+		return floatval($price - ($price * ($discount / 100)));
 	}
 
 	/**
-	 * Remise à zéro des membres internes
+	 * Remise ï¿½ zï¿½ro des membres internes
 	 */
-	private function initializePrivateData()
-	{
+	private function initializePrivateData() {
 		$this->totalProductsQuantities = 0;
 		$this->totalAmountBeforeDiscounts = 0;
 		$this->rulesForTheWhole = array();
@@ -365,27 +348,26 @@ class oledrion_reductions
 	 * Calcul de la facture en fonction du panier
 	 * Contenu du panier en session :
 	 *
-	 * 	$datas['number'] = Indice du produit dans le panier
-	 * 	$datas['id'] = Identifiant du produit dans la base
-	 * 	$datas['qty'] = Quantité voulue
-	 *  $datas['attributes'] = Attributs produit array('attr_id' => id attribut, 'values' => array(valueId1, valueId2 ...))
+	 * $datas['number'] = Indice du produit dans le panier
+	 * $datas['id'] = Identifiant du produit dans la base
+	 * $datas['qty'] = Quantitï¿½ voulue
+	 * $datas['attributes'] = Attributs produit array('attr_id' => id attribut, 'values' => array(valueId1, valueId2 ...))
 	 *
-	 * En variable privé, le panier (dans $cart) contient la même chose + un objet 'oledrion_products' dans la clé 'product'
+	 * En variable privï¿½, le panier (dans $cart) contient la mï¿½me chose + un objet 'oledrion_products' dans la clï¿½ 'product'
 	 *
-	 * @param array $cartForTemplate Contenu du caddy à passer au template (en fait la liste des produits)
+	 * @param array $cartForTemplate Contenu du caddy ï¿½ passer au template (en fait la liste des produits)
 	 * @param boolean emptyCart Indique si le panier est vide ou pas
 	 * @param float $shippingAmount Montant des frais de port
 	 * @param float $commandAmount Montant HT de la commande
 	 * @param float $vatAmount Montant de la TVA
-	 * @param string $goOn Adresse vers laquelle renvoyer le visiteur après qu'il ait ajouté un produit dans son panier (cela correspond en fait à la catégorie du dernier produit ajouté dans le panier)
+	 * @param string $goOn Adresse vers laquelle renvoyer le visiteur aprï¿½s qu'il ait ajoutï¿½ un produit dans son panier (cela correspond en fait ï¿½ la catï¿½gorie du dernier produit ajoutï¿½ dans le panier)
 	 * @param float $commandAmountTTC Montant TTC de la commande
-	 * @param array $discountsDescription Descriptions des remises GLOBALES appliquées (et pas les remises par produit !)
-	 * @param integer $discountsCount	Le nombre TOTAL de réductions appliquées (individuellement ou sur la globalité du panier)
-	 *
-	 * TODO: Passer les paramètres sous forme d'objet
+	 * @param array $discountsDescription Descriptions des remises GLOBALES appliquï¿½es (et pas les remises par produit !)
+	 * @param integer $discountsCount Le nombre TOTAL de rï¿½ductions appliquï¿½es (individuellement ou sur la globalitï¿½ du panier)
+	 *       
+	 *        TODO: Passer les paramï¿½tres sous forme d'objet
 	 */
-	function computeCart(&$cartForTemplate, &$emptyCart, &$shippingAmount, &$commandAmount, &$vatAmount, &$goOn, &$commandAmountTTC, &$discountsDescription, &$discountsCount)
-	{
+	function computeCart(&$cartForTemplate, &$emptyCart, &$shippingAmount, &$commandAmount, &$vatAmount, &$goOn, &$commandAmountTTC, &$discountsDescription, &$discountsCount) {
 		$emptyCart = false;
 		$goOn = '';
 		$vats = array();
@@ -393,40 +375,39 @@ class oledrion_reductions
 		$discountsCount = 0;
 		$this->cart = isset($_SESSION[OledrionOledrion_caddyHandler::CADDY_NAME]) ? $_SESSION[OledrionOledrion_caddyHandler::CADDY_NAME] : array();
 		$cartCount = count($this->cart);
-		if( $cartCount == 0 ) {
+		if ($cartCount == 0) {
 			$emptyCart = true;
 			return true;
 		}
 
-		// Réinitialisation des données privées
+		// Rï¿½initialisation des donnï¿½es privï¿½es
 		$this->initializePrivateData();
-		// Chargement des objets produits associés aux produits du panier et calcul des quantités par catégorie
+		// Chargement des objets produits associï¿½s aux produits du panier et calcul des quantitï¿½s par catï¿½gorie
 		$this->loadProductsAssociatedToCart();
 		// Chargement des TVA
 		$vats = $this->handlers->h_oledrion_vat->getAllVats(new oledrion_parameters());
-		$oledrion_Currency = & oledrion_Currency::getInstance();
+		$oledrion_Currency = &oledrion_Currency::getInstance();
 		$caddyCount = count($this->cart);
 
-		// Initialisation des totaux généraux (ht, tva et frais de port)
+		// Initialisation des totaux gï¿½nï¿½raux (ht, tva et frais de port)
 		$totalHT = $totalVAT = $totalShipping = 0.0;
 
-		// Boucle sur tous les produits et sur chacune des règles pour calculer le prix du produit (et ses frais de port) et voir si on doit y appliquer une réduction
-		foreach($this->cart as $cartProduct) {
-			if(floatval($cartProduct['product']->getVar('product_discount_price', 'n')) > 0) {
+		// Boucle sur tous les produits et sur chacune des rï¿½gles pour calculer le prix du produit (et ses frais de port) et voir si on doit y appliquer une rï¿½duction
+		foreach ($this->cart as $cartProduct) {
+			if (floatval($cartProduct['product']->getVar('product_discount_price', 'n')) > 0) {
 				$ht = floatval($cartProduct['product']->getVar('product_discount_price', 'n'));
 			} else {
 				$ht = floatval($cartProduct['product']->getVar('product_price', 'n'));
 			}
 			// S'il y a des options, on rajoute leur montant
 			$productAttributes = array();
-			if(is_array($cartProduct['attributes']) && count($cartProduct['attributes']) > 0) {
-                $ht += $this->handlers->h_oledrion_attributes->getProductOptionsPrice($cartProduct['attributes'], $cartProduct['product']->getVar('product_vat_id'), $productAttributes);
-
+			if (is_array($cartProduct['attributes']) && count($cartProduct['attributes']) > 0) {
+				$ht += $this->handlers->h_oledrion_attributes->getProductOptionsPrice($cartProduct['attributes'], $cartProduct['product']->getVar('product_vat_id'), $productAttributes);
 			}
-            $discountedPrice = $ht;
+			$discountedPrice = $ht;
 			$quantity = intval($cartProduct['qty']);
 
-			if(oledrion_utils::getModuleOption('shipping_quantity')) {
+			if (oledrion_utils::getModuleOption('shipping_quantity')) {
 				$discountedShipping = floatval($cartProduct['product']->getVar('product_shipping_price', 'n') * $quantity);
 			} else {
 				$discountedShipping = floatval($cartProduct['product']->getVar('product_shipping_price', 'n'));
@@ -434,61 +415,61 @@ class oledrion_reductions
 			$totalPrice = 0.0;
 			$reduction = '';
 
-			$cpt++;
-			if(($cpt == $caddyCount)) {	// On arrive sur le dernier produit
+			$cpt++ ;
+			if (($cpt == $caddyCount)) { // On arrive sur le dernier produit
 				$category = null;
 				$category = $this->handlers->h_oledrion_cat->get($cartProduct['product']->getVar('product_cid'));
-				if(is_object($category)) {
+				if (is_object($category)) {
 					$goOn = $category->getLink();
 				}
 			}
 
-			// Boucle sur les règles
-			foreach($this->allActiveRules as $rule) {
+			// Boucle sur les rï¿½gles
+			foreach ($this->allActiveRules as $rule) {
 				$applyRule = false;
-				if( ($rule->disc_group != 0 && oledrion_utils::isMemberOfGroup($rule->disc_group)) || $rule->disc_group == 0) {
-					if( ($rule->disc_cat_cid != 0 && $cartProduct['product']->getVar('product_cid') == $rule->disc_cat_cid) || $rule->disc_cat_cid == 0) {
-						if( ($rule->disc_vendor_id != 0 && $cartProduct['product']->getVar('disc_vendor_id') == $rule->disc_vendor_id) || $rule->disc_vendor_id == 0) {
-							if( ($rule->disc_product_id != 0 && $cartProduct['product']->getVar('product_id') == $rule->disc_product_id) || $rule->disc_product_id == 0) {
-								// Dans quel cas appliquer la réduction ?
-								switch($rule->disc_price_case) {
-									case OLEDRION_DISCOUNT_PRICE_CASE_ALL:	// Dans tous les cas
+				if (($rule->disc_group != 0 && oledrion_utils::isMemberOfGroup($rule->disc_group)) || $rule->disc_group == 0) {
+					if (($rule->disc_cat_cid != 0 && $cartProduct['product']->getVar('product_cid') == $rule->disc_cat_cid) || $rule->disc_cat_cid == 0) {
+						if (($rule->disc_vendor_id != 0 && $cartProduct['product']->getVar('disc_vendor_id') == $rule->disc_vendor_id) || $rule->disc_vendor_id == 0) {
+							if (($rule->disc_product_id != 0 && $cartProduct['product']->getVar('product_id') == $rule->disc_product_id) || $rule->disc_product_id == 0) {
+								// Dans quel cas appliquer la rï¿½duction ?
+								switch ($rule->disc_price_case) {
+									case OLEDRION_DISCOUNT_PRICE_CASE_ALL: // Dans tous les cas
 										$applyRule = true;
 										break;
-									case OLEDRION_DISCOUNT_PRICE_CASE_FIRST_BUY:	// Si c'est le premier achat de l'utilisateur sur le site
-										if($this->handlers->h_oledrion_commands->isFirstCommand()) {
+									case OLEDRION_DISCOUNT_PRICE_CASE_FIRST_BUY: // Si c'est le premier achat de l'utilisateur sur le site
+										if ($this->handlers->h_oledrion_commands->isFirstCommand()) {
 											$applyRule = true;
 										}
 										break;
-									case OLEDRION_DISCOUNT_PRICE_CASE_PRODUCT_NEVER:	// Si le produit n'a jamais été acheté par le client
-										if(!$this->handlers->h_oledrion_commands->productAlreadyBought(0, $cartProduct['product']->getVar('product_id'))) {
+									case OLEDRION_DISCOUNT_PRICE_CASE_PRODUCT_NEVER: // Si le produit n'a jamais ï¿½tï¿½ achetï¿½ par le client
+										if (!$this->handlers->h_oledrion_commands->productAlreadyBought(0, $cartProduct['product']->getVar('product_id'))) {
 											$applyRule = true;
 										}
 										break;
-									case OLEDRION_DISCOUNT_PRICE_CASE_QTY_IS:	// Si la quantité de produit est ... à ...
-										switch($rule->disc_price_case_qty_cond) {
-											case OLEDRION_DISCOUNT_PRICE_QTY_COND1:	// >
-												if($cartProduct['qty'] > $rule->disc_price_case_qty_value) {
+									case OLEDRION_DISCOUNT_PRICE_CASE_QTY_IS: // Si la quantitï¿½ de produit est ... ï¿½ ...
+										switch ($rule->disc_price_case_qty_cond) {
+											case OLEDRION_DISCOUNT_PRICE_QTY_COND1: // >
+												if ($cartProduct['qty'] > $rule->disc_price_case_qty_value) {
 													$applyRule = true;
 												}
 												break;
-											case OLEDRION_DISCOUNT_PRICE_QTY_COND2:	// >=
-												if($cartProduct['qty'] >= $rule->disc_price_case_qty_value) {
+											case OLEDRION_DISCOUNT_PRICE_QTY_COND2: // >=
+												if ($cartProduct['qty'] >= $rule->disc_price_case_qty_value) {
 													$applyRule = true;
 												}
 												break;
-											case OLEDRION_DISCOUNT_PRICE_QTY_COND3:	// <
-												if($cartProduct['qty'] < $rule->disc_price_case_qty_value) {
+											case OLEDRION_DISCOUNT_PRICE_QTY_COND3: // <
+												if ($cartProduct['qty'] < $rule->disc_price_case_qty_value) {
 													$applyRule = true;
 												}
 												break;
-											case OLEDRION_DISCOUNT_PRICE_QTY_COND4:	// <=
-												if($cartProduct['qty'] <= $rule->disc_price_case_qty_value) {
+											case OLEDRION_DISCOUNT_PRICE_QTY_COND4: // <=
+												if ($cartProduct['qty'] <= $rule->disc_price_case_qty_value) {
 													$applyRule = true;
 												}
 												break;
-											case OLEDRION_DISCOUNT_PRICE_QTY_COND5:	// ==
-												if($cartProduct['qty'] == $rule->disc_price_case_qty_value) {
+											case OLEDRION_DISCOUNT_PRICE_QTY_COND5: // ==
+												if ($cartProduct['qty'] == $rule->disc_price_case_qty_value) {
 													$applyRule = true;
 												}
 												break;
@@ -498,43 +479,43 @@ class oledrion_reductions
 						}
 					}
 				}
-				if($applyRule) {	// Il faut appliquer la règle
-					// On calcule le nouveau prix ht du produit
-					switch($rule->disc_price_type) {
-						case OLEDRION_DISCOUNT_PRICE_TYPE1:	// Montant dégressif selon les quantités
-							if($quantity >= $rule->disc_price_degress_l1qty1 && $quantity <= $rule->disc_price_degress_l1qty2) {
+				if ($applyRule) { // Il faut appliquer la rï¿½gle
+				                  // On calcule le nouveau prix ht du produit
+					switch ($rule->disc_price_type) {
+						case OLEDRION_DISCOUNT_PRICE_TYPE1: // Montant dï¿½gressif selon les quantitï¿½s
+							if ($quantity >= $rule->disc_price_degress_l1qty1 && $quantity <= $rule->disc_price_degress_l1qty2) {
 								$discountedPrice = floatval($rule->getVar('disc_price_degress_l1total', 'n'));
 							}
-							if($quantity >= $rule->disc_price_degress_l2qty1 && $quantity <= $rule->disc_price_degress_l2qty2) {
+							if ($quantity >= $rule->disc_price_degress_l2qty1 && $quantity <= $rule->disc_price_degress_l2qty2) {
 								$discountedPrice = floatval($rule->getVar('disc_price_degress_l2total', 'n'));
 							}
-							if($quantity >= $rule->disc_price_degress_l3qty1 && $quantity <= $rule->disc_price_degress_l3qty2) {
+							if ($quantity >= $rule->disc_price_degress_l3qty1 && $quantity <= $rule->disc_price_degress_l3qty2) {
 								$discountedPrice = floatval($rule->getVar('disc_price_degress_l3total', 'n'));
 							}
-							if($quantity >= $rule->disc_price_degress_l4qty1 && $quantity <= $rule->disc_price_degress_l4qty2) {
+							if ($quantity >= $rule->disc_price_degress_l4qty1 && $quantity <= $rule->disc_price_degress_l4qty2) {
 								$discountedPrice = floatval($rule->getVar('disc_price_degress_l4total', 'n'));
 							}
-							if($quantity >= $rule->disc_price_degress_l5qty1 && $quantity <= $rule->disc_price_degress_l5qty2) {
+							if ($quantity >= $rule->disc_price_degress_l5qty1 && $quantity <= $rule->disc_price_degress_l5qty2) {
 								$discountedPrice = floatval($rule->getVar('disc_price_degress_l5total', 'n'));
 							}
 							$reduction = $rule->disc_description;
-							$discountsCount++;
+							$discountsCount++ ;
 							break;
 
-						case OLEDRION_DISCOUNT_PRICE_TYPE2:	// D'un montant ou d'un pourcentage
-							if($rule->disc_price_amount_on == OLEDRION_DISCOUNT_PRICE_AMOUNT_ON_PRODUCT) {	// Réduction sur le produit
-								if($rule->disc_price_amount_type == OLEDRION_DISCOUNT_PRICE_REDUCE_PERCENT) {	// Réduction en pourcentage
+						case OLEDRION_DISCOUNT_PRICE_TYPE2: // D'un montant ou d'un pourcentage
+							if ($rule->disc_price_amount_on == OLEDRION_DISCOUNT_PRICE_AMOUNT_ON_PRODUCT) { // Rï¿½duction sur le produit
+								if ($rule->disc_price_amount_type == OLEDRION_DISCOUNT_PRICE_REDUCE_PERCENT) { // Rï¿½duction en pourcentage
 									$discountedPrice = $this->getDiscountedPrice($discountedPrice, $rule->getVar('disc_price_amount_amount', 'n'));
-								} elseif($rule->disc_price_amount_type == OLEDRION_DISCOUNT_PRICE_REDUCE_MONEY) {	// Réduction d'un montant en euros
+								} elseif ($rule->disc_price_amount_type == OLEDRION_DISCOUNT_PRICE_REDUCE_MONEY) { // Rï¿½duction d'un montant en euros
 									$discountedPrice -= floatval($rule->getVar('disc_price_amount_amount', 'n'));
 								}
 
-								// Pas de montants négatifs
+								// Pas de montants nï¿½gatifs
 								oledrion_utils::doNotAcceptNegativeAmounts($discountedPrice);
 								$reduction = $rule->disc_description;
-								$discountsCount++;
-							} elseif($rule->disc_price_amount_on == OLEDRION_DISCOUNT_PRICE_AMOUNT_ON_CART) {	// Règle à appliquer sur le panier
-								if(!isset($this->rulesForTheWhole[$rule->disc_id])) {
+								$discountsCount++ ;
+							} elseif ($rule->disc_price_amount_on == OLEDRION_DISCOUNT_PRICE_AMOUNT_ON_CART) { // Rï¿½gle ï¿½ appliquer sur le panier
+								if (!isset($this->rulesForTheWhole[$rule->disc_id])) {
 									$this->rulesForTheWhole[$rule->disc_id] = $rule;
 								}
 							}
@@ -542,45 +523,45 @@ class oledrion_reductions
 					}
 
 					// On passe au montant des frais de port
-					switch($rule->disc_shipping_type) {
-						case OLEDRION_DISCOUNT_SHIPPING_TYPE1:	// A payer dans leur intégralité, rien à faire
+					switch ($rule->disc_shipping_type) {
+						case OLEDRION_DISCOUNT_SHIPPING_TYPE1: // A payer dans leur intï¿½gralitï¿½, rien ï¿½ faire
 							break;
-						case OLEDRION_DISCOUNT_SHIPPING_TYPE2:	// Totalement gratuits si le client commande plus de X euros d'achat
-							if($this->totalAmountBeforeDiscounts > $rule->disc_shipping_free_morethan) {
+						case OLEDRION_DISCOUNT_SHIPPING_TYPE2: // Totalement gratuits si le client commande plus de X euros d'achat
+							if ($this->totalAmountBeforeDiscounts > $rule->disc_shipping_free_morethan) {
 								$discountedShipping = 0.0;
 							}
 							break;
-						case OLEDRION_DISCOUNT_SHIPPING_TYPE3:	// Frais de port réduits de X euros si la commande est > x
-							if($this->totalAmountBeforeDiscounts > $rule->disc_shipping_reduce_cartamount) {
+						case OLEDRION_DISCOUNT_SHIPPING_TYPE3: // Frais de port rï¿½duits de X euros si la commande est > x
+							if ($this->totalAmountBeforeDiscounts > $rule->disc_shipping_reduce_cartamount) {
 								$discountedShipping -= floatval($rule->getVar('disc_shipping_reduce_amount', 'n'));
 							}
-							// Pas de montants négatifs
+							// Pas de montants nï¿½gatifs
 							oledrion_utils::doNotAcceptNegativeAmounts($discountedShipping);
 							break;
-						case OLEDRION_DISCOUNT_SHIPPING_TYPE4:	// Frais de port dégressifs
-							if($quantity >= $rule->disc_shipping_degress_l1qty1 && $quantity <= $rule->disc_shipping_degress_l1qty2) {
+						case OLEDRION_DISCOUNT_SHIPPING_TYPE4: // Frais de port dï¿½gressifs
+							if ($quantity >= $rule->disc_shipping_degress_l1qty1 && $quantity <= $rule->disc_shipping_degress_l1qty2) {
 								$discountedShipping = floatval($rule->getVar('disc_shipping_degress_l1total', 'n'));
 							}
-							if($quantity >= $rule->disc_shipping_degress_l2qty1 && $quantity <= $rule->disc_shipping_degress_l2qty2) {
+							if ($quantity >= $rule->disc_shipping_degress_l2qty1 && $quantity <= $rule->disc_shipping_degress_l2qty2) {
 								$discountedShipping = floatval($rule->getVar('disc_shipping_degress_l2total', 'n'));
 							}
-							if($quantity >= $rule->disc_shipping_degress_l3qty1 && $quantity <= $rule->disc_shipping_degress_l3qty2) {
+							if ($quantity >= $rule->disc_shipping_degress_l3qty1 && $quantity <= $rule->disc_shipping_degress_l3qty2) {
 								$discountedShipping = floatval($rule->getVar('disc_shipping_degress_l3total', 'n'));
 							}
-							if($quantity >= $rule->disc_shipping_degress_l4qty1 && $quantity <= $rule->disc_shipping_degress_l4qty2) {
+							if ($quantity >= $rule->disc_shipping_degress_l4qty1 && $quantity <= $rule->disc_shipping_degress_l4qty2) {
 								$discountedShipping = floatval($rule->getVar('disc_shipping_degress_l4total', 'n'));
 							}
-							if($quantity >= $rule->disc_shipping_degress_l5qty1 && $quantity <= $rule->disc_shipping_degress_l5qty2) {
+							if ($quantity >= $rule->disc_shipping_degress_l5qty1 && $quantity <= $rule->disc_shipping_degress_l5qty2) {
 								$discountedShipping = floatval($rule->getVar('disc_shipping_degress_l5total', 'n'));
 							}
 							break;
-					}	// Sélection du type de réduction sur les frais de port
-				}	// Il faut appliquer la règle de réduction
-			}	// Boucle sur les réductions
+					} // Sï¿½lection du type de rï¿½duction sur les frais de port
+				} // Il faut appliquer la rï¿½gle de rï¿½duction
+			} // Boucle sur les rï¿½ductions
 
 			// Calcul de la TVA du produit
 			$vatId = $cartProduct['product']->getVar('product_vat_id');
-			if(is_array($vats) && isset($vats[$vatId])) {
+			if (is_array($vats) && isset($vats[$vatId])) {
 				$vatRate = floatval($vats[$vatId]->getVar('vat_rate', 'n'));
 				$vatAmount = oledrion_utils::getVAT(($discountedPrice * $quantity), $vatRate);
 			} else {
@@ -591,36 +572,34 @@ class oledrion_reductions
 			// Calcul du TTC du produit ((ht * qte) + tva + frais de port)
 			$totalPrice = floatval(($discountedPrice * $quantity) + $vatAmount + $discountedShipping);
 
-			// Les totaux généraux
+			// Les totaux gï¿½nï¿½raux
 			$totalHT += ($discountedPrice * $quantity);
 			$totalVAT += $vatAmount;
 			$totalShipping += $discountedShipping;
 
-			// Recherche des éléments associés au produit
+			// Recherche des ï¿½lï¿½ments associï¿½s au produit
 			$associatedVendor = $associatedCategory = $associatedManufacturers = array();
 			$manufacturersJoinList = '';
 			// Le vendeur
-			if(isset($this->associatedVendors[$cartProduct['product']->product_vendor_id])) {
+			if (isset($this->associatedVendors[$cartProduct['product']->product_vendor_id])) {
 				$associatedVendor = $this->associatedVendors[$cartProduct['product']->product_vendor_id]->toArray();
 			}
 
-			// La catégorie
-			if(isset($this->associatedCategories[$cartProduct['product']->product_cid])) {
+			// La catï¿½gorie
+			if (isset($this->associatedCategories[$cartProduct['product']->product_cid])) {
 				$associatedCategory = $this->associatedCategories[$cartProduct['product']->product_cid]->toArray();
 			}
 
 			// Les fabricants
 			$product_id = $cartProduct['product']->product_id;
-			if(isset($this->associatedManufacturersPerProduct[$product_id])) {	// Recherche de la liste des fabricants associés à ce produit
+			if (isset($this->associatedManufacturersPerProduct[$product_id])) { // Recherche de la liste des fabricants associï¿½s ï¿½ ce produit
 				$manufacturers = $this->associatedManufacturersPerProduct[$product_id];
 				$manufacturersList = array();
-				foreach($manufacturers as $manufacturer_id) {
-					if(isset($this->associatedManufacturers[$manufacturer_id]))
-						$associatedManufacturers[] = $this->associatedManufacturers[$manufacturer_id]->toArray();
-						$manufacturersList[] = $this->associatedManufacturers[$manufacturer_id]->manu_commercialname.' '.$this->associatedManufacturers[$manufacturer_id]->manu_name;
+				foreach ($manufacturers as $manufacturer_id) {
+					if (isset($this->associatedManufacturers[$manufacturer_id])) $associatedManufacturers[] = $this->associatedManufacturers[$manufacturer_id]->toArray();
+					$manufacturersList[] = $this->associatedManufacturers[$manufacturer_id]->manu_commercialname . ' ' . $this->associatedManufacturers[$manufacturer_id]->manu_name;
 				}
 				$manufacturersJoinList = implode(OLEDRION_STRING_TO_JOIN_MANUFACTURERS, $manufacturersList);
-
 			}
 			$productTemplate = array();
 			$productTemplate = $cartProduct['product']->toArray();
@@ -629,13 +608,13 @@ class oledrion_reductions
 			$productTemplate['id'] = $cartProduct['id'];
 			$productTemplate['product_qty'] = $cartProduct['qty'];
 
-			$productTemplate['unitBasePrice'] = $ht;				// Prix unitaire HT SANS réduction
-			$productTemplate['discountedPrice'] = $discountedPrice;	// Prix unitaire HT AVEC réduction
-			$productTemplate['discountedPriceWithQuantity'] = $discountedPrice * $quantity;	// Prix HT AVEC réduction et la quantité
-			// Les même prix mais formatés
-			$productTemplate['unitBasePriceFormated'] = $oledrion_Currency->amountForDisplay($ht);				// Prix unitaire HT SANS réduction
-			$productTemplate['discountedPriceFormated'] = $oledrion_Currency->amountForDisplay($discountedPrice);	// Prix unitaire HT AVEC réduction
-			$productTemplate['discountedPriceWithQuantityFormated'] = $oledrion_Currency->amountForDisplay($discountedPrice * $quantity);	// Prix HT AVEC réduction et la quantité
+			$productTemplate['unitBasePrice'] = $ht; // Prix unitaire HT SANS rï¿½duction
+			$productTemplate['discountedPrice'] = $discountedPrice; // Prix unitaire HT AVEC rï¿½duction
+			$productTemplate['discountedPriceWithQuantity'] = $discountedPrice * $quantity; // Prix HT AVEC rï¿½duction et la quantitï¿½
+			                                                                                // Les mï¿½me prix mais formatï¿½s
+			$productTemplate['unitBasePriceFormated'] = $oledrion_Currency->amountForDisplay($ht); // Prix unitaire HT SANS rï¿½duction
+			$productTemplate['discountedPriceFormated'] = $oledrion_Currency->amountForDisplay($discountedPrice); // Prix unitaire HT AVEC rï¿½duction
+			$productTemplate['discountedPriceWithQuantityFormated'] = $oledrion_Currency->amountForDisplay($discountedPrice * $quantity); // Prix HT AVEC rï¿½duction et la quantitï¿½
 
 			$productTemplate['vatRate'] = $oledrion_Currency->amountInCurrency($vatRate);
 			$productTemplate['vatAmount'] = $vatAmount;
@@ -654,34 +633,34 @@ class oledrion_reductions
 			$productTemplate['templateManufacturers'] = $associatedManufacturers;
 			$productTemplate['manufacturersJoinList'] = $manufacturersJoinList;
 			$this->cartForTemplate[] = $productTemplate;
-		}	// foreach sur les produits du panier
+		} // foreach sur les produits du panier
 
-		// Traitement des règles générales s'il y en a
-		if(count($this->rulesForTheWhole) > 0) {
+		// Traitement des rï¿½gles gï¿½nï¿½rales s'il y en a
+		if (count($this->rulesForTheWhole) > 0) {
 			// $discountsDescription
-			foreach($this->rulesForTheWhole as $rule) {
-				switch($rule->disc_price_type) {
-					case OLEDRION_DISCOUNT_PRICE_TYPE2:	// D'un montant ou d'un pourcentage
-						if($rule->disc_price_amount_on == OLEDRION_DISCOUNT_PRICE_AMOUNT_ON_CART) {	// Règle à appliquer sur le panier
-							if($rule->disc_price_amount_type == OLEDRION_DISCOUNT_PRICE_REDUCE_PERCENT) {	// Réduction en pourcentage
+			foreach ($this->rulesForTheWhole as $rule) {
+				switch ($rule->disc_price_type) {
+					case OLEDRION_DISCOUNT_PRICE_TYPE2: // D'un montant ou d'un pourcentage
+						if ($rule->disc_price_amount_on == OLEDRION_DISCOUNT_PRICE_AMOUNT_ON_CART) { // Rï¿½gle ï¿½ appliquer sur le panier
+							if ($rule->disc_price_amount_type == OLEDRION_DISCOUNT_PRICE_REDUCE_PERCENT) { // Rï¿½duction en pourcentage
 								$totalHT = $this->getDiscountedPrice($totalHT, $rule->getVar('disc_price_amount_amount'));
 								$totalVAT = $this->getDiscountedPrice($totalVAT, $rule->getVar('disc_price_amount_amount'));
-							} elseif($rule->disc_price_amount_type == OLEDRION_DISCOUNT_PRICE_REDUCE_MONEY) {	// Réduction d'un montant en euros
+							} elseif ($rule->disc_price_amount_type == OLEDRION_DISCOUNT_PRICE_REDUCE_MONEY) { // Rï¿½duction d'un montant en euros
 								$totalHT -= floatval($rule->getVar('disc_price_amount_amount'));
 								$totalVAT -= floatval($rule->getVar('disc_price_amount_amount'));
 							}
 
-							// Pas de montants négatifs
+							// Pas de montants nï¿½gatifs
 							oledrion_utils::doNotAcceptNegativeAmounts($totalHT);
 							oledrion_utils::doNotAcceptNegativeAmounts($totalVAT);
 							$discountsDescription[] = $rule->disc_description;
-							$discountsCount++;
-						}	// Règle à appliquer sur le panier
+							$discountsCount++ ;
+						} // Rï¿½gle ï¿½ appliquer sur le panier
 						break;
-				}	// Switch
-			}	// Foreach
-		}	// S'il y a des règles globales
-		// Les totaux "renvoyés" à l'appelant
+				} // Switch
+			} // Foreach
+		} // S'il y a des rï¿½gles globales
+		  // Les totaux "renvoyï¿½s" ï¿½ l'appelant
 		$shippingAmount = $totalShipping;
 		$commandAmount = $totalHT;
 		$vatAmount = $totalVAT;

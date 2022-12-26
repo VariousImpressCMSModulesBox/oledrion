@@ -2,7 +2,7 @@
 /**
  * ****************************************************************************
  * oledrion - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * Copyright (c) Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
  *
  * You may not change or alter any portion of this comment or credits
  * of supporting developers from this source code or any supporting source code
@@ -11,68 +11,70 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- *
- * Version : $Id:
- * ****************************************************************************
+ * @copyright Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ *        
+ *         Version : $Id:
+ *         ****************************************************************************
  */
 
 /**
- * Actions relatives aux vendeurs (affichage, édition, suppression)
+ * Actions relatives aux vendeurs (affichage, ï¿½dition, suppression)
  */
-if(!defined("OLEDRION_ADMIN")) exit();
-switch($action) {
+if (!defined("OLEDRION_ADMIN")) exit();
+switch ($action) {
 	// ****************************************************************************************************************
-	case 'default':	// Gestion des vendeurs
-	// ****************************************************************************************************************
-        xoops_cp_header();
-        oledrion_adminMenu(1);
+	case 'default': // Gestion des vendeurs
+	                 // ****************************************************************************************************************
+		xoops_cp_header();
+		oledrion_adminMenu(1);
 		$start = isset($_GET['start']) ? intval($_GET['start']) : 0;
 		$vendors = array();
-		$form = "<form method='post' action='$baseurl' name='frmaddvendor' id='frmaddvendor'><input type='hidden' name='op' id='op' value='vendors' /><input type='hidden' name='action' id='action' value='add' /><input type='submit' name='btngo' id='btngo' value='"._AM_OLEDRION_ADD_ITEM."' /></form>";
+		$form = "<form method='post' action='$baseurl' name='frmaddvendor' id='frmaddvendor'><input type='hidden' name='op' id='op' value='vendors' /><input type='hidden' name='action' id='action' value='add' /><input type='submit' name='btngo' id='btngo' value='" . _AM_OLEDRION_ADD_ITEM . "' /></form>";
 		echo $form;
-		oledrion_utils::htitle(_MI_OLEDRION_ADMENU0,4);
-		$vendors = $h_oledrion_vendors->getAllVendors(new oledrion_parameters(array('start' => $start, 'limit' => $limit)));
-		$class='';
+		oledrion_utils::htitle(_MI_OLEDRION_ADMENU0, 4);
+		$vendors = $h_oledrion_vendors->getAllVendors(new oledrion_parameters(array(
+			'start' => $start,
+			'limit' => $limit)));
+		$class = '';
 		echo "<table width='100%' cellspacing='1' cellpadding='3' border='0' class='outer'>";
-		echo "<tr><th align='center'>"._AM_OLEDRION_ID."</th><th align='center'>"._OLEDRION_VENDOR."</th><th align='center'>"._AM_OLEDRION_ACTION."</th></tr>";
+		echo "<tr><th align='center'>" . _AM_OLEDRION_ID . "</th><th align='center'>" . _OLEDRION_VENDOR . "</th><th align='center'>" . _AM_OLEDRION_ACTION . "</th></tr>";
 		foreach ($vendors as $item) {
 			$id = $item->getVar('vendor_id');
 			$class = ($class == 'even') ? 'odd' : 'even';
 			$actions = array();
-			$actions[] = "<a href='$baseurl?op=vendors&action=edit&id=".$id."' title='"._OLEDRION_EDIT."'>".$icones['edit'].'</a>';
-			$actions[] = "<a href='$baseurl?op=vendors&action=delete&id=".$id."' title='"._OLEDRION_DELETE."'".$conf_msg.">".$icones['delete'].'</a>';
-			echo "<tr class='".$class."'>\n";
-			echo '<td>'.$id."</td><td align='center'>".$item->getVar('vendor_name')."</td><td align='center'>".implode(' ', $actions)."</td>\n";
+			$actions[] = "<a href='$baseurl?op=vendors&action=edit&id=" . $id . "' title='" . _OLEDRION_EDIT . "'>" . $icones['edit'] . '</a>';
+			$actions[] = "<a href='$baseurl?op=vendors&action=delete&id=" . $id . "' title='" . _OLEDRION_DELETE . "'" . $conf_msg . ">" . $icones['delete'] . '</a>';
+			echo "<tr class='" . $class . "'>\n";
+			echo '<td>' . $id . "</td><td align='center'>" . $item->getVar('vendor_name') . "</td><td align='center'>" . implode(' ', $actions) . "</td>\n";
 			echo "<tr>\n";
 		}
 		$class = ($class == 'even') ? 'odd' : 'even';
-		echo "<tr class='".$class."'>\n";
-		echo "<td colspan='3' align='center'>".$form."</td>\n";
+		echo "<tr class='" . $class . "'>\n";
+		echo "<td colspan='3' align='center'>" . $form . "</td>\n";
 		echo "</tr>\n";
 		echo '</table>';
-        show_footer();
+		show_footer();
 		break;
 
 	// ****************************************************************************************************************
-	case 'add':			// Ajout d'un vendeur
-	case 'edit':		// Edition d'un vendeur
-	// ****************************************************************************************************************
-        xoops_cp_header();
-        oledrion_adminMenu(1);
-		if($action == 'edit') {
+	case 'add': // Ajout d'un vendeur
+	case 'edit': // Edition d'un vendeur
+	              // ****************************************************************************************************************
+		xoops_cp_header();
+		oledrion_adminMenu(1);
+		if ($action == 'edit') {
 			$title = _AM_OLEDRION_EDIT_VENDOR;
 			$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
-			if(empty($id)) {
+			if (empty($id)) {
 				oledrion_utils::redirect(_AM_OLEDRION_ERROR_1, $baseurl, 5);
 			}
 			// Item exits ?
 			$item = null;
 			$item = $h_oledrion_vendors->get($id);
-			if(!is_object($item)) {
+			if (!is_object($item)) {
 				oledrion_utils::redirect(_AM_OLEDRION_NOT_FOUND, $baseurl, 5);
 			}
 			$edit = true;
@@ -87,9 +89,9 @@ switch($action) {
 		$sform->addElement(new XoopsFormHidden('op', 'vendors'));
 		$sform->addElement(new XoopsFormHidden('action', 'saveedit'));
 		$sform->addElement(new XoopsFormHidden('vendor_id', $item->getVar('vendor_id')));
-		$sform->addElement(new XoopsFormText(_OLEDRION_VENDOR,'vendor_name',50,150, $item->getVar('vendor_name','e')), true);
+		$sform->addElement(new XoopsFormText(_OLEDRION_VENDOR, 'vendor_name', 50, 150, $item->getVar('vendor_name', 'e')), true);
 
-		$button_tray = new XoopsFormElementTray('' ,'');
+		$button_tray = new XoopsFormElementTray('', '');
 		$submit_btn = new XoopsFormButton('', 'post', $label_submit, 'submit');
 		$button_tray->addElement($submit_btn);
 		$sform->addElement($button_tray);
@@ -98,60 +100,59 @@ switch($action) {
 		show_footer();
 		break;
 
-
 	// ****************************************************************************************************************
-	case 'saveedit':	// Sauvegarde d'un vendeur (édition et ajout)
-	// ****************************************************************************************************************
+	case 'saveedit': // Sauvegarde d'un vendeur (ï¿½dition et ajout)
+	                  // ****************************************************************************************************************
 		xoops_cp_header();
 		$id = isset($_POST['vendor_id']) ? intval($_POST['vendor_id']) : 0;
-		if(!empty($id)) {
+		if (!empty($id)) {
 			$edit = true;
 			$item = $h_oledrion_vendors->get($id);
-			if(!is_object($item)) {
+			if (!is_object($item)) {
 				oledrion_utils::redirect(_AM_OLEDRION_NOT_FOUND, $baseurl, 5);
 			}
 			$item->unsetNew();
 		} else {
-			$item= $h_oledrion_vendors->create(true);
+			$item = $h_oledrion_vendors->create(true);
 		}
 		$opRedirect = 'vendors';
 		$item->setVars($_POST);
 		$res = $h_oledrion_vendors->insert($item);
-		if($res) {
+		if ($res) {
 			oledrion_utils::updateCache();
-			oledrion_utils::redirect(_AM_OLEDRION_SAVE_OK, $baseurl.'?op='.$opRedirect, 2);
+			oledrion_utils::redirect(_AM_OLEDRION_SAVE_OK, $baseurl . '?op=' . $opRedirect, 2);
 		} else {
-			oledrion_utils::redirect(_AM_OLEDRION_SAVE_PB, $baseurl.'?op='.$opRedirect,5);
+			oledrion_utils::redirect(_AM_OLEDRION_SAVE_PB, $baseurl . '?op=' . $opRedirect, 5);
 		}
 		break;
 
 	// ****************************************************************************************************************
-	case 'delete':		// Suppression d'un vendeur
-	// ****************************************************************************************************************
-        xoops_cp_header();
+	case 'delete': // Suppression d'un vendeur
+	                // ****************************************************************************************************************
+		xoops_cp_header();
 		$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
-		if(empty($id)) {
+		if (empty($id)) {
 			oledrion_utils::redirect(_AM_OLEDRION_ERROR_1, $baseurl, 5);
 		}
 		$opRedirect = 'vendors';
-		// On vérifie que ce vendeur n'est pas rattaché à des produits
+		// On vï¿½rifie que ce vendeur n'est pas rattachï¿½ ï¿½ des produits
 		$cnt = $h_oledrion_vendors->getVendorProductsCount($id);
-		if($cnt == 0) {
+		if ($cnt == 0) {
 			$item = null;
 			$item = $h_oledrion_vendors->get($id);
-			if(is_object($item)) {
+			if (is_object($item)) {
 				$res = $h_oledrion_vendors->deleteVendor($item);
-				if($res) {
+				if ($res) {
 					oledrion_utils::updateCache();
-					oledrion_utils::redirect(_AM_OLEDRION_SAVE_OK, $baseurl.'?op='.$opRedirect,2);
+					oledrion_utils::redirect(_AM_OLEDRION_SAVE_OK, $baseurl . '?op=' . $opRedirect, 2);
 				} else {
-					oledrion_utils::redirect(_AM_OLEDRION_SAVE_PB, $baseurl.'?op='.$opRedirect,5);
+					oledrion_utils::redirect(_AM_OLEDRION_SAVE_PB, $baseurl . '?op=' . $opRedirect, 5);
 				}
 			} else {
-				oledrion_utils::redirect(_AM_OLEDRION_NOT_FOUND, $baseurl.'?op='.$opRedirect,5);
+				oledrion_utils::redirect(_AM_OLEDRION_NOT_FOUND, $baseurl . '?op=' . $opRedirect, 5);
 			}
 		} else {
-			oledrion_utils::redirect(_AM_OLEDRION_ERROR_6, $baseurl.'?op='.$opRedirect,5);
+			oledrion_utils::redirect(_AM_OLEDRION_ERROR_6, $baseurl . '?op=' . $opRedirect, 5);
 		}
 		break;
 }

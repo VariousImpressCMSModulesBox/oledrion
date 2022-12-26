@@ -2,7 +2,7 @@
 /**
  * ****************************************************************************
  * oledrion - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * Copyright (c) Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
  *
  * You may not change or alter any portion of this comment or credits
  * of supporting developers from this source code or any supporting source code
@@ -11,23 +11,23 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- *
- * Version : $Id:
- * ****************************************************************************
+ * @copyright Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ *        
+ *         Version : $Id:
+ *         ****************************************************************************
  */
 /**
- * Entête pour les classes d'ORM
+ * Entï¿½te pour les classes d'ORM
  */
 if (!defined('ICMS_ROOT_PATH')) {
 	die("XOOPS root path not defined");
 }
 
-include_once ICMS_ROOT_PATH.'/class/xoopsobject.php';
+include_once ICMS_ROOT_PATH . '/class/xoopsobject.php';
 if (!class_exists('Oledrion_XoopsPersistableObjectHandler')) {
-	include_once ICMS_ROOT_PATH.'/modules/oledrion/class/PersistableObjectHandler.php';
+	include_once ICMS_ROOT_PATH . '/modules/oledrion/class/PersistableObjectHandler.php';
 }
 ?>
