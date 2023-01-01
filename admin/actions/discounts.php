@@ -2,7 +2,7 @@
 /**
  * ****************************************************************************
  * oledrion - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * Copyright (c) Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
  *
  * You may not change or alter any portion of this comment or credits
  * of supporting developers from this source code or any supporting source code
@@ -11,28 +11,27 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- *
- * Version : $Id:
- * ****************************************************************************
+ * @copyright Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ *        
+ *         Version : $Id:
+ *         ****************************************************************************
  */
 
 /**
- * Gestion des réductions (dans l'administration)
+ * Gestion des rï¿½ductions (dans l'administration)
  */
-if(!defined("OLEDRION_ADMIN")) exit();
+if (!defined("OLEDRION_ADMIN")) exit();
 
-
-switch($action) {
+switch ($action) {
 	// ****************************************************************************************************************
-	case 'default':	// Gestion des réductions
-	// ****************************************************************************************************************
-        xoops_cp_header();
-        oledrion_adminMenu(7);
-        $form = "<form method='post' action='$baseurl' name='frmadddiscount' id='frmadddiscount'><input type='hidden' name='op' id='op' value='discounts' /><input type='hidden' name='action' id='action' value='add' /><input type='submit' name='btngo' id='btngo' value='"._AM_OLEDRION_ADD_ITEM."' /></form>";
+	case 'default': // Gestion des rï¿½ductions
+	                 // ****************************************************************************************************************
+		xoops_cp_header();
+		oledrion_adminMenu(7);
+		$form = "<form method='post' action='$baseurl' name='frmadddiscount' id='frmadddiscount'><input type='hidden' name='op' id='op' value='discounts' /><input type='hidden' name='action' id='action' value='add' /><input type='submit' name='btngo' id='btngo' value='" . _AM_OLEDRION_ADD_ITEM . "' /></form>";
 		echo $form;
 		oledrion_utils::htitle(_MI_OLEDRION_ADMENU6, 4);
 
@@ -41,9 +40,9 @@ switch($action) {
 		$class = '';
 		$start = isset($_GET['start']) ? intval($_GET['start']) : 0;
 
-		$itemsCount = $h_oledrion_discounts->getCount();	// Recherche du nombre total de réductions
-		if($itemsCount > $limit) {
-			$pagenav = new XoopsPageNav( $itemsCount, $limit, $start, 'start', 'op=discounts');
+		$itemsCount = $h_oledrion_discounts->getCount(); // Recherche du nombre total de rï¿½ductions
+		if ($itemsCount > $limit) {
+			$pagenav = new XoopsPageNav($itemsCount, $limit, $start, 'start', 'op=discounts');
 		}
 
 		$criteria = new Criteria('disc_id', 0, '<>');
@@ -52,47 +51,47 @@ switch($action) {
 		$discounts = $h_oledrion_discounts->getObjects($criteria);
 
 		echo "<table width='100%' cellspacing='1' cellpadding='3' border='0' class='outer'>";
-		echo "<tr><th align='center'>"._AM_OLEDRION_ID."</th><th align='center'>"._TITLE."</th><th align='center'>"._AM_OLEDRION_ACTION."</th></tr>";
+		echo "<tr><th align='center'>" . _AM_OLEDRION_ID . "</th><th align='center'>" . _TITLE . "</th><th align='center'>" . _AM_OLEDRION_ACTION . "</th></tr>";
 		foreach ($discounts as $item) {
 			$class = ($class == 'even') ? 'odd' : 'even';
 			$id = $item->getVar('disc_id');
 			$actions = array();
-			$actions[] = "<a href='$baseurl?op=discounts&action=edit&id=".$id."' title='"._OLEDRION_EDIT."'>".$icones['edit'].'</a>';
-			$actions[] = "<a href='$baseurl?op=discounts&action=delete&id=".$id."' title='"._OLEDRION_DELETE."'".$conf_msg.">".$icones['delete'].'</a>';
-			$actions[] = "<a href='$baseurl?op=discounts&action=copy&id=".$id."' title='"._OLEDRION_DUPLICATE_DISCOUNT."'>".$icones['copy'].'</a>';
-			echo "<tr class='".$class."'>\n";
-			echo "<td>".$id."</td><td align='center'>".$item->getVar('disc_title')."</td><td align='center'>".implode(' ', $actions)."</td>\n";
+			$actions[] = "<a href='$baseurl?op=discounts&action=edit&id=" . $id . "' title='" . _OLEDRION_EDIT . "'>" . $icones['edit'] . '</a>';
+			$actions[] = "<a href='$baseurl?op=discounts&action=delete&id=" . $id . "' title='" . _OLEDRION_DELETE . "'" . $conf_msg . ">" . $icones['delete'] . '</a>';
+			$actions[] = "<a href='$baseurl?op=discounts&action=copy&id=" . $id . "' title='" . _OLEDRION_DUPLICATE_DISCOUNT . "'>" . $icones['copy'] . '</a>';
+			echo "<tr class='" . $class . "'>\n";
+			echo "<td>" . $id . "</td><td align='center'>" . $item->getVar('disc_title') . "</td><td align='center'>" . implode(' ', $actions) . "</td>\n";
 			echo "<tr>\n";
 		}
 		$class = ($class == 'even') ? 'odd' : 'even';
-		echo "<tr class='".$class."'>\n";
-		echo "<td colspan='3' align='center'>".$form."</td>\n";
+		echo "<tr class='" . $class . "'>\n";
+		echo "<td colspan='3' align='center'>" . $form . "</td>\n";
 		echo "</tr>\n";
 		echo '</table>';
-		if(isset($pagenav) && is_object($pagenav)) {
-			echo "<div align='right'>".$pagenav->renderNav()."</div>";
+		if (isset($pagenav) && is_object($pagenav)) {
+			echo "<div align='right'>" . $pagenav->renderNav() . "</div>";
 		}
 		$oledrion_reductions = new oledrion_reductions();
 
-        show_footer();
+		show_footer();
 		break;
 
 	// ****************************************************************************************************************
-	case 'add':		// Ajout d'une promotion
-	case 'edit':	// Edition d'une promo
-	// ****************************************************************************************************************
-        xoops_cp_header();
-        oledrion_adminMenu(7);
-		if($action == 'edit') {
+	case 'add': // Ajout d'une promotion
+	case 'edit': // Edition d'une promo
+	              // ****************************************************************************************************************
+		xoops_cp_header();
+		oledrion_adminMenu(7);
+		if ($action == 'edit') {
 			$title = _AM_OLEDRION_EDIT_DISCOUNT;
 			$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
-			if(empty($id)) {
+			if (empty($id)) {
 				oledrion_utils::redirect(_AM_OLEDRION_ERROR_1, $baseurl, 5);
 			}
 			// Item exits ?
 			$item = null;
 			$item = $h_oledrion_discounts->get($id);
-			if(!is_object($item)) {
+			if (!is_object($item)) {
 				oledrion_utils::redirect(_AM_OLEDRION_NOT_FOUND, $baseurl, 5);
 			}
 			$edit = true;
@@ -103,7 +102,7 @@ switch($action) {
 			$label_submit = _AM_OLEDRION_ADD;
 			$edit = false;
 		}
-		include_once ICMS_ROOT_PATH.'/class/template.php';
+		include_once ICMS_ROOT_PATH . '/class/template.php';
 		$xoopsTpl = new XoopsTpl();
 		$xoopsTpl->assign('formTitle', $title);
 		$xoopsTpl->assign('action', 'edit');
@@ -120,7 +119,7 @@ switch($action) {
 		$reductionType0 = $reductionType1 = $reductionType2 = '';
 		$checked = "checked='checked'";
 
-		switch($item->getVar('disc_price_type')) {
+		switch ($item->getVar('disc_price_type')) {
 			case OLEDRION_DISCOUNT_PRICE_TYPE0:
 				$reductionType0 = $checked;
 				break;
@@ -136,25 +135,25 @@ switch($action) {
 		$discountForTemplate['disc_price_type_checked2'] = $reductionType2;
 		// ****
 		$disc_price_amount_type1 = $disc_price_amount_type2 = '';
-		if($item->getVar('disc_price_amount_type') == OLEDRION_DISCOUNT_PRICE_REDUCE_PERCENT) {
+		if ($item->getVar('disc_price_amount_type') == OLEDRION_DISCOUNT_PRICE_REDUCE_PERCENT) {
 			$disc_price_amount_type1 = $checked;
-		} elseif($item->getVar('disc_price_amount_type') == OLEDRION_DISCOUNT_PRICE_REDUCE_MONEY) {
+		} elseif ($item->getVar('disc_price_amount_type') == OLEDRION_DISCOUNT_PRICE_REDUCE_MONEY) {
 			$disc_price_amount_type2 = $checked;
 		}
 		$discountForTemplate['disc_price_amount_type_checked1'] = $disc_price_amount_type1;
 		$discountForTemplate['disc_price_amount_type_checked2'] = $disc_price_amount_type2;
 		// ****
 		$disc_price_amount_on_checked1 = $disc_price_amount_on_checked2 = '';
-		if($item->getVar('disc_price_amount_on') == OLEDRION_DISCOUNT_PRICE_AMOUNT_ON_PRODUCT) {
-			$disc_price_amount_on_checked1  = $checked;
-		} elseif($item->getVar('disc_price_amount_on') == OLEDRION_DISCOUNT_PRICE_AMOUNT_ON_CART) {
-			$disc_price_amount_on_checked2  = $checked;
+		if ($item->getVar('disc_price_amount_on') == OLEDRION_DISCOUNT_PRICE_AMOUNT_ON_PRODUCT) {
+			$disc_price_amount_on_checked1 = $checked;
+		} elseif ($item->getVar('disc_price_amount_on') == OLEDRION_DISCOUNT_PRICE_AMOUNT_ON_CART) {
+			$disc_price_amount_on_checked2 = $checked;
 		}
 		$discountForTemplate['disc_price_amount_on_checked1'] = $disc_price_amount_on_checked1;
 		$discountForTemplate['disc_price_amount_on_checked2'] = $disc_price_amount_on_checked2;
 		// ****
 		$disc_price_case_checked1 = $disc_price_case_checked2 = $disc_price_case_checked3 = $disc_price_case_checked4 = '';
-		switch($item->getVar('disc_price_case')) {
+		switch ($item->getVar('disc_price_case')) {
 			case OLEDRION_DISCOUNT_PRICE_CASE_ALL:
 				$disc_price_case_checked1 = $checked;
 				break;
@@ -174,18 +173,18 @@ switch($action) {
 		$discountForTemplate['disc_price_case_checked4'] = $disc_price_case_checked4;
 
 		// ****
-		$quantityConditions = array(OLEDRION_DISCOUNT_PRICE_QTY_COND1 => OLEDRION_DISCOUNT_PRICE_QTY_COND1_TEXT,
-		 							OLEDRION_DISCOUNT_PRICE_QTY_COND2 => OLEDRION_DISCOUNT_PRICE_QTY_COND2_TEXT,
-		 							OLEDRION_DISCOUNT_PRICE_QTY_COND3 => OLEDRION_DISCOUNT_PRICE_QTY_COND3_TEXT,
-		 							OLEDRION_DISCOUNT_PRICE_QTY_COND4 => OLEDRION_DISCOUNT_PRICE_QTY_COND4_TEXT,
-		 							OLEDRION_DISCOUNT_PRICE_QTY_COND5 => OLEDRION_DISCOUNT_PRICE_QTY_COND5_TEXT
-		 							);
+		$quantityConditions = array(
+			OLEDRION_DISCOUNT_PRICE_QTY_COND1 => OLEDRION_DISCOUNT_PRICE_QTY_COND1_TEXT,
+			OLEDRION_DISCOUNT_PRICE_QTY_COND2 => OLEDRION_DISCOUNT_PRICE_QTY_COND2_TEXT,
+			OLEDRION_DISCOUNT_PRICE_QTY_COND3 => OLEDRION_DISCOUNT_PRICE_QTY_COND3_TEXT,
+			OLEDRION_DISCOUNT_PRICE_QTY_COND4 => OLEDRION_DISCOUNT_PRICE_QTY_COND4_TEXT,
+			OLEDRION_DISCOUNT_PRICE_QTY_COND5 => OLEDRION_DISCOUNT_PRICE_QTY_COND5_TEXT);
 		$xoopsTpl->assign('disc_price_case_qty_cond_options', $quantityConditions);
 		$xoopsTpl->assign('disc_price_case_qty_cond_selected', $item->getVar('disc_price_case_qty_cond'));
 
-		// **** Réductions sur les frais de port ****
+		// **** Rï¿½ductions sur les frais de port ****
 		$disc_shipping_type_checked1 = $disc_shipping_type_checked2 = $disc_shipping_type_checked3 = $disc_shipping_type_checked4 = '';
-		switch($item->getVar('disc_shipping_type')) {
+		switch ($item->getVar('disc_shipping_type')) {
 			case OLEDRION_DISCOUNT_SHIPPING_TYPE1:
 				$disc_shipping_type_checked1 = $checked;
 				break;
@@ -206,14 +205,14 @@ switch($action) {
 
 		// Groupes
 		$xoopsTpl->assign('disc_groups_selected', $item->getVar('disc_group'));
-		$member_handler =& xoops_gethandler('member');
+		$member_handler = &xoops_gethandler('member');
 		$groups = array();
 		$groups = $member_handler->getGroupList();
 		$groups[0] = _ALL;
 		ksort($groups);
 		$xoopsTpl->assign('disc_groups_options', $groups);
 
-		// Catégories
+		// Catï¿½gories
 		$categories = $h_oledrion_cat->getAllCategories(new oledrion_parameters());
 		$mytree = new Oledrion_XoopsObjectTree($categories, 'cat_cid', 'cat_pid');
 		$categoriesSelect = $mytree->makeSelBox('disc_cat_cid', 'cat_title', '-', $item->getVar('disc_cat_cid'), _ALL);
@@ -227,7 +226,7 @@ switch($action) {
 		$xoopsTpl->assign('disc_vendor_id_options', $vendors);
 		$xoopsTpl->assign('disc_vendor_id_selected', $item->getVar('disc_vendor_id'));
 
-		// Catégorie
+		// Catï¿½gorie
 		$xoopsTpl->assign('disc_cat_cid_options', $categoriesSelect);
 
 		// Produits
@@ -237,58 +236,69 @@ switch($action) {
 		$xoopsTpl->assign('disc_product_id_options', $products);
 		$xoopsTpl->assign('disc_product_id_selected', $item->getVar('disc_product_id'));
 
-		$productsSelect = $h_oledrion_products->productSelector(new oledrion_parameters(array('caption' => _AM_OLEDRION_DISCOUNT_PRODUCT, 'name' => 'disc_product_id', 'value' => $item->getVar('disc_product_id'), 'size' => 1, 'multiple' => false, 'values' => null, 'showAll' => true, 'sort' => 'product_title', 'order' => 'ASC', 'formName' => 'frmdiscount', 'description' => _AM_OLEDRION_DISCOUNT_HELP1, 'withNull' => _ALL)));
+		$productsSelect = $h_oledrion_products->productSelector(new oledrion_parameters(array(
+			'caption' => _AM_OLEDRION_DISCOUNT_PRODUCT,
+			'name' => 'disc_product_id',
+			'value' => $item->getVar('disc_product_id'),
+			'size' => 1,
+			'multiple' => false,
+			'values' => null,
+			'showAll' => true,
+			'sort' => 'product_title',
+			'order' => 'ASC',
+			'formName' => 'frmdiscount',
+			'description' => _AM_OLEDRION_DISCOUNT_HELP1,
+			'withNull' => _ALL)));
 		$xoopsTpl->assign('disc_product_id', $productsSelect->render());
 
 		$xoopsTpl->assign('discount', $discountForTemplate);
 		$xoopsTpl->assign('currencyName', oledrion_utils::getModuleOption('money_full'));
-		$editor = oledrion_utils::getWysiwygForm(_AM_OLEDRION_DISCOUNT_DESCR, 'disc_description', $item->getVar('disc_description','e'), 15, 60, 'description_hidden');
+		$editor = oledrion_utils::getWysiwygForm(_AM_OLEDRION_DISCOUNT_DESCR, 'disc_description', $item->getVar('disc_description', 'e'), 15, 60, 'description_hidden');
 		$xoopsTpl->assign('editor', $editor->render());
 		$xoopsTpl->display('db:oledrion_admin_discounts.html');
 		show_footer();
 		break;
 
 	// ****************************************************************************************************************
-	case 'copy':	// Duplication d'une réduction
-	// ****************************************************************************************************************
+	case 'copy': // Duplication d'une rï¿½duction
+	              // ****************************************************************************************************************
 		xoops_cp_header();
 		$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
-		if(empty($id)) {
+		if (empty($id)) {
 			oledrion_utils::redirect(_AM_OLEDRION_ERROR_1, $baseurl, 5);
 		}
 		$opRedirect = 'discounts';
 		$item = null;
 		$item = $h_oledrion_discounts->get($id);
-		if(is_object($item)) {
+		if (is_object($item)) {
 			$newDiscount = $item->xoopsClone();
-			if(OLEDRION_DUPLICATED_PLACE == 'right') {
-			    $newDiscount->setVar('disc_title', xoops_trim($item->getvar('disc_title')).' '._AM_OLEDRION_DUPLICATED);
+			if (OLEDRION_DUPLICATED_PLACE == 'right') {
+				$newDiscount->setVar('disc_title', xoops_trim($item->getvar('disc_title')) . ' ' . _AM_OLEDRION_DUPLICATED);
 			} else {
-			    $newDiscount->setVar('disc_title', _AM_OLEDRION_DUPLICATED.' '.xoops_trim($item->getvar('disc_title')));
+				$newDiscount->setVar('disc_title', _AM_OLEDRION_DUPLICATED . ' ' . xoops_trim($item->getvar('disc_title')));
 			}
 			$newDiscount->setVar('disc_id', 0);
 			$newDiscount->setNew();
 			$res = $h_oledrion_discounts->insert($newDiscount, true);
-			if($res) {
+			if ($res) {
 				oledrion_utils::updateCache();
-				oledrion_utils::redirect(_AM_OLEDRION_SAVE_OK, $baseurl.'?op='.$opRedirect, 2);
+				oledrion_utils::redirect(_AM_OLEDRION_SAVE_OK, $baseurl . '?op=' . $opRedirect, 2);
 			} else {
-				oledrion_utils::redirect(_AM_OLEDRION_SAVE_PB, $baseurl.'?op='.$opRedirect, 5);
+				oledrion_utils::redirect(_AM_OLEDRION_SAVE_PB, $baseurl . '?op=' . $opRedirect, 5);
 			}
 		} else {
-			oledrion_utils::redirect(_AM_OLEDRION_NOT_FOUND, $baseurl.'?op='.$opRedirect, 5);
+			oledrion_utils::redirect(_AM_OLEDRION_NOT_FOUND, $baseurl . '?op=' . $opRedirect, 5);
 		}
 
-
 	// ****************************************************************************************************************
-	case 'saveedit':	// Enregistrement d'une réduction après modification ou ajout
-	// ****************************************************************************************************************
+	case 'saveedit': // Enregistrement d'une rï¿½duction aprï¿½s modification ou ajout
+	                  // ****************************************************************************************************************
 		xoops_cp_header();
 		$id = isset($_POST['disc_id']) ? intval($_POST['disc_id']) : 0;
-		if(!empty($id)) {
+		if (!empty($id)) {
 			$edit = true;
 			$item = $h_oledrion_discounts->get($id);
-			if(!is_object($item)) {
+			if (!is_object($item)) {
 				oledrion_utils::redirect(_AM_OLEDRION_NOT_FOUND, $baseurl, 5);
 			}
 			$item->unsetNew();
@@ -297,7 +307,7 @@ switch($action) {
 		}
 		$opRedirect = 'discounts';
 		$item->setVars($_POST);
-		if(isset($_POST['disc_pediod']) && intval($_POST['disc_pediod']) == 1) {
+		if (isset($_POST['disc_pediod']) && intval($_POST['disc_pediod']) == 1) {
 			$item->setVar('disc_date_from', strtotime($_POST['disc_date_from']));
 			$item->setVar('disc_date_to', strtotime($_POST['disc_date_to']));
 		} else {
@@ -305,34 +315,34 @@ switch($action) {
 			$item->setVar('disc_date_to', 0);
 		}
 		$res = $h_oledrion_discounts->insert($item);
-		if($res) {
+		if ($res) {
 			oledrion_utils::updateCache();
-			oledrion_utils::redirect(_AM_OLEDRION_SAVE_OK, $baseurl.'?op='.$opRedirect, 2);
+			oledrion_utils::redirect(_AM_OLEDRION_SAVE_OK, $baseurl . '?op=' . $opRedirect, 2);
 		} else {
-			oledrion_utils::redirect(_AM_OLEDRION_SAVE_PB, $baseurl.'?op='.$opRedirect, 5);
+			oledrion_utils::redirect(_AM_OLEDRION_SAVE_PB, $baseurl . '?op=' . $opRedirect, 5);
 		}
 		break;
 
 	// ****************************************************************************************************************
-	case 'delete':	// Suppression d'une réduction
-	// ****************************************************************************************************************
-        xoops_cp_header();
+	case 'delete': // Suppression d'une rï¿½duction
+	                // ****************************************************************************************************************
+		xoops_cp_header();
 		$id = isset($_GET['id']) ? intval($_GET['id']) : 0;
-		if(empty($id)) {
+		if (empty($id)) {
 			oledrion_utils::redirect(_AM_OLEDRION_ERROR_1, $baseurl, 5);
 		}
 		$opRedirect = 'discounts';
 		$item = $h_oledrion_discounts->get($id);
-		if(is_object($item)) {
+		if (is_object($item)) {
 			$res = $h_oledrion_discounts->delete($item, true);
-			if($res) {
+			if ($res) {
 				oledrion_utils::updateCache();
-				oledrion_utils::redirect(_AM_OLEDRION_SAVE_OK, $baseurl.'?op='.$opRedirect, 2);
+				oledrion_utils::redirect(_AM_OLEDRION_SAVE_OK, $baseurl . '?op=' . $opRedirect, 2);
 			} else {
-				oledrion_utils::redirect(_AM_OLEDRION_SAVE_PB, $baseurl.'?op='.$opRedirect, 5);
+				oledrion_utils::redirect(_AM_OLEDRION_SAVE_PB, $baseurl . '?op=' . $opRedirect, 5);
 			}
 		} else {
-			oledrion_utils::redirect(_AM_OLEDRION_NOT_FOUND, $baseurl.'?op='.$opRedirect, 5);
+			oledrion_utils::redirect(_AM_OLEDRION_NOT_FOUND, $baseurl . '?op=' . $opRedirect, 5);
 		}
 		break;
 }

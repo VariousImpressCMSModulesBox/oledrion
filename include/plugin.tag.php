@@ -1,8 +1,9 @@
 <?php
+
 /**
  * ****************************************************************************
  * oledrion - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * Copyright (c) Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
  *
  * You may not change or alter any portion of this comment or credits
  * of supporting developers from this source code or any supporting source code
@@ -11,76 +12,59 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- *
- * Version : $Id:
- * ****************************************************************************
+ * @copyright Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ *        
+ *         Version : $Id:
+ *         ****************************************************************************
  */
-function oledrion_tag_iteminfo(&$items)
-{
-    include ICMS_ROOT_PATH.'/modules/oledrion/include/common.php';
+function oledrion_tag_iteminfo(&$items) {
+	include ICMS_ROOT_PATH . '/modules/oledrion/include/common.php';
 	$items_id = array();
-	foreach(array_keys($items) as $cat_id){
-		foreach(array_keys($items[$cat_id]) as $item_id){
+	foreach (array_keys($items) as $cat_id) {
+		foreach (array_keys($items[$cat_id]) as $item_id) {
 			$items_id[] = intval($item_id);
 		}
 	}
 	$items_obj = $h_oledrion_products->getItemsFromIds($items_id);
 
-	foreach(array_keys($items) as $cat_id){
-		foreach(array_keys($items[$cat_id]) as $item_id){
-			$item_obj =& $items_obj[$item_id];
+	foreach (array_keys($items) as $cat_id) {
+		foreach (array_keys($items[$cat_id]) as $item_id) {
+			$item_obj = &$items_obj[$item_id];
 			$items[$cat_id][$item_id] = array(
-				'title'		=> $item_obj->getVar('product_title'),
-				'uid'		=> $item_obj->getVar('product_submitter'),
-				'link'		=> $item_obj->getLink(0, '', true),
-				'time'		=> $item_obj->getVar('product_submitted'),
-				'tags'		=> '', // optional
-				'content'	=> '',
-				);
+				'title' => $item_obj->getVar('product_title'),
+				'uid' => $item_obj->getVar('product_submitter'),
+				'link' => $item_obj->getLink(0, '', true),
+				'time' => $item_obj->getVar('product_submitted'),
+				'tags' => '', // optional
+				'content' => '');
 		}
 	}
 	unset($items_obj);
 }
-/** Remove orphan tag-item links **/
-function oledrion_tag_synchronization($mid)
-{
+
+/**
+ * Remove orphan tag-item links *
+ */
+function oledrion_tag_synchronization($mid) {
 	global $xoopsDB;
 	$item_handler_keyName = 'product_id';
 	$item_handler_table = $xoopsDB->prefix('oledrion_products');
-	$link_handler =& xoops_getmodulehandler('link', 'tag');
+	$link_handler = &xoops_getmodulehandler('link', 'tag');
 	$where = "1=1";
 	$where1 = "1=1";
 
 	/* clear tag-item links */
-	if($link_handler->mysql_major_version() >= 4):
-    $sql =	"	DELETE FROM {$link_handler->table}".
-    		"	WHERE ".
-    		"		tag_modid = {$mid}".
-    		"		AND ".
-    		"		( tag_itemid NOT IN ".
-    		"			( SELECT DISTINCT {$item_handler_keyName} ".
-    		"				FROM {$item_handler_table} ".
-    		"				WHERE $where".
-    		"			) ".
-    		"		)";
-    else:
-    $sql = 	"	DELETE {$link_handler->table} FROM {$link_handler->table}".
-    		"	LEFT JOIN {$item_handler_table} AS aa ON {$link_handler->table}.tag_itemid = aa.{$item_handler_keyName} ".
-    		"	WHERE ".
-    		"		tag_modid = {$mid}".
-    		"		AND ".
-    		"		( aa.{$item_handler_keyName} IS NULL".
-    		"			OR $where1".
-    		"		)";
+	if ($link_handler->mysql_major_version() >= 4) :
+		$sql = "	DELETE FROM {$link_handler->table}" . "	WHERE " . "		tag_modid = {$mid}" . "		AND " . "		( tag_itemid NOT IN " . "			( SELECT DISTINCT {$item_handler_keyName} " . "				FROM {$item_handler_table} " . "				WHERE $where" . "			) " . "		)";
+	else :
+		$sql = "	DELETE {$link_handler->table} FROM {$link_handler->table}" . "	LEFT JOIN {$item_handler_table} AS aa ON {$link_handler->table}.tag_itemid = aa.{$item_handler_keyName} " . "	WHERE " . "		tag_modid = {$mid}" . "		AND " . "		( aa.{$item_handler_keyName} IS NULL" . "			OR $where1" . "		)";
 	endif;
-    if (!$link_handler->db->queryF($sql)) {
-        trigger_error($link_handler->db->error());
-  	}
-
+	if (!$link_handler->db->queryF($sql)) {
+		trigger_error($link_handler->db->error());
+	}
 }
 
 ?>

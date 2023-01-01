@@ -1,8 +1,9 @@
 <?php
+
 /**
  * ****************************************************************************
  * oledrion - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * Copyright (c) Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
  *
  * You may not change or alter any portion of this comment or credits
  * of supporting developers from this source code or any supporting source code
@@ -11,61 +12,61 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- *
- * Version : $Id:
- * ****************************************************************************
+ * @copyright Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ *        
+ *         Version : $Id:
+ *         ****************************************************************************
  */
 
 /**
- * Plugin chargé de notifier les utilisateurs de la création d'un nouveau produit et d'une nouvelle catégorie
+ * Plugin chargï¿½ de notifier les utilisateurs de la crï¿½ation d'un nouveau produit et d'une nouvelle catï¿½gorie
  *
  * @since 2.31
  */
-class newelementsAction extends oledrion_action
-{
-	public static function registerEvents()
-	{
+class newelementsAction extends oledrion_action {
+
+	public static function registerEvents() {
 		/**
-		 * La liste des évènements traités par le plugin se présente sous la forme d'un tableau compposé comme ceci :
+		 * La liste des ï¿½vï¿½nements traitï¿½s par le plugin se prï¿½sente sous la forme d'un tableau compposï¿½ comme ceci :
 		 *
-		 * Indice	Signification
+		 * Indice Signification
 		 * ----------------------
-		 *	0		Evènement sur lequel se raccrocher (voir class/oledrion_plugins.php::EVENT_ON_PRODUCT_CREATE
-		 *	1		Priorité du plugin (de 1 à 5)
-		 *	2		Script Php à inclure
-		 *	3		Classe à instancier
-		 *	4		Méthode à appeler
+		 * 0 Evï¿½nement sur lequel se raccrocher (voir class/oledrion_plugins.php::EVENT_ON_PRODUCT_CREATE
+		 * 1 Prioritï¿½ du plugin (de 1 ï¿½ 5)
+		 * 2 Script Php ï¿½ inclure
+		 * 3 Classe ï¿½ instancier
+		 * 4 Mï¿½thode ï¿½ appeler
 		 */
 		$events = array();
-		$events[] = array(oledrion_plugins::EVENT_ON_PRODUCT_CREATE,
-									oledrion_plugins::EVENT_PRIORITY_1,
-									basename(__FILE__),
-									__CLASS__,
-									'fireNewProduct');
-		$events[] = array(oledrion_plugins::EVENT_ON_CATEGORY_CREATE,
-									oledrion_plugins::EVENT_PRIORITY_1,
-									basename(__FILE__),
-									__CLASS__,
-									'fireNewCategory');
+		$events[] = array(
+			oledrion_plugins::EVENT_ON_PRODUCT_CREATE,
+			oledrion_plugins::EVENT_PRIORITY_1,
+			basename(__FILE__),
+			__CLASS__,
+			'fireNewProduct');
+		$events[] = array(
+			oledrion_plugins::EVENT_ON_CATEGORY_CREATE,
+			oledrion_plugins::EVENT_PRIORITY_1,
+			basename(__FILE__),
+			__CLASS__,
+			'fireNewCategory');
 		return $events;
 	}
 
 	/**
-	 * Méthode appelée pour indiquer qu'un nouveau produit a été crée
+	 * Mï¿½thode appelï¿½e pour indiquer qu'un nouveau produit a ï¿½tï¿½ crï¿½e
 	 *
-	 * @param object $product	Le produit qui vient d'être crée
+	 * @param object $product Le produit qui vient d'ï¿½tre crï¿½e
 	 * @return void
 	 */
-	public function fireNewProduct($parameters)
-	{
+	public function fireNewProduct($parameters) {
 		$product = $parameters['product'];
-		if(intval($product->getVar('product_online')) == 1) {
+		if (intval($product->getVar('product_online')) == 1) {
 			$tags = array();
-			$notification_handler =& xoops_gethandler('notification');
+			$notification_handler = &xoops_gethandler('notification');
 			$tags['PRODUCT_NAME'] = $product->getVar('product_title');
 			$tags['PRODUCT_SUMMARY'] = strip_tags($product->getVar('product_summary'));
 			$tags['PRODUCT_URL'] = $product->getLink();
@@ -74,21 +75,19 @@ class newelementsAction extends oledrion_action
 	}
 
 	/**
-	 * Méthode appelée pour indiquer qu'une nouvelle catégorie a été crée
+	 * Mï¿½thode appelï¿½e pour indiquer qu'une nouvelle catï¿½gorie a ï¿½tï¿½ crï¿½e
 	 *
 	 * @param object $category
 	 * @return void
 	 */
-	public function fireNewCategory($parameters)
-	{
+	public function fireNewCategory($parameters) {
 		$category = $parameters['category'];
-		$notification_handler =& xoops_gethandler('notification');
+		$notification_handler = &xoops_gethandler('notification');
 		$tags = array();
 		$tags['CATEGORY_NAME'] = $category->getVar('cat_title');
 		$tags['CATEGORY_URL'] = $category->getLink(); // OLEDRION_URL.'category.php?cat_cid=' . $category->getVar('cat_cid');
 		$tags['X_MODULE_URL'] = OLEDRION_URL;
 		$notification_handler->triggerEvent('global', 0, 'new_category', $tags);
-
 	}
 }
 ?>

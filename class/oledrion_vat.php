@@ -2,7 +2,7 @@
 /**
  * ****************************************************************************
  * oledrion - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * Copyright (c) Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
  *
  * You may not change or alter any portion of this comment or credits
  * of supporting developers from this source code or any supporting source code
@@ -11,13 +11,13 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- *
- * Version : $Id:
- * ****************************************************************************
+ * @copyright Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ *        
+ *         Version : $Id:
+ *         ****************************************************************************
  */
 
 /**
@@ -25,16 +25,14 @@
  */
 require 'classheader.php';
 
-class oledrion_vat extends Oledrion_Object
-{
-	function __construct()
-	{
+class oledrion_vat extends Oledrion_Object {
+
+	function __construct() {
 		$this->initVar('vat_id', XOBJ_DTYPE_INT, null, false);
 		$this->initVar('vat_rate', XOBJ_DTYPE_TXTBOX, null, false);
 	}
 
-	function toArray($format = 's')
-	{
+	function toArray($format = 's') {
 		$ret = array();
 		$ret = parent::toArray($format);
 		$oledrion_Currency = oledrion_Currency::getInstance();
@@ -43,28 +41,30 @@ class oledrion_vat extends Oledrion_Object
 	}
 }
 
+class OledrionOledrion_vatHandler extends Oledrion_XoopsPersistableObjectHandler {
 
-class OledrionOledrion_vatHandler extends Oledrion_XoopsPersistableObjectHandler
-{
-	function __construct($db)
-	{	//						Table			Classe		 	Id
+	function __construct($db) { // Table Classe Id
 		parent::__construct($db, 'oledrion_vat', 'oledrion_vat', 'vat_id');
 	}
 
 	/**
 	 * Renvoie la liste de toutes les TVA du module
 	 *
-	 * @param integer $start Position de départ
-	 * @param integer $limit Nombre total d'enregistrements à renvoyer
+	 * @param integer $start Position de dï¿½part
+	 * @param integer $limit Nombre total d'enregistrements ï¿½ renvoyer
 	 * @param string $order Champ sur lequel faire le tri
 	 * @param string $order Ordre du tri
-	 * @param boolean $idaskey Indique si le tableau renvoyé doit avoir pour clé l'identifiant unique de l'enregistrement
+	 * @param boolean $idaskey Indique si le tableau renvoyï¿½ doit avoir pour clï¿½ l'identifiant unique de l'enregistrement
 	 * @return array tableau d'objets de type TVA
 	 */
-	function getAllVats(oledrion_parameters $parameters)
-	{
-		$parameters = $parameters->extend(new oledrion_parameters(array('start' => 0, 'limit' => 0, 'sort' => 'vat_id', 'order' => 'ASC', 'idaskey' => true)));
-		$critere = new Criteria('vat_id', 0 ,'<>');
+	function getAllVats(oledrion_parameters $parameters) {
+		$parameters = $parameters->extend(new oledrion_parameters(array(
+			'start' => 0,
+			'limit' => 0,
+			'sort' => 'vat_id',
+			'order' => 'ASC',
+			'idaskey' => true)));
+		$critere = new Criteria('vat_id', 0, '<>');
 		$critere->setLimit($parameters['limit']);
 		$critere->setStart($parameters['start']);
 		$critere->setSort($parameters['sort']);
@@ -78,21 +78,19 @@ class OledrionOledrion_vatHandler extends Oledrion_XoopsPersistableObjectHandler
 	 * Suppression d'une TVA
 	 *
 	 * @param oledrion_vat $vat
-	 * @return boolean	Le résultat de la suppressin
+	 * @return boolean Le rï¿½sultat de la suppressin
 	 */
-	function deleteVat(oledrion_vat $vat)
-	{
+	function deleteVat(oledrion_vat $vat) {
 		return $this->delete($vat, true);
 	}
 
 	/**
-	 * Retourne le nombre de produits associés à une TVA
+	 * Retourne le nombre de produits associï¿½s ï¿½ une TVA
 	 *
-	 * @param integer $vat_id	L'ID de la TVA
-	 * @return integer	Le nombre de produits
+	 * @param integer $vat_id L'ID de la TVA
+	 * @return integer Le nombre de produits
 	 */
-	function getVatProductsCount($vat_id)
-	{
+	function getVatProductsCount($vat_id) {
 		global $h_oledrion_products;
 		return $h_oledrion_products->getVatProductsCount($vat_id);
 	}

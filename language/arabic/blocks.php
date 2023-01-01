@@ -2,7 +2,7 @@
 /**
  * ****************************************************************************
  * oledrion - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * Copyright (c) Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
  *
  * You may not change or alter any portion of this comment or credits
  * of supporting developers from this source code or any supporting source code
@@ -11,28 +11,27 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- *
- * Version : $Id:
- * ****************************************************************************
+ * @copyright Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ *        
+ *         Version : $Id:
+ *         ****************************************************************************
  */
-
-define("_MB_OLEDRION_DISP","ÚÑÖ");
-define("_MB_OLEDRION_LINKS","ÑæÇÈØ");
-define("_MB_OLEDRION_CHARS","Øæá ÇáÚäæÇä");
-define("_MB_OLEDRION_LENGTH"," ÇáÃÍÑÝ");
-define("_MB_OLEDRION_MAX_ITEMS","ÃßÈÑ ÚÏÏ ááÃÕäÇÝ ÇáÊí ÓíÊã ÚÑÖåÇ (0 = ÛíÑ ãÍÏæÏ )");
-define("_MB_OLEDRION_PRODUCTS_CNT","ßã ÚÏÏ ÇáãäÊÌÇÊ ÇáÊí ÓíÊã ÚÑÖåÇ");
-define("_MB_OLEDRION_SORT_ORDER","ÊÑÊíÈ ÇáØáÈ");
-define("_MB_OLEDRION_SORT_1","ÇáÚäæÇä");
-define("_MB_OLEDRION_SORT_2","ÇáÚÏÏ");
-define("_MB_OLEDRION_CATEGORY","ÇáÞÓã");
-define("_MB_OLEDRION_ALL_CATEGORIES","* ÌãíÚ ÇáÇÞÓÇã *");
-define("_MB_OLEDRION_TYPE_BLOCK","äæÚ ÇáÈáæß");
-define("_MB_OLEDRION_TYPE_BLOCK1","ÇáÞÇÆãÉ ÇáÚÇÏíÉ ááÇÞÓÇã");
-define("_MB_OLEDRION_TYPE_BLOCK2","ÞÇÆãÉ ÇáÇÞÓÇã ÇáãÑÊÈØÉ ãÚ ÇáÕÝÍÉ ÇáÍÇáíÉ");
-define("_MB_OLEDRION_THIS_MONTH","åÐÇ ÇáÔåÑ ÝÞØ ¿");
+define("_MB_OLEDRION_DISP", "ï¿½ï¿½ï¿½");
+define("_MB_OLEDRION_LINKS", "ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MB_OLEDRION_CHARS", "ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MB_OLEDRION_LENGTH", " ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MB_OLEDRION_MAX_ITEMS", "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ (0 = ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ )");
+define("_MB_OLEDRION_PRODUCTS_CNT", "ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MB_OLEDRION_SORT_ORDER", "ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MB_OLEDRION_SORT_1", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MB_OLEDRION_SORT_2", "ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MB_OLEDRION_CATEGORY", "ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MB_OLEDRION_ALL_CATEGORIES", "* ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ *");
+define("_MB_OLEDRION_TYPE_BLOCK", "ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MB_OLEDRION_TYPE_BLOCK1", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MB_OLEDRION_TYPE_BLOCK2", "ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MB_OLEDRION_THIS_MONTH", "ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½");
 ?>

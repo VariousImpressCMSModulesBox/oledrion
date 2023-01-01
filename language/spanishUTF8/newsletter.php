@@ -1,5 +1,5 @@
 <?php
-$newsletterTemplate =<<<contentend
+$newsletterTemplate = <<<contentend
 Título de los artículos : %title%
 Categorías : %category%
 Marcas/Proveedores : %author%

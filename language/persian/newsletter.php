@@ -1,5 +1,5 @@
 <?php
-$newsletterTemplate =<<<contentend
+$newsletterTemplate = <<<contentend
 عنوان محصول: %title%
 شاخه : %category%
 سازنده  : %author%

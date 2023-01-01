@@ -11,70 +11,69 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- *
- * Version : $Id:
- * ****************************************************************************
+ * @copyright Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ *        
+ *         Version : $Id:
+ *         ****************************************************************************
  */
-
-define("_AM_OLEDRION_GO_TO_MODULE","Go to the module");
-define("_AM_OLEDRION_PREFERENCES","Settings");
-define("_AM_OLEDRION_ADMINISTRATION","Administration");
-define("_AM_OLEDRION_CATEGORIES","Categories");
-define("_AM_OLEDRION_CATEG_CONFIG","Chunks configuration on the categories pages");
-define("_AM_OLEDRION_CHUNK","Chunk");
-define("_AM_OLEDRION_POSITION","Position & Visibility");
-define("_AM_OLEDRION_INVISIBLE","Invisible");
-define("_AM_OLEDRION_OK","Ok");
-define("_AM_OLEDRION_SAVE_OK","Data was saved successfully");
-define("_AM_OLEDRION_SAVE_PB","There was a problem while saving data");
-define("_AM_OLEDRION_ACTION","Action");
-define("_AM_OLEDRION_ADD_ITEM","Add an item");
-define("_AM_OLEDRION_CONF_DELITEM","Do you really want to delete this item ?");
-define("_AM_OLEDRION_LIST","List");
-define("_AM_OLEDRION_ID","Id");
-define("_AM_OLEDRION_RATE","Rate");
+define("_AM_OLEDRION_GO_TO_MODULE", "Go to the module");
+define("_AM_OLEDRION_PREFERENCES", "Settings");
+define("_AM_OLEDRION_ADMINISTRATION", "Administration");
+define("_AM_OLEDRION_CATEGORIES", "Categories");
+define("_AM_OLEDRION_CATEG_CONFIG", "Chunks configuration on the categories pages");
+define("_AM_OLEDRION_CHUNK", "Chunk");
+define("_AM_OLEDRION_POSITION", "Position & Visibility");
+define("_AM_OLEDRION_INVISIBLE", "Invisible");
+define("_AM_OLEDRION_OK", "Ok");
+define("_AM_OLEDRION_SAVE_OK", "Data was saved successfully");
+define("_AM_OLEDRION_SAVE_PB", "There was a problem while saving data");
+define("_AM_OLEDRION_ACTION", "Action");
+define("_AM_OLEDRION_ADD_ITEM", "Add an item");
+define("_AM_OLEDRION_CONF_DELITEM", "Do you really want to delete this item ?");
+define("_AM_OLEDRION_LIST", "List");
+define("_AM_OLEDRION_ID", "Id");
+define("_AM_OLEDRION_RATE", "Rate");
 define("_AM_OLEDRION_MAINTAIN", "Maintain tables and cache");
 
-define("_AM_OLEDRION_ADD_VAT","Add a VAT");
-define("_AM_OLEDRION_EDIT_VAT","Edit a VAT");
+define("_AM_OLEDRION_ADD_VAT", "Add a VAT");
+define("_AM_OLEDRION_EDIT_VAT", "Edit a VAT");
 
-define("_AM_OLEDRION_ADD_CATEG","Add a category");
-define("_AM_OLEDRION_EDIT_CATEG","Edit a category");
+define("_AM_OLEDRION_ADD_CATEG", "Add a category");
+define("_AM_OLEDRION_EDIT_CATEG", "Edit a category");
 
-define("_AM_OLEDRION_ADD_VENDOR","Add a vendor");
-define("_AM_OLEDRION_EDIT_VENDOR","Edit a vendor");
+define("_AM_OLEDRION_ADD_VENDOR", "Add a vendor");
+define("_AM_OLEDRION_EDIT_VENDOR", "Edit a vendor");
 
-define("_AM_OLEDRION_ADD_FILE","Add a file");
-define("_AM_OLEDRION_EDIT_FILE","Edit a file");
+define("_AM_OLEDRION_ADD_FILE", "Add a file");
+define("_AM_OLEDRION_EDIT_FILE", "Edit a file");
 
-define("_AM_OLEDRION_ADD_MANUFACTURER","Add a Manufacturer");
-define("_AM_OLEDRION_EDIT_MANUFACTURER","Edit a Manufacturer");
+define("_AM_OLEDRION_ADD_MANUFACTURER", "Add a Manufacturer");
+define("_AM_OLEDRION_EDIT_MANUFACTURER", "Edit a Manufacturer");
 
-define("_AM_OLEDRION_ADD_PRODUCT","Add a product");
-define("_AM_OLEDRION_EDIT_PRODUCT","Edit a product");
+define("_AM_OLEDRION_ADD_PRODUCT", "Add a product");
+define("_AM_OLEDRION_EDIT_PRODUCT", "Edit a product");
 
-define("_AM_OLEDRION_ADD_DSICOUNT","Add a discount");
-define("_AM_OLEDRION_EDIT_DISCOUNT","Edit a discount");
+define("_AM_OLEDRION_ADD_DSICOUNT", "Add a discount");
+define("_AM_OLEDRION_EDIT_DISCOUNT", "Edit a discount");
 
-define("_AM_OLEDRION_ADD_ATTRIBUTE","Add an attribute");
-define("_AM_OLEDRION_EDIT_ATTRIBUTE","Edit an attribute");
+define("_AM_OLEDRION_ADD_ATTRIBUTE", "Add an attribute");
+define("_AM_OLEDRION_EDIT_ATTRIBUTE", "Edit an attribute");
 
-define("_AM_OLEDRION_ERROR_1","Error, no ID specified");
-define("_AM_OLEDRION_ERROR_2","Error, impossible to delete this vat, it is used by some products");
-define("_AM_OLEDRION_ERROR_3","Error while uploading file ");
-define("_AM_OLEDRION_ERROR_4","Error, impossible to delete this category, it is used by some products");
-define("_AM_OLEDRION_ERROR_5","Error, impossible to delete this manufacturer, it is used by some products");
-define("_AM_OLEDRION_ERROR_6","Error, impossible to delete this vendor, it is used by a product");
-define("_AM_OLEDRION_ERROR_7","Error, impossible to create the export file");
-define("_AM_OLEDRION_ERROR_8","Error, please create at least one category before to create a product");
-define("_AM_OLEDRION_ERROR_9","Error, please create at least one VAT before to create a product");
-define("_AM_OLEDRION_ERROR_10","Error, unknow category");
-define("_AM_OLEDRION_ERROR_11","Error, unknow export format");
-define("_AM_OLEDRION_ERROR_12","Error, unknown action");
+define("_AM_OLEDRION_ERROR_1", "Error, no ID specified");
+define("_AM_OLEDRION_ERROR_2", "Error, impossible to delete this vat, it is used by some products");
+define("_AM_OLEDRION_ERROR_3", "Error while uploading file ");
+define("_AM_OLEDRION_ERROR_4", "Error, impossible to delete this category, it is used by some products");
+define("_AM_OLEDRION_ERROR_5", "Error, impossible to delete this manufacturer, it is used by some products");
+define("_AM_OLEDRION_ERROR_6", "Error, impossible to delete this vendor, it is used by a product");
+define("_AM_OLEDRION_ERROR_7", "Error, impossible to create the export file");
+define("_AM_OLEDRION_ERROR_8", "Error, please create at least one category before to create a product");
+define("_AM_OLEDRION_ERROR_9", "Error, please create at least one VAT before to create a product");
+define("_AM_OLEDRION_ERROR_10", "Error, unknow category");
+define("_AM_OLEDRION_ERROR_11", "Error, unknow export format");
+define("_AM_OLEDRION_ERROR_12", "Error, unknown action");
 define("_AM_OLEDRION_NOT_FOUND", "Error, item not found");
 define("_AM_OLEDRION_CONF_DEL_CATEG", "Do you really want to delete this category and its sub-categories ?<br />%s");
 
@@ -111,7 +110,7 @@ define("_AM_OLEDRION_TOTAL_SHIPP", "Total / Shipping");
 define('_AM_OLEDRION_NEWSLETTER_BETWEEN', 'Select products published between');
 define('_AM_OLEDRION_EXPORT_AND', ' and ');
 define('_AM_OLEDRION_IN_CATEGORY', 'In the following categories');
-define('_AM_OLEDRION_REMOVE_BR',"Convert the html &lt;br&gt; tag to a new line ?");
+define('_AM_OLEDRION_REMOVE_BR', "Convert the html &lt;br&gt; tag to a new line ?");
 define('_AM_OLEDRION_NEWSLETTER_HTML_TAGS', "Remove html tags ?");
 define('_AM_OLEDRION_NEWSLETTER_HEADER', "Header");
 define('_AM_OLEDRION_NEWSLETTER_FOOTER', "Footer");
@@ -227,8 +226,8 @@ define("_AM_OLEDRION_ATTRIBUTE_PRICE", "Price");
 define("_AM_OLEDRION_ATTRIBUTE_STOCK", "Stock");
 define("_AM_OLEDRION_ATTRIBUTE_DEF_VALUE", "ReplaceMe");
 define("_AM_OLEDRION_ATTRIBUTE_DEF_AMOUNT", 1);
-define("_AM_OLEDRION_ATTRIBUTE_MOVE_UP", "Move Up");        // Warning, this text goes in a javascript code
-define("_AM_OLEDRION_ATTRIBUTE_MOVE_DOWN", "Move Down");    // Warning, this text goes in a javascript code
+define("_AM_OLEDRION_ATTRIBUTE_MOVE_UP", "Move Up"); // Warning, this text goes in a javascript code
+define("_AM_OLEDRION_ATTRIBUTE_MOVE_DOWN", "Move Down"); // Warning, this text goes in a javascript code
 define("_AM_OLEDRION_ATTRIBUTE_DELIMITER", "Delimeter for check boxes and radio buttons");
 define("_AM_OLEDRION_ATTRIBUTE_DELIMITER1", "white space");
 define("_AM_OLEDRION_ATTRIBUTE_DELIMITER2", "line break");
@@ -242,8 +241,8 @@ define("_AM_OLEDRION_ANONYMOUS", "Anonymous");
 define('_AM_OLEDRION_CHECKOUT_TEXT1', "Text to display on the first checkkout screen");
 define('_AM_OLEDRION_CHECKOUT_TEXT2', "Text to display on the second checkkout screen");
 
-define('_AM_OLEDRION_SELECT_OTHER_P', "Select other products");		// Several products
-define('_AM_OLEDRION_SELECT_PRODUCT', "Select another product");	// ONE product
+define('_AM_OLEDRION_SELECT_OTHER_P', "Select other products"); // Several products
+define('_AM_OLEDRION_SELECT_PRODUCT', "Select another product"); // ONE product
 define('_AM_OLEDRION_REMOVE_SELECTED', "Remove selected items");
 define('_AM_OLEDRION_SEARCH', "Search");
 define('_AM_OLEDRION_SELECT', "Select");

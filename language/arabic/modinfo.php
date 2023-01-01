@@ -2,7 +2,7 @@
 /**
  * ****************************************************************************
  * oledrion - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * Copyright (c) Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
  *
  * You may not change or alter any portion of this comment or credits
  * of supporting developers from this source code or any supporting source code
@@ -11,60 +11,60 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- *
- * Version : $Id:
- * ****************************************************************************
+ * @copyright Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ *        
+ *         Version : $Id:
+ *         ****************************************************************************
  */
 
 // The name of this module
-define("_MI_OLEDRION_NAME","ãÊÌÑí");
+define("_MI_OLEDRION_NAME", "ï¿½ï¿½ï¿½ï¿½ï¿½");
 
 // A brief description of this module
-define("_MI_OLEDRION_DESC","ÇäÔÆ ãÊÌÑß ÇáÇáßÊÑæäí Úáì ÇáÔÈßÉ áÈíÚ æÚÑÖ ãäÊÌÇÊß.");
+define("_MI_OLEDRION_DESC", "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.");
 
 // Names of blocks for this module (Not all module has blocks)
-define("_MI_OLEDRION_BNAME1","ÇÍÏË ÇáãäÊÌÇÊ");
-define("_MI_OLEDRION_BNAME2","ÇÝÖá ÇáãäÊÌÇÊ");
-define("_MI_OLEDRION_BNAME3","ÇáÇÞÓÇã");
-define("_MI_OLEDRION_BNAME4","ÇáÇÝÖá ãÈíÚÇð");
-define("_MI_OLEDRION_BNAME5","ÇÝÖá ÇáãäÊÌÇÊ ÊÞííãÇð");
-define("_MI_OLEDRION_BNAME6","ãäÊÌ ÚÔæÇÆí");
-define("_MI_OLEDRION_BNAME7","ÇáãäÊÌÇÊ Ýí ÇáÇÚáÇä");
-define("_MI_OLEDRION_BNAME8","ÚÑÈÉ ÇáÔÑÇÁ");
-define("_MI_OLEDRION_BNAME9","ãäÊÌÇÊ ãæÕì ÈåÇ");
+define("_MI_OLEDRION_BNAME1", "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_BNAME2", "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_BNAME3", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_BNAME4", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_BNAME5", "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_BNAME6", "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_BNAME7", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_BNAME8", "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_BNAME9", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½");
 
 // Sub menu titles
-define("_MI_OLEDRION_SMNAME1","ÚÑÈÉ ÇáÔÑÇÁ");
-define("_MI_OLEDRION_SMNAME2","ÇáÑÆíÓíÉ");
-define("_MI_OLEDRION_SMNAME3","ÇáÇÞÓÇã");
-define("_MI_OLEDRION_SMNAME4","ÎÇÑØÉ ÇáÇÞÓÇã");
-define("_MI_OLEDRION_SMNAME5","ãä åæ");
-define("_MI_OLEDRION_SMNAME6","ÌãíÚ ÇáãäÊÌÇÊ");
-define("_MI_OLEDRION_SMNAME7","ÈÍË");
-define("_MI_OLEDRION_SMNAME8","ÇáÔÑæØ ÇáÚÇãÉ ááÈíÚ");
-define("_MI_OLEDRION_SMNAME9","ÇáãäÊÌÇÊ ÇáãæÕì ÈåÇ");
+define("_MI_OLEDRION_SMNAME1", "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_SMNAME2", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_SMNAME3", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_SMNAME4", "ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_SMNAME5", "ï¿½ï¿½ ï¿½ï¿½");
+define("_MI_OLEDRION_SMNAME6", "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_SMNAME7", "ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_SMNAME8", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_SMNAME9", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½");
 
 // Names of admin menu items
-define("_MI_OLEDRION_ADMENU0","ÇáÈÇÆÚíä");
-define("_MI_OLEDRION_ADMENU1","ÇáÖÑíÈÉ Úáì ÇáÞíãÉ ÇáãÖÇÝÉ");
-define("_MI_OLEDRION_ADMENU2","ÇáÇÞÓÇã");
-define("_MI_OLEDRION_ADMENU3","ÇáãÕÇäÚ");
-define("_MI_OLEDRION_ADMENU4","ÇáãäÊÌÇÊ");
-define("_MI_OLEDRION_ADMENU5","ØáÈÇÊ ÇáÔÑÇÁ");
-define("_MI_OLEDRION_ADMENU6","ÇáÍÓæãÇÊ");
-define("_MI_OLEDRION_ADMENU7","ÇáäÔÑÉ");
-define("_MI_OLEDRION_ADMENU8", "ÇáäÕæÕ");
-define("_MI_OLEDRION_ADMENU9", "ãÎÒæä ãÊÏäí");
-define("_MI_OLEDRION_ADMENU10", "áæÍÉ ÇáÚÏÇÏÇÊ");
-define("_MI_OLEDRION_ADMENU11", "ÇáãáÝÇÊ ÇáãÑÝÞÉ");
+define("_MI_OLEDRION_ADMENU0", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_ADMENU1", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_ADMENU2", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_ADMENU3", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_ADMENU4", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_ADMENU5", "ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_ADMENU6", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_ADMENU7", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_ADMENU8", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_ADMENU9", "ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_ADMENU10", "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_ADMENU11", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 
 // Title of config items
-define('_MI_OLEDRION_NEWLINKS', 'ÇÎÊÑ ÇáÚÏÏ ÇáÇÞÕì ááãäÊÌÇÊ ÇáÌÏíÏÉ Ýí ÇáÕÝÍÉ ÇáÇæáì');
-define('_MI_OLEDRION_PERPAGE', 'ÇÎÊÑ ÇáÍÏ ÇáÇÞÕì ááãäÊÌÇÊ Ýí ßá ÕÝÍÉ');
+define('_MI_OLEDRION_NEWLINKS', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½');
+define('_MI_OLEDRION_PERPAGE', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½');
 
 // Description of each config items
 define('_MI_OLEDRION_NEWLINKSDSC', '');
@@ -72,117 +72,117 @@ define('_MI_OLEDRION_PERPAGEDSC', '');
 
 // Text for notifications
 
-define('_MI_OLEDRION_GLOBAL_NOTIFY', 'ÚÇãÉ');
-define('_MI_OLEDRION_GLOBAL_NOTIFYDSC', 'ÎíÇÑÇÊ ÇáÊäÈíåÇÊ ÇáÚÇãÉ.');
+define('_MI_OLEDRION_GLOBAL_NOTIFY', 'ï¿½ï¿½ï¿½ï¿½');
+define('_MI_OLEDRION_GLOBAL_NOTIFYDSC', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.');
 
-define('_MI_OLEDRION_GLOBAL_NEWCATEGORY_NOTIFY', 'ÞÓã ÌÏíÏ');
-define('_MI_OLEDRION_GLOBAL_NEWCATEGORY_NOTIFYCAP', "ÇÈáÛäí ÚäÏ ÇäÔÇÁ ÞÓã ÌÏíÏ ááãäÊÌÇÊ.");
-define('_MI_OLEDRION_GLOBAL_NEWCATEGORY_NOTIFYDSC', "ÊáÞí ÊÈáÈÛÇÊ ÚäÏ ÇäÔÇÁ ÞÓã ÌÏíÏ ááãäÊÌÇÊ.");
-define('_MI_OLEDRION_GLOBAL_NEWCATEGORY_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} ÊÈáíÛ ÊáÞÇÆí : ÞÓã ÌÏíÏ ááãäÊÌÇÊ');
+define('_MI_OLEDRION_GLOBAL_NEWCATEGORY_NOTIFY', 'ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½');
+define('_MI_OLEDRION_GLOBAL_NEWCATEGORY_NOTIFYCAP', "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.");
+define('_MI_OLEDRION_GLOBAL_NEWCATEGORY_NOTIFYDSC', "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.");
+define('_MI_OLEDRION_GLOBAL_NEWCATEGORY_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½');
 
-define('_MI_OLEDRION_GLOBAL_NEWLINK_NOTIFY', 'ãäÊÌ ÌÏíÏ');
-define('_MI_OLEDRION_GLOBAL_NEWLINK_NOTIFYCAP', 'ÇÈáÇÛí ÚäÏ ÇÖÇÝÉ Çí ãäÊÌ ÌÏíÏ.');
-define('_MI_OLEDRION_GLOBAL_NEWLINK_NOTIFYDSC', 'ÊáÞí ÊÈáíÛÇÊ ÚäÏ ÇÖÇÝÉ Çí ãäÊÌ ÌÏíÏ.');
-define('_MI_OLEDRION_GLOBAL_NEWLINK_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} ÊÈáíÛ ÊáÞÇÆí : ãäÊÌ ÌÏíÏ');
+define('_MI_OLEDRION_GLOBAL_NEWLINK_NOTIFY', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½');
+define('_MI_OLEDRION_GLOBAL_NEWLINK_NOTIFYCAP', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.');
+define('_MI_OLEDRION_GLOBAL_NEWLINK_NOTIFYDSC', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.');
+define('_MI_OLEDRION_GLOBAL_NEWLINK_NOTIFYSBJ', '[{X_SITENAME}] {X_MODULE} ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½');
 
-define('_MI_OLEDRION_PAYPAL_EMAIL', "ÚäæÇä ÇáÈÑíÏ ÇáÇáßÊÑæäí ÇáãÎÕÕ á ÈÇí ÈÇá PayPal");
-define('_MI_OLEDRION_PAYPAL_EMAILDSC', "ÎíÇÑÇÊ ÇáÊÈáíÛ ááÚäæÇä ÇáãÓÊÚãá Ýí ÈÇí ÈÇá ÇËäÇÁ ÚãáíÉ ÇáÏÝÚ.<br /><u><b>Çä áã ÊãáÃ åÐå ÇáÍÞæá, áä ÊÓÊØíÚ Çä Êßãá ÚãáíÉ ÇáÏÝÚ.</u></b>");
-define('_MI_OLEDRION_PAYPAL_TEST', "ÇÓÊÎÏÇã äãæÐÌ ÇáÈÇí ÈÇá ?");
-define("_MI_OLEDRION_FORM_OPTIONS","ÎíÇÄÇÊ ÇáäãæÐÌ");
-define("_MI_OLEDRION_FORM_OPTIONS_DESC","ÇÎÊÑ ÇáãÍÑÑ ÇáÐí ÊÑíÏ ÇÓÊÚãÇáå. If you have a 'simple' install (e.g you use only xoops core editor class, provided in the standard Xoops core package), then you can just select DHTML and Compact");
+define('_MI_OLEDRION_PAYPAL_EMAIL', "ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ PayPal");
+define('_MI_OLEDRION_PAYPAL_EMAILDSC', "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½.<br /><u><b>ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½.</u></b>");
+define('_MI_OLEDRION_PAYPAL_TEST', "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ?");
+define("_MI_OLEDRION_FORM_OPTIONS", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_FORM_OPTIONS_DESC", "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½. If you have a 'simple' install (e.g you use only xoops core editor class, provided in the standard Xoops core package), then you can just select DHTML and Compact");
 
-define("_MI_OLEDRION_FORM_COMPACT","Compact");
-define("_MI_OLEDRION_FORM_DHTML","DHTML");
-define("_MI_OLEDRION_FORM_SPAW","Spaw Editor");
-define("_MI_OLEDRION_FORM_HTMLAREA","HtmlArea Editor");
-define("_MI_OLEDRION_FORM_FCK","FCK Editor");
-define("_MI_OLEDRION_FORM_KOIVI","Koivi Editor");
-define("_MI_OLEDRION_FORM_TINYEDITOR","TinyEditor");
+define("_MI_OLEDRION_FORM_COMPACT", "Compact");
+define("_MI_OLEDRION_FORM_DHTML", "DHTML");
+define("_MI_OLEDRION_FORM_SPAW", "Spaw Editor");
+define("_MI_OLEDRION_FORM_HTMLAREA", "HtmlArea Editor");
+define("_MI_OLEDRION_FORM_FCK", "FCK Editor");
+define("_MI_OLEDRION_FORM_KOIVI", "Koivi Editor");
+define("_MI_OLEDRION_FORM_TINYEDITOR", "TinyEditor");
 
-define("_MI_OLEDRION_INFOTIPS","Øæá ÇáÇÏæÇÊ");
-define("_MI_OLEDRION_INFOTIPS_DES","ÇÐÇ ÇÓÊÚãáÊ åÐÇ ÇáÎíÇÑ, ÇáÑæÇÈØ ÇáÊÇÈÚÉ ááãäÊÌÇÊ Óíßæä ÝíåÇ Çæá (n) ÍÑÝ ãä ÇáãäÊÌ. ÇÐÇ ÇÎÊÑÊ ÇáÞíãÉ ÖÝÑ ÓæÝ áä ÊÚÑÖ ÇáãÚáæãÇÊ ÇáÇÖÇÝíÉ");
-define('_MI_OLEDRION_UPLOADFILESIZE', 'ÇáÍÏ ÇÇáÇÞÕì áãÑÝÞÇÊ ÇáÊÍãíá (KB) 1048576 = 1 ãíÛÇ');
+define("_MI_OLEDRION_INFOTIPS", "ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_INFOTIPS_DES", "ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ (n) ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define('_MI_OLEDRION_UPLOADFILESIZE', 'ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (KB) 1048576 = 1 ï¿½ï¿½ï¿½ï¿½');
 
-define('_MI_PRODUCTSBYTHISMANUFACTURER', 'ãäÊÌÇÊ ãä äÝÓ ÇáãÕäÚ');
+define('_MI_PRODUCTSBYTHISMANUFACTURER', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½');
 
-define('_MI_OLEDRION_PREVNEX_LINK','ÇÙåÇÑ ÑæÇÈØ ÇáÓÇÈÞ æÇáÊÇáí ?');
-define('_MI_OLEDRION_PREVNEX_LINK_DESC','ÚäÏãÇ íÊã ÇÎÊíÇÑ \'äÚã\', ÑÇÈØíä ÍÏíÏíä ÓíÙåÑÇä ÞÑÈ ÇáãäÊÌ. åÐå ÇáÑæÇÈØ ÓÊäÞáß Çáì ÇáãäÊÌÇÊ ÇáÓÇÈÞÉ æÇááÇÍÞÉ æÝÞÇ ð áÊÇÑíÎ ÇáäÔÑ');
+define('_MI_OLEDRION_PREVNEX_LINK', 'ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ?');
+define('_MI_OLEDRION_PREVNEX_LINK_DESC', 'ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ \'ï¿½ï¿½ï¿½\', ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½');
 
-define('_MI_OLEDRION_SUMMARY1_SHOW','ÇÙåÇÑ ÇÍÏË ÇáãäÊÌÇÊ Ýí ßá ÞÓã?');
-define('_MI_OLEDRION_SUMMARY1_SHOW_DESC','ÚäÏ ÇÓÊÚãÇáß áåÐÇ ÇáÎíÇÑ, ãáÎÕ íÍÊæí Úáì æÕáÇÊ áÌãíÚ ÇáãäÊÌÇÊ ÇáãäÔæÑÉ ãÄÎÑÇð ÓæÝ íÙåÑ Ýí ÇÝá ßá ãäÊÌ');
+define('_MI_OLEDRION_SUMMARY1_SHOW', 'ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½?');
+define('_MI_OLEDRION_SUMMARY1_SHOW_DESC', 'ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½');
 
-define('_MI_OLEDRION_SUMMARY2_SHOW','ÇÙåÇÑ ÇÍÏË ÇáãäÊÌÇÊ Ýí ÇáÞÓã ÇáÍÇáí ?');
-define('_MI_OLEDRION_SUMMARY2_SHOW_DESC','ÚäÏ ÇÓÊÚãÇáß áåÐÇ ÇáÎíÇÑ, ãáÎÕ íÍÊæí Úáì æÕáÇÊ áÌãíÚ ÇáãäÊÌÇÊ ÇáãäÔæÑÉ ãÄÎÑÇð ÓæÝ íÙåÑ Ýí ÇÝá ßá ãäÊÌ');
+define('_MI_OLEDRION_SUMMARY2_SHOW', 'ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ?');
+define('_MI_OLEDRION_SUMMARY2_SHOW_DESC', 'ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½');
 
-define('_MI_OLEDRION_OPT23',"[METAGEN] - ÇáÍÏ ÇáÇÞÕì ááßáãÇÊ ááÊæáíÏ");
-define('_MI_OLEDRION_OPT23_DSC',"ÇÎÊÑ ÇáÍÏ ÇáÇÞÕì ááßáãÇÊ ááÊæáíÏ ÇáÊáÞÇÆí.");
+define('_MI_OLEDRION_OPT23', "[METAGEN] - ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define('_MI_OLEDRION_OPT23_DSC', "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.");
 
-define('_MI_OLEDRION_OPT24',"[METAGEN] - ÊÑÊíÈ ÇáßáãÇÊ");
-define('_MI_OLEDRION_OPT241',"ÇäÔÇÁ ÇáßáãÇÊ ßãÇ áæ Çäåã íÙåÑæä Ýí äÕ");
-define('_MI_OLEDRION_OPT242',"ÇáßáãÇÊ ÇáÇßËÑ ÊÑÏÏÇð");
-define('_MI_OLEDRION_OPT243',"ÇáÊÑÊíÈ ÇáÚßÓí ááßáãÇÊ ÇáÇßËÑ ÊÑÏÏÇð");
+define('_MI_OLEDRION_OPT24', "[METAGEN] - ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define('_MI_OLEDRION_OPT241', "ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½");
+define('_MI_OLEDRION_OPT242', "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define('_MI_OLEDRION_OPT243', "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 
-define('_MI_OLEDRION_OPT25',"[METAGEN] - ÇááÇÆÍÉ ÇáÓæÏÇÁ");
-define('_MI_OLEDRION_OPT25_DSC',"ÇÏÎá ÇáßáãÇÊ (ÖÚ ÈíäåÇ ÝÇÕáÉ) áÇÒÇáÊåÇ ãä áÇÆÍÉ ßáãÇÊ ÇáãíÊÇ");
-define('_MI_OLEDRION_RATE','ÇáÓãÇÍ ááãÔÊÑßíä ÈÊÞííã ÇáãäÊÌÇÊ ?');
+define('_MI_OLEDRION_OPT25', "[METAGEN] - ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define('_MI_OLEDRION_OPT25_DSC', "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½) ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define('_MI_OLEDRION_RATE', 'ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ?');
 
-define("_MI_OLEDRION_ADVERTISEMENT","ÇÚáÇäÇÊ");
-define("_MI_OLEDRION_ADV_DESCR","ÇÏÎá äÕ Çæ ßæÏ ÌÇÝÇ áíÙåÑ Ýí ÇÚáÇäÇÊß");
-define("_MI_OLEDRION_MIMETYPES","ÇÏÎá Çáãíã ÊÇíÈ ÇáãÓãæÍ ÈåÇ ááÑÝÚ (ÇÝÕá Ýí ãÇ Èíäåã ÈÓØÑ)");
-define('_MI_OLEDRION_STOCK_EMAIL', "ÚäæÇä ÇáÈÑíÏ ÇáÇáßÊÑæäí ÇáãÓÊÚãá Ýí ÍÇá ßÇäÊ ÇáßãíÇÊ ÇáãÎÒäÉ ÞáíáÉ");
-define('_MI_OLEDRION_STOCK_EMAIL_DSC', "áÇ ÊßÊÈ Çí ÔíÁ Çä ßäÊ áÇ ÊÑíÏ Çä ÊÓÊÚãá åÐå ÇáÎÇÕíÉ.");
+define("_MI_OLEDRION_ADVERTISEMENT", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_ADV_DESCR", "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define("_MI_OLEDRION_MIMETYPES", "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)");
+define('_MI_OLEDRION_STOCK_EMAIL', "ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½");
+define('_MI_OLEDRION_STOCK_EMAIL_DSC', "ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½.");
 
-define('_MI_OLEDRION_OPT7',"ÇÓÊÚãÇá ÎÏãÉ Çá ÇÑ ÇÓ ÇÓ ?");
-define('_MI_OLEDRION_OPT7_DSC',"ÇÎÑ ÇáãäÊÌÇÊ ÓæÝ íÊã ÚÑÖåÇ Ýí ÎÏãÉ Çá ÇÑ ÇÓ ÇÓ");
+define('_MI_OLEDRION_OPT7', "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ?");
+define('_MI_OLEDRION_OPT7_DSC', "ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½");
 
-define('_MI_OLEDRION_CHUNK1',"ÇáãÏì áÇÍÏË ÇáãäÊÌÇÊ");
-define('_MI_OLEDRION_CHUNK2',"ÇáãÏì áÇßËÑ ÇáãäÊÌÇÊ ãÈíÚÇð");
-define('_MI_OLEDRION_CHUNK3',"ÇáãÏì áÇßËÑ ÇáãäÊÌÇÊ ãÔÇåÏÉ");
-define('_MI_OLEDRION_CHUNK4',"ÇáãÏì áÇÝÖá ÇáãäÊÌÇÊ ÊÕäíÝÇð");
-define('_MI_OLEDRION_ITEMSCNT',"ÚÏÏ ÇáÚäÇÕÑ ÇáÊí ÓÊÙåÑ Ýí áÇÆÍÉ ÇáÇÏãä");
-define('_MI_OLEDRION_PDF_CATALOG',"ÇáÓãÇÍ ÈÇÓÊÚãÇá ßÇÊÇáæÌ Çá Èí Ïí ÇÝ PDF ?");
-define('_MI_OLEDRION_URL_REWR',"ÇÓÊÚãÇá ÇÚÇÏÉ ßÊÇÈÉ ÚäæÇä Çá URL ?");
+define('_MI_OLEDRION_CHUNK1', "ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define('_MI_OLEDRION_CHUNK2', "ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define('_MI_OLEDRION_CHUNK3', "ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define('_MI_OLEDRION_CHUNK4', "ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define('_MI_OLEDRION_ITEMSCNT', "ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define('_MI_OLEDRION_PDF_CATALOG', "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ PDF ?");
+define('_MI_OLEDRION_URL_REWR', "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ URL ?");
 
-define('_MI_OLEDRION_MONEY_F',"ÇÓã ÇáÚãáÉ");
-define('_MI_OLEDRION_MONEY_S',"ÔÚÇÑ ÇáÚãáÉ");
-define('_MI_OLEDRION_MONEY_P',"ÇÏÎá ßæÏ ÇáÈÇí ÈÇá ááÚãáÉ ÇáãÓÊÎÏãÉ");
-define('_MI_OLEDRION_NO_MORE',"ÇÚÑÖ ÇáãäÊÌÇÊ ÍÊì áæ áã Êßä ãÊæÝÑÉ ?");
-define('_MI_OLEDRION_MSG_NOMORE',"ÇáäÕ ÇáãÓÊÎÏã Ýí ÍÇá ÇäÊåÇÁ ÇáßãíÉ ãä ÇáãÎÒä");
-define('_MI_OLEDRION_GRP_SOLD',"ÇáãÌãæÚÉ ÇáÊí ÓíÊã ÇÑÓÇá ÑÓÇáÉ áåÇ Ýí ÍÇá Êã ÈíÚ Çí ãäÊÌ ?");
-define('_MI_OLEDRION_GRP_QTY',"ãÌãæÚÉ ÇáãÔÊÑßíä ÇáãÓãæÍ áåã ÊÚÏíá ÇáßãíÇÊ Ýí ÕÝÍÉ ÇáãäÊÌ");
-define('_MI_OLEDRION_BEST_TOGETHER',"ÇÙåÇÑ ÇáÇÝÖá ãÚÇð ?");
-define('_MI_OLEDRION_UNPUBLISHED',"ÇÙåÇÑ ÇáãäÊÌ ÇáÐí Êã äÔÑå ÞÈá Çáíæã ?");
-define('_MI_OLEDRION_DECIMAL', "ÇáÇÞÓÇã ÇáÚÔÑíÉ ááÇãæÇá");
-define('_MI_OLEDRION_PDT', "Paypal - ÏÝÚ ÊÍæíá äÞá ÇáÈíÇäÇÊ (ÇÎÊíÇÑí)");
-define('_MI_OLEDRION_CONF04',"ÝÇÕá ÇáÇáÇÝ");
-define('_MI_OLEDRION_CONF05', "ÝÇÕá ÇáÇÚÔÇÑ");
-define('_MI_OLEDRION_CONF00',"ãæÞÚ ÇáãÇá ?");
-define('_MI_OLEDRION_CONF00_DSC', "äÚã = íãíä, áÇ = íÓÇÑ");
-define('_MI_OLEDRION_MANUAL_META', "ÇÏÎÇá ÇáãÚáæãÇÊ íÏæíÇð ?");
+define('_MI_OLEDRION_MONEY_F', "ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define('_MI_OLEDRION_MONEY_S', "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define('_MI_OLEDRION_MONEY_P', "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define('_MI_OLEDRION_NO_MORE', "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ?");
+define('_MI_OLEDRION_MSG_NOMORE', "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define('_MI_OLEDRION_GRP_SOLD', "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ?");
+define('_MI_OLEDRION_GRP_QTY', "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define('_MI_OLEDRION_BEST_TOGETHER', "ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ?");
+define('_MI_OLEDRION_UNPUBLISHED', "ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ?");
+define('_MI_OLEDRION_DECIMAL', "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define('_MI_OLEDRION_PDT', "Paypal - ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)");
+define('_MI_OLEDRION_CONF04', "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define('_MI_OLEDRION_CONF05', "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define('_MI_OLEDRION_CONF00', "ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ?");
+define('_MI_OLEDRION_CONF00_DSC', "ï¿½ï¿½ï¿½ = ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ = ï¿½ï¿½ï¿½ï¿½");
+define('_MI_OLEDRION_MANUAL_META', "ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ?");
 
-define('_MI_OLEDRION_OFFLINE_PAYMENT', "åá ÊÑíÏ ÊÝÚíá ÇáÏÝÚ ÇæÝáÇíä?");
-define('_MI_OLEDRION_OFF_PAY_DSC', "ÇÐÇ ÝÚáÊåÇ, Úáíß ßÊÇÈÉ ÈÚÖ ÇáäÕæÕ Ýí áÇÆÍÉ ÊÍßã ÇáÇÏÇÑÉ æÊÍíÏÇ Ýí ÎÇäÉ ÇáäÕæÕ ");
+define('_MI_OLEDRION_OFFLINE_PAYMENT', "ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?");
+define('_MI_OLEDRION_OFF_PAY_DSC', "ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ");
 
-define('_MI_OLEDRION_USE_PRICE', "åá ÊÑíÏ Çä ÊÓÊÚãá ÎÇäÉ ÇáäÕæÕ?");
-define('_MI_OLEDRION_USE_PRICE_DSC', "íãßäß ãä ÎáÇá åÐå ÇáãíÒÉ ÇáÛÇÁ ÇÓÚÇÑ ÇáãäÊÌÇÊ (áÚãá ßÇÊÇáæÌ ãËáÇð)");
+define('_MI_OLEDRION_USE_PRICE', "ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?");
+define('_MI_OLEDRION_USE_PRICE_DSC', "ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½)");
 
-define('_MI_OLEDRION_PERSISTENT_CART', "åá ÊÑíÏ ÇáÇÓÊãÑÇÑ Ýí ÇÓÊÚãÇá ÚÑÈÉ ÇáÔÑÇÁ?");
-define('_MI_OLEDRION_PERSISTENT_CART_DSC', "ÚäÏ ÇÎÊíÇÑß äÚã, ÓíÊã ÍÝÙ ÚÑÈÉ ÔÑÇÁ ÇáãÔÊÑß (ÊäÈíå, åÐÇ ÇáÎíÇÑ ÓæÝ íÓÊåáß ÇáãæÇÑÏ)");
+define('_MI_OLEDRION_PERSISTENT_CART', "ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?");
+define('_MI_OLEDRION_PERSISTENT_CART_DSC', "ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)");
 
-define('_MI_OLEDRION_RESTRICT_ORDERS', "ÍÕÑ ØáÈÇÊ ÇáÔÑÇÁ ÈÇáÇÚÖÇÁ ÇáãÓÌÇíä ?");
-define('_MI_OLEDRION_RESTRICT_ORDERS_DSC', "ÇÐÇ ÇÎÊÑÊ äÚã ÝÇä ÇáãÔÊÑßíä Ýí ÇáãæÞÚ åã ÝÞØ ãä íÓÊØíÚæä æÖÚ ØáÈÇÊ ÔÑÇÁ");
+define('_MI_OLEDRION_RESTRICT_ORDERS', "ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ?");
+define('_MI_OLEDRION_RESTRICT_ORDERS_DSC', "ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 
-define('_MI_OLEDRION_RESIZE_MAIN', "åá ÊÑíÏ Çä íÊã ÊÍÌíã ÇæÊæãÇÊíßí áÕßá ÕæÑÉ ÑÆíÓíÉ ááãäÊÌÇÊ ?");
+define('_MI_OLEDRION_RESIZE_MAIN', "ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ?");
 define('_MI_OLEDRION_RESIZE_MAIN_DSC', '');
 
-define('_MI_OLEDRION_CREATE_THUMBS', "åá ÊÑíÏ Çä ÊÞæã ÇáãæÏíæá ÈÔßá ÇæÊæãÇÊíßí ÈÎáÞ ÕæÑ ãÕÛÑÉ ááãäÊÌÇÊ ?");
-define('_MI_OLEDRION_CREATE_THUMBS_DSC', "Çä áã ÊÎÊÑ åÐå ÇáãíÒÉ Úáíß Çä ÊÑÝÚ ÇäÊ ÇáÕæÑ ÇáãÕÛÑÉ áßá ãäÊÌ");
+define('_MI_OLEDRION_CREATE_THUMBS', "ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ?");
+define('_MI_OLEDRION_CREATE_THUMBS_DSC', "ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 
-define('_MI_OLEDRION_IMAGES_WIDTH', "ÚÑÖ ÇáÕæÑ");
-define('_MI_OLEDRION_IMAGES_HEIGHT', "ÇÑÊÝÇÚ ÇáÕæÑ");
+define('_MI_OLEDRION_IMAGES_WIDTH', "ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½");
+define('_MI_OLEDRION_IMAGES_HEIGHT', "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½");
 
-define('_MI_OLEDRION_THUMBS_WIDTH', "ÚÑÖ ÇáÕæÑ ÇáãÕÛÑÉ");
-define('_MI_OLEDRION_THUMBS_HEIGHT', "ÇÑÊÝÇÚ ÇáÕæÑ ÇáãÕÛÑÉ");
+define('_MI_OLEDRION_THUMBS_WIDTH', "ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+define('_MI_OLEDRION_THUMBS_HEIGHT', "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 
-define('_MI_OLEDRION_RESIZE_CATEGORIES', "åá ÊÑíÏ Çä íÊã ÊÍÌíã ÕæÑ ÇáãÕÇäÚ æÇáÇÞÓÇã Çáì ÇáãÞÇÓÇÊ ÇáãÍÏÏÉ ÇÚáÇå ?");
+define('_MI_OLEDRION_RESIZE_CATEGORIES', "ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ?");
 ?>

@@ -2,7 +2,7 @@
 /**
  * ****************************************************************************
  * oledrion Paypal - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * Copyright (c) Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
  *
  * You may not change or alter any portion of this comment or credits
  * of supporting developers from this source code or any supporting source code
@@ -11,17 +11,17 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion Paypal
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- *
- * Version : $Id:
- * ****************************************************************************
+ * @copyright Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion Paypal
+ * @author Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ *        
+ *         Version : $Id:
+ *         ****************************************************************************
  */
-define("_OLEDRION_PAYPAL_PARAMETERS","Paramètres");
+define("_OLEDRION_PAYPAL_PARAMETERS", "Paramï¿½tres");
 define('_OLEDRION_PAYPAL_EMAIL', "Adresse Email Paypal");
-define('_OLEDRION_PAYPAL_EMAILDSC', "Adresse à utiliser pour les paiements et les notifications de commandes");
+define('_OLEDRION_PAYPAL_EMAILDSC', "Adresse ï¿½ utiliser pour les paiements et les notifications de commandes");
 define('_OLEDRION_PAYPAL_TEST', "Utilser Paypal en mode test (sandbox) ?");
-define('_OLEDRION_PAYPAL_MONEY_P',"Code de la monnaie pour Paypal");
+define('_OLEDRION_PAYPAL_MONEY_P', "Code de la monnaie pour Paypal");
 ?>

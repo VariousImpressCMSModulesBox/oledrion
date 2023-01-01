@@ -1,8 +1,9 @@
 <?php
+
 /**
  * ****************************************************************************
  * oledrion - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * Copyright (c) Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
  *
  * You may not change or alter any portion of this comment or credits
  * of supporting developers from this source code or any supporting source code
@@ -11,19 +12,18 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- *
- * Version : $Id:
- * ****************************************************************************
+ * @copyright Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ *        
+ *         Version : $Id:
+ *         ****************************************************************************
  */
-
 function b_sitemap_oledrion() {
 	require '../oledrion/header.php';
 	global $sitemap_configs;
-	$xoopsDB =& Database::getInstance();
+	$xoopsDB = &Database::getInstance();
 	$table = $xoopsDB->prefix('oledrion_cat');
 	$id_name = 'cat_cid';
 	$pid_name = 'cat_pid';
@@ -31,50 +31,48 @@ function b_sitemap_oledrion() {
 	$url = 'category.php?cat_cid=';
 	$order = 'cat_title';
 
-	include_once ICMS_ROOT_PATH.'/class/xoopstree.php';
+	include_once ICMS_ROOT_PATH . '/class/xoopstree.php';
 	$mytree = new XoopsTree($table, $id_name, $pid_name);
-	$xoopsDB =& Database::getInstance();
+	$xoopsDB = &Database::getInstance();
 
 	$sitemap = array();
-	$myts =& MyTextSanitizer::getInstance();
+	$myts = &MyTextSanitizer::getInstance();
 
 	$i = 0;
-	$sql = "SELECT `$id_name`,`$title_name` FROM `$table` WHERE `$pid_name`=0" ;
+	$sql = "SELECT `$id_name`,`$title_name` FROM `$table` WHERE `$pid_name`=0";
 	if ($order != '') {
-		$sql .= " ORDER BY `$order`" ;
+		$sql .= " ORDER BY `$order`";
 	}
 	$result = $xoopsDB->query($sql);
-	while (list($catid, $name) = $xoopsDB->fetchRow($result))
-	{
+	while (list($catid, $name) = $xoopsDB->fetchRow($result)) {
 		$sitemap['parent'][$i]['id'] = $catid;
-		$sitemap['parent'][$i]['title'] = $myts->htmlSpecialChars( $name ) ;
-		if( oledrion_utils::getModuleOption('urlrewriting') == 1 ) {	// On utilise l'url rewriting
-			$url = 'category'.'-'.intval($catid).oledrion_utils::makeSeoUrl($name).'.html';
-		} else {	// Pas d'utilisation de l'url rewriting
-			$url = 'category.php?cat_cid='.intval($catid);
+		$sitemap['parent'][$i]['title'] = $myts->htmlSpecialChars($name);
+		if (oledrion_utils::getModuleOption('urlrewriting') == 1) { // On utilise l'url rewriting
+			$url = 'category' . '-' . intval($catid) . oledrion_utils::makeSeoUrl($name) . '.html';
+		} else { // Pas d'utilisation de l'url rewriting
+			$url = 'category.php?cat_cid=' . intval($catid);
 		}
 		$sitemap['parent'][$i]['url'] = $url;
 
-		if(@$sitemap_configs["show_subcategoris"]){
+		if (@$sitemap_configs["show_subcategoris"]) {
 			$j = 0;
 			$child_ary = $mytree->getChildTreeArray($catid, $order);
-			foreach ($child_ary as $child)
-			{
+			foreach ($child_ary as $child) {
 				$count = strlen($child['prefix']) + 1;
 				$sitemap['parent'][$i]['child'][$j]['id'] = $child[$id_name];
-				$sitemap['parent'][$i]['child'][$j]['title'] = $myts->htmlSpecialChars( $child[$title_name] ) ;
+				$sitemap['parent'][$i]['child'][$j]['title'] = $myts->htmlSpecialChars($child[$title_name]);
 				$sitemap['parent'][$i]['child'][$j]['image'] = (($count > 3) ? 4 : $count);
-				if( oledrion_utils::getModuleOption('urlrewriting') == 1 ) {	// On utilise l'url rewriting
-					$url = 'category'.'-'.intval($child[$id_name]).oledrion_utils::makeSeoUrl($child[$title_name]).'.html';
-				} else {	// Pas d'utilisation de l'url rewriting
-					$url = 'category.php?cat_cid='.intval($child[$id_name]);
+				if (oledrion_utils::getModuleOption('urlrewriting') == 1) { // On utilise l'url rewriting
+					$url = 'category' . '-' . intval($child[$id_name]) . oledrion_utils::makeSeoUrl($child[$title_name]) . '.html';
+				} else { // Pas d'utilisation de l'url rewriting
+					$url = 'category.php?cat_cid=' . intval($child[$id_name]);
 				}
 				$sitemap['parent'][$i]['child'][$j]['url'] = $url;
 
-				$j++;
+				$j++ ;
 			}
 		}
-		$i++;
+		$i++ ;
 	}
 	return $sitemap;
 }

@@ -2,7 +2,7 @@
 /**
  * ****************************************************************************
  * oledrion - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * Copyright (c) Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
  *
  * You may not change or alter any portion of this comment or credits
  * of supporting developers from this source code or any supporting source code
@@ -11,13 +11,13 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- *
- * Version : $Id:
- * ****************************************************************************
+ * @copyright Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ *        
+ *         Version : $Id:
+ *         ****************************************************************************
  */
 
 /**
@@ -25,31 +25,27 @@
  */
 require 'classheader.php';
 
-class oledrion_related extends Oledrion_Object
-{
-	function __construct()
-	{
-		$this->initVar('related_id',XOBJ_DTYPE_INT,null,false);
-		$this->initVar('related_product_id',XOBJ_DTYPE_INT,null,false);
-		$this->initVar('related_product_related',XOBJ_DTYPE_INT,null,false);
+class oledrion_related extends Oledrion_Object {
+
+	function __construct() {
+		$this->initVar('related_id', XOBJ_DTYPE_INT, null, false);
+		$this->initVar('related_product_id', XOBJ_DTYPE_INT, null, false);
+		$this->initVar('related_product_related', XOBJ_DTYPE_INT, null, false);
 	}
 }
 
+class OledrionOledrion_relatedHandler extends Oledrion_XoopsPersistableObjectHandler {
 
-class OledrionOledrion_relatedHandler extends Oledrion_XoopsPersistableObjectHandler
-{
-	function __construct($db)
-	{	//							Table				Classe					 Id
+	function __construct($db) { // Table Classe Id
 		parent::__construct($db, 'oledrion_related', 'oledrion_related', 'related_id');
 	}
 
 	/**
-	 * Supprime les produits relatifs rattachés à un produit
+	 * Supprime les produits relatifs rattachï¿½s ï¿½ un produit
 	 *
-	 * @param integer $related_product_id	L'identifiant du produit pour lequel il faut faire la suppression
+	 * @param integer $related_product_id L'identifiant du produit pour lequel il faut faire la suppression
 	 */
-	function deleteProductRelatedProducts($related_product_id)
-	{
+	function deleteProductRelatedProducts($related_product_id) {
 		$criteria = new Criteria('related_product_id', $related_product_id, '=');
 		$this->deleteAll($criteria);
 	}
@@ -57,14 +53,13 @@ class OledrionOledrion_relatedHandler extends Oledrion_XoopsPersistableObjectHan
 	/**
 	 * Retourne la liste des produits relatifs d'une liste de produits
 	 *
-	 * @param array $ids	Les ID des produits dont on recherche les produits relatifs
-	 * @return array	Objets de type oledrion_related
+	 * @param array $ids Les ID des produits dont on recherche les produits relatifs
+	 * @return array Objets de type oledrion_related
 	 */
-	function getRelatedProductsFromProductsIds($ids)
-	{
+	function getRelatedProductsFromProductsIds($ids) {
 		$ret = array();
-		if(is_array($ids)) {
-			$criteria = new Criteria('related_product_id', '('.implode(',', $ids).')', 'IN');
+		if (is_array($ids)) {
+			$criteria = new Criteria('related_product_id', '(' . implode(',', $ids) . ')', 'IN');
 			$ret = $this->getObjects($criteria, true, true, '*', false);
 		}
 		return $ret;

@@ -11,67 +11,66 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Herv Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			Herv Thouzard of Instant Zero (http://www.instant-zero.com)
- *
- * Version : $Id:
- * ****************************************************************************
+ * @copyright Herv Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author Herv Thouzard of Instant Zero (http://www.instant-zero.com)
+ *        
+ *         Version : $Id:
+ *         ****************************************************************************
  */
-
-define("_AM_OLEDRION_GO_TO_MODULE","برو به ماژول");
-define("_AM_OLEDRION_PREFERENCES","تنظیمات");
-define("_AM_OLEDRION_ADMINISTRATION","مدیریت");
-define("_AM_OLEDRION_CATEGORIES","شاخه ها");
-define("_AM_OLEDRION_CATEG_CONFIG","پیکر بندی Chunk ها در صفحه شاخه ها");
-define("_AM_OLEDRION_CHUNK","Chunk");
-define("_AM_OLEDRION_POSITION","موقعیت & قابل دیدن");
-define("_AM_OLEDRION_INVISIBLE","مخفی");
-define("_AM_OLEDRION_OK","Ok");
-define("_AM_OLEDRION_SAVE_OK","اطلاعات با موفقیت ذخیره شد");
-define("_AM_OLEDRION_SAVE_PB","یک مشکل در ذخیره اطلاعات وجود دارد");
-define("_AM_OLEDRION_ACTION","عملکرد");
-define("_AM_OLEDRION_ADD_ITEM","اضافه کردن یک مورد");
-define("_AM_OLEDRION_CONF_DELITEM","آیا واقعا می‌خواهید این مورد را حذف کنید؟");
-define("_AM_OLEDRION_LIST","فهرست");
-define("_AM_OLEDRION_ID","شناسه");
-define("_AM_OLEDRION_RATE","Rate");
+define("_AM_OLEDRION_GO_TO_MODULE", "برو به ماژول");
+define("_AM_OLEDRION_PREFERENCES", "تنظیمات");
+define("_AM_OLEDRION_ADMINISTRATION", "مدیریت");
+define("_AM_OLEDRION_CATEGORIES", "شاخه ها");
+define("_AM_OLEDRION_CATEG_CONFIG", "پیکر بندی Chunk ها در صفحه شاخه ها");
+define("_AM_OLEDRION_CHUNK", "Chunk");
+define("_AM_OLEDRION_POSITION", "موقعیت & قابل دیدن");
+define("_AM_OLEDRION_INVISIBLE", "مخفی");
+define("_AM_OLEDRION_OK", "Ok");
+define("_AM_OLEDRION_SAVE_OK", "اطلاعات با موفقیت ذخیره شد");
+define("_AM_OLEDRION_SAVE_PB", "یک مشکل در ذخیره اطلاعات وجود دارد");
+define("_AM_OLEDRION_ACTION", "عملکرد");
+define("_AM_OLEDRION_ADD_ITEM", "اضافه کردن یک مورد");
+define("_AM_OLEDRION_CONF_DELITEM", "آیا واقعا می‌خواهید این مورد را حذف کنید؟");
+define("_AM_OLEDRION_LIST", "فهرست");
+define("_AM_OLEDRION_ID", "شناسه");
+define("_AM_OLEDRION_RATE", "Rate");
 define("_AM_OLEDRION_MAINTAIN", "نگهداری جدول‌ها و کش");
 
-define("_AM_OLEDRION_ADD_VAT","اضافه کردن ماليات");
-define("_AM_OLEDRION_EDIT_VAT","ویرایش ماليات");
+define("_AM_OLEDRION_ADD_VAT", "اضافه کردن ماليات");
+define("_AM_OLEDRION_EDIT_VAT", "ویرایش ماليات");
 
-define("_AM_OLEDRION_ADD_CATEG","اضافه کردن شاخه");
-define("_AM_OLEDRION_EDIT_CATEG","ویرایش شاخه");
+define("_AM_OLEDRION_ADD_CATEG", "اضافه کردن شاخه");
+define("_AM_OLEDRION_EDIT_CATEG", "ویرایش شاخه");
 
-define("_AM_OLEDRION_ADD_VENDOR","اضافه کردن فروشنده");
-define("_AM_OLEDRION_EDIT_VENDOR","ویرایش فروشنده");
+define("_AM_OLEDRION_ADD_VENDOR", "اضافه کردن فروشنده");
+define("_AM_OLEDRION_EDIT_VENDOR", "ویرایش فروشنده");
 
-define("_AM_OLEDRION_ADD_FILE","اضافه کردن فایل");
-define("_AM_OLEDRION_EDIT_FILE","ویرایش فایل");
+define("_AM_OLEDRION_ADD_FILE", "اضافه کردن فایل");
+define("_AM_OLEDRION_EDIT_FILE", "ویرایش فایل");
 
-define("_AM_OLEDRION_ADD_MANUFACTURER","اضافه کردن تولید کننده");
-define("_AM_OLEDRION_EDIT_MANUFACTURER","ویرایش تولید کننده");
+define("_AM_OLEDRION_ADD_MANUFACTURER", "اضافه کردن تولید کننده");
+define("_AM_OLEDRION_EDIT_MANUFACTURER", "ویرایش تولید کننده");
 
-define("_AM_OLEDRION_ADD_PRODUCT","اضافه کردن محصول");
-define("_AM_OLEDRION_EDIT_PRODUCT","ویرایش محصول");
+define("_AM_OLEDRION_ADD_PRODUCT", "اضافه کردن محصول");
+define("_AM_OLEDRION_EDIT_PRODUCT", "ویرایش محصول");
 
-define("_AM_OLEDRION_ADD_DSICOUNT","اضافه کردن تخفیف");
-define("_AM_OLEDRION_EDIT_DISCOUNT","ویرایش تخفیف");
+define("_AM_OLEDRION_ADD_DSICOUNT", "اضافه کردن تخفیف");
+define("_AM_OLEDRION_EDIT_DISCOUNT", "ویرایش تخفیف");
 
-define("_AM_OLEDRION_ERROR_1","خطا, هیچ شناسه‌ای مشخص نشده است");
-define("_AM_OLEDRION_ERROR_2","خطا, حذف این مالیات غیر ممکن است، از آن در چند محصول استفاده میشود");
-define("_AM_OLEDRION_ERROR_3","خطا در هنگام بارگذاری فایل ");
-define("_AM_OLEDRION_ERROR_4","خطا، حذف این شاخه غیر ممکن است، از آن در چند محصول استفاده شده است");
-define("_AM_OLEDRION_ERROR_5","خطا، حذف این تولید کننده غیر ممکن است، از آن در چند محصول استفاده شده است");
-define("_AM_OLEDRION_ERROR_6","خطا، حذف این فروشنده غیر ممکن است، به وسیله چند محصول از آن استفاده شده است");
-define("_AM_OLEDRION_ERROR_7","خطا، ایجاد فایل خروجی غیر ممکن است");
-define("_AM_OLEDRION_ERROR_8","خطا، لطفا ابتدا یک شاخه بسازید بعد برای ساخت محصول اقدام کنید");
-define("_AM_OLEDRION_ERROR_9","خطا، لطفا ابتدا یک ماليات بسازید بعد برای ساخت محصول اقدام کنید");
-define("_AM_OLEDRION_ERROR_10","خطا، شاخه مشخص نشده است");
-define("_AM_OLEDRION_ERROR_11","خطا، فرمت خروجی مشخص نشده است");
-define("_AM_OLEDRION_ERROR_12","خطا, رفتار ناشناس");
+define("_AM_OLEDRION_ERROR_1", "خطا, هیچ شناسه‌ای مشخص نشده است");
+define("_AM_OLEDRION_ERROR_2", "خطا, حذف این مالیات غیر ممکن است، از آن در چند محصول استفاده میشود");
+define("_AM_OLEDRION_ERROR_3", "خطا در هنگام بارگذاری فایل ");
+define("_AM_OLEDRION_ERROR_4", "خطا، حذف این شاخه غیر ممکن است، از آن در چند محصول استفاده شده است");
+define("_AM_OLEDRION_ERROR_5", "خطا، حذف این تولید کننده غیر ممکن است، از آن در چند محصول استفاده شده است");
+define("_AM_OLEDRION_ERROR_6", "خطا، حذف این فروشنده غیر ممکن است، به وسیله چند محصول از آن استفاده شده است");
+define("_AM_OLEDRION_ERROR_7", "خطا، ایجاد فایل خروجی غیر ممکن است");
+define("_AM_OLEDRION_ERROR_8", "خطا، لطفا ابتدا یک شاخه بسازید بعد برای ساخت محصول اقدام کنید");
+define("_AM_OLEDRION_ERROR_9", "خطا، لطفا ابتدا یک ماليات بسازید بعد برای ساخت محصول اقدام کنید");
+define("_AM_OLEDRION_ERROR_10", "خطا، شاخه مشخص نشده است");
+define("_AM_OLEDRION_ERROR_11", "خطا، فرمت خروجی مشخص نشده است");
+define("_AM_OLEDRION_ERROR_12", "خطا, رفتار ناشناس");
 define("_AM_OLEDRION_NOT_FOUND", "خطا، هیچ موردی پیدا نشد");
 define("_AM_OLEDRION_CONF_DEL_CATEG", "آیا شما واقعا می‌خواهید این شاخه و زیر شاخه‌های آن را حذف کنید؟<br />%s");
 
@@ -108,7 +107,7 @@ define("_AM_OLEDRION_TOTAL_SHIPP", "مجموع / ترابری");
 define('_AM_OLEDRION_NEWSLETTER_BETWEEN', 'انتخاب محصولات منتشر شده بین');
 define('_AM_OLEDRION_EXPORT_AND', ' و ');
 define('_AM_OLEDRION_IN_CATEGORY', 'در شاخه‌های زیر');
-define('_AM_OLEDRION_REMOVE_BR',"تبدیل تگ html &lt;br&gt; در یک خط جدید؟");
+define('_AM_OLEDRION_REMOVE_BR', "تبدیل تگ html &lt;br&gt; در یک خط جدید؟");
 define('_AM_OLEDRION_NEWSLETTER_HTML_TAGS', "حذف تگ‌های html؟");
 define('_AM_OLEDRION_NEWSLETTER_HEADER', "بالا صفحه");
 define('_AM_OLEDRION_NEWSLETTER_FOOTER', "پایین صفحه");

@@ -2,7 +2,7 @@
 /**
  * ****************************************************************************
  * oledrion - MODULE FOR XOOPS
- * Copyright (c) HervИ Thouzard of Instant Zero (http://www.instant-zero.com)
+ * Copyright (c) HervО©╫ Thouzard of Instant Zero (http://www.instant-zero.com)
  *
  * You may not change or alter any portion of this comment or credits
  * of supporting developers from this source code or any supporting source code
@@ -11,178 +11,177 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       HervИ Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			HervИ Thouzard of Instant Zero (http://www.instant-zero.com)
- *
- * Version : $Id:
- * ****************************************************************************
+ * @copyright HervО©╫ Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author HervО©╫ Thouzard of Instant Zero (http://www.instant-zero.com)
+ *        
+ *         Version : $Id:
+ *         ****************************************************************************
  */
+define("_AM_OLEDRION_GO_TO_MODULE", "О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_PREFERENCES", "О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_ADMINISTRATION", "О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_CATEGORIES", "О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_CATEG_CONFIG", "О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_CHUNK", "О©╫О©╫О©╫");
+define("_AM_OLEDRION_POSITION", "О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_INVISIBLE", "О©╫О©╫О©╫ О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_OK", "О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_SAVE_OK", "О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_SAVE_PB", "О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫!");
+define("_AM_OLEDRION_ACTION", "О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_ADD_ITEM", "О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫");
+define("_AM_OLEDRION_CONF_DELITEM", "О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫щ©");
+define("_AM_OLEDRION_LIST", "О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_ID", "Id");
+define("_AM_OLEDRION_RATE", "О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_MAINTAIN", "О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
 
-define("_AM_OLEDRION_GO_TO_MODULE","гАпЕгх еАЛ гАхяДгЦл");
-define("_AM_OLEDRION_PREFERENCES","гАезогогй");
-define("_AM_OLEDRION_ADMINISTRATION","гАеогяи");
-define("_AM_OLEDRION_CATEGORIES","гАгчсгЦ");
-define("_AM_OLEDRION_CATEG_CONFIG","езогогй гАчьз щМ ущмгй гАгчсгЦ");
-define("_AM_OLEDRION_CHUNK","чьз");
-define("_AM_OLEDRION_POSITION","гАФжз ФгАыЕФя");
-define("_AM_OLEDRION_INVISIBLE","шМя ыгЕя");
-define("_AM_OLEDRION_OK","ЦФгщч");
-define("_AM_OLEDRION_SAVE_OK","йЦ мщы гАхМгДгй хДлгм");
-define("_AM_OLEDRION_SAVE_PB","мокй ЦтъАи цкДга гАмщы!");
-define("_AM_OLEDRION_ACTION","йДщМп");
-define("_AM_OLEDRION_ADD_ITEM","ежгщи уДщ");
-define("_AM_OLEDRION_CONF_DELITEM","ЕА цДй Цйцъо ЦД цДъ йяМо мпщ Епг гАуДщ©");
-define("_AM_OLEDRION_LIST","гАчгфЦи");
-define("_AM_OLEDRION_ID","Id");
-define("_AM_OLEDRION_RATE","гАояли");
-define("_AM_OLEDRION_MAINTAIN", "уМгДи гАлогФА");
+define("_AM_OLEDRION_ADD_VAT", "О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_EDIT_VAT", "О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
 
-define("_AM_OLEDRION_ADD_VAT","ежгщи жяМхи гАчМЦи гАЦжгщи");
-define("_AM_OLEDRION_EDIT_VAT","йзоМА жяМхи гАчМЦи гАЦжгщи");
+define("_AM_OLEDRION_ADD_CATEG", "О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_EDIT_CATEG", "О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫");
 
-define("_AM_OLEDRION_ADD_CATEG","ежгщи ЦлЦФзи");
-define("_AM_OLEDRION_EDIT_CATEG","йзоМА ЦлЦФзи");
+define("_AM_OLEDRION_ADD_VENDOR", "О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_EDIT_VENDOR", "О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫");
 
-define("_AM_OLEDRION_ADD_VENDOR","ежгщи хгфз");
-define("_AM_OLEDRION_EDIT_VENDOR","йзоМА хгфз");
+define("_AM_OLEDRION_ADD_FILE", "О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫");
+define("_AM_OLEDRION_EDIT_FILE", "О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫");
 
-define("_AM_OLEDRION_ADD_FILE","ежгщи ЦАщ");
-define("_AM_OLEDRION_EDIT_FILE","йзоМА ЦАщ");
+define("_AM_OLEDRION_ADD_MANUFACTURER", "О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_EDIT_MANUFACTURER", "О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫");
 
-define("_AM_OLEDRION_ADD_MANUFACTURER","ежгщи угмх ЦуДз");
-define("_AM_OLEDRION_EDIT_MANUFACTURER","йзоМА угмх ЦуДз");
+define("_AM_OLEDRION_ADD_PRODUCT", "О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_EDIT_PRODUCT", "О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫");
 
-define("_AM_OLEDRION_ADD_PRODUCT","ежгщи ЦДйл");
-define("_AM_OLEDRION_EDIT_PRODUCT","йзоМА ЦДйл");
+define("_AM_OLEDRION_ADD_DSICOUNT", "О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫");
+define("_AM_OLEDRION_EDIT_DISCOUNT", "О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫");
 
-define("_AM_OLEDRION_ADD_DSICOUNT","ежгщи нуЦ");
-define("_AM_OLEDRION_EDIT_DISCOUNT","йзоМА нуЦ");
+define("_AM_OLEDRION_ERROR_1", "О©╫О©╫О©╫, О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫");
+define("_AM_OLEDRION_ERROR_2", "О©╫О©╫О©╫, О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_ERROR_3", "О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ ");
+define("_AM_OLEDRION_ERROR_4", "О©╫О©╫О©╫, О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_ERROR_5", "О©╫О©╫О©╫, О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_ERROR_6", "О©╫О©╫О©╫, О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_ERROR_7", "О©╫О©╫О©╫, О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_ERROR_8", "О©╫О©╫О©╫, О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_ERROR_9", "О©╫О©╫О©╫, О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫  О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_ERROR_10", "О©╫О©╫О©╫, О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_ERROR_11", "О©╫О©╫О©╫, О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_NOT_FOUND", "О©╫О©╫О©╫, О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_CONF_DEL_CATEG", "О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫<br />%s");
 
-define("_AM_OLEDRION_ERROR_1","ньц, АЦ МйЦ ймоМо ячЦ");
-define("_AM_OLEDRION_ERROR_2","ньц, Аг МЦъД мпщ жяМхи гАчМЦи гАЦжгщи ЕпЕ АгДЕг ЦсйноЦЕ ЦД чхА хзж гАЦДйлгй");
-define("_AM_OLEDRION_ERROR_3","мок ньц цкДга ящз гАЦАщ ");
-define("_AM_OLEDRION_ERROR_4","ньц, Аг МЦъД мпщ ЕпЕ гАЦлЦФзи АгДЕг ЦсйноЦи ЦД чхА хзж гАЦДйлгй");
-define("_AM_OLEDRION_ERROR_5","ньц, Аг МЦъД мпщ угмх гАЦуДз Епг АгДЕ ЦсйноЦ ЦД чхА хзж гАЦДйлгй");
-define("_AM_OLEDRION_ERROR_6","ньц, Аг МЦъД мпщ Епг гАхгфз АгДЕ ЦсйноЦ ЦД чхА хзж гАЦДйлгй");
-define("_AM_OLEDRION_ERROR_7","ньц, Аг МЦъД еДтга ЦАщ гАйуоМя");
-define("_AM_OLEDRION_ERROR_8","ньц, гАялга еДтга зАЛ гАцчА ЦлЦФзи Фгмои чхА ежгщи цМ ЦДйл");
-define("_AM_OLEDRION_ERROR_9","ньц, гАялга еДтга зАЛ гАцчА жяМхи гАчМЦи гАЦжгщи  Фгмои чхА еДтга гАЦДйл");
-define("_AM_OLEDRION_ERROR_10","ньц, ЦлЦФзи шМя ЦзяФщи");
-define("_AM_OLEDRION_ERROR_11","ньц, уМши гАйуоМя шМя ЦзяФщи");
-define("_AM_OLEDRION_NOT_FOUND", "ньц, гАуДщ шМя ЦФлФо");
-define("_AM_OLEDRION_CONF_DEL_CATEG", "ЕА цДй Цйцъо ЦД цДъ йяМо мпщ ЕпЕ гАЦлЦФзи Цз лЦМз гАгчсгЦ гАщязМи гАйгхзи АЕг ©<br />%s");
+define("_AM_OLEDRION_MODIFY", "О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_ADD", "О©╫О©╫О©╫О©╫О©╫");
 
-define("_AM_OLEDRION_MODIFY", "йзоМА");
-define("_AM_OLEDRION_ADD", "ежгщи");
+define("_AM_OLEDRION_PARENT_CATEG", "О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_CURRENT_PICTURE", "О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_CURRENT_FILE", "О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_PICTURE", "О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_DESCRIPTION", "О©╫О©╫О©╫О©╫О©╫");
 
-define("_AM_OLEDRION_PARENT_CATEG", "гАЦлЦФзи гАцсгсМи");
-define("_AM_OLEDRION_CURRENT_PICTURE", "гАуФяи гАмгАМи");
-define("_AM_OLEDRION_CURRENT_FILE", "гАЦАщ гАмгАМ");
-define("_AM_OLEDRION_PICTURE", "гАуФяи");
-define("_AM_OLEDRION_DESCRIPTION", "гАФущ");
-
-define("_AM_OLEDRION_ALL", "гАъА");
-define("_AM_OLEDRION_LIMIT_TO", "гАщАйя");
-define("_AM_OLEDRION_FILTER", "гАщАйя");
-define("_AM_OLEDRION_INDEX_PAGE", "гАщЕяс");
-define("_AM_OLEDRION_RELATED_HELP", "ймпМя, Аг йонАЕЦ еАг хзо цД йонА ъА гАЦДйлгй");
-define("_AM_OLEDRION_SUBDATE_HELP", "цонА гАйгяМн хгАтъА: гАМФЦ-гАтЕя-гАсДи");
-define("_AM_OLEDRION_IMAGE1_HELP", "гАуФяи гАъхМяи гАмгАМи");
-define("_AM_OLEDRION_IMAGE2_HELP", "гАуФяи гАЦушяи гАмгАМи");
-define("_AM_OLEDRION_IMAGE1_CHANGE", "йшММя уФяи гАЦДйл");
-define("_AM_OLEDRION_IMAGE2_CHANGE", "йшММя гАуФяи гАЦушяи");
+define("_AM_OLEDRION_ALL", "О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_LIMIT_TO", "О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_FILTER", "О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_INDEX_PAGE", "О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_RELATED_HELP", "О©╫О©╫О©╫О©╫О©╫, О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_SUBDATE_HELP", "О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫: О©╫О©╫О©╫О©╫О©╫-О©╫О©╫О©╫О©╫О©╫-О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_IMAGE1_HELP", "О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_IMAGE2_HELP", "О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_IMAGE1_CHANGE", "О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_IMAGE2_CHANGE", "О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
 define("_AM_OLEDRION_ATTACHED_HLP", "");
-define("_AM_OLEDRION_CATEG_HLP", "ЦлЦФзи гАЦДйл");
-define("_AM_OLEDRION_CATEG_TITLE", "зДФгД гАЦлЦФзи");
-define("_AM_OLEDRION_URL_HLP", "ягхь гАЦДйл (енйМгяМ)");
-define("_AM_OLEDRION_SELECT_HLP", "гнйя ря гАъФДйяФА (or the apple key on Mac) АгнйМгя гъкя ЦД чьзи");
-define("_AM_OLEDRION_STOCK_HLP", "сМйЦ еясгА ясгАи еАЛ гАЦлЦФзи зДоЦг йухм гАъЦМи цчА ЦД ...");
-define("_AM_OLEDRION_DISCOUNT_HLP", "сзя гАйФрМз (Цдчй) хоФД жяМхи гАчМЦи гАЦжгщи");
-define("_AM_OLEDRION_DISCOUNT_DESCR", "Фущ гАнуЦ (АрхгфДъ)");
-define("_AM_OLEDRION_DATE", "гАйгяМн");
-define("_AM_OLEDRION_CLIENT", "рхФД");
-define("_AM_OLEDRION_TOTAL_SHIPP", "гАелЦгАМ / гАтмД");
-define('_AM_OLEDRION_NEWSLETTER_BETWEEN', 'енйгя гАЦДйлгй гАйМ йЦ ДтяЕг хМД');
-define('_AM_OLEDRION_EXPORT_AND', ' Ф ');
-define('_AM_OLEDRION_IN_CATEGORY', 'щМ гАгчсгЦ гАйгАМи');
-define('_AM_OLEDRION_REMOVE_BR',"мФА йгл гАейт йМ цЦ цА &lt;br&gt; Асья лоМо ©");
-define('_AM_OLEDRION_NEWSLETTER_HTML_TAGS', "цмпщйглгй гАейт йМ цЦ цА");
-define('_AM_OLEDRION_NEWSLETTER_HEADER', "гАЕоя");
-define('_AM_OLEDRION_NEWSLETTER_FOOTER', "гАщФйя");
-define('_AM_OLEDRION_CSV_EXPORT', "уоя гАьАхМгй хгАуМши гАйгАМи ");
-define('_AM_OLEDRION_EXPORT_READY', "ЦАщ гАйуоМя гАнгу хъ лгЕр ААйДрМА, цДчя щФч Епг гАягхь АймуА зАМЕ");
+define("_AM_OLEDRION_CATEG_HLP", "О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_CATEG_TITLE", "О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_URL_HLP", "О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ (О©╫О©╫О©╫О©╫О©╫О©╫О©╫)");
+define("_AM_OLEDRION_SELECT_HLP", "О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ (or the apple key on Mac) О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_STOCK_HLP", "О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫ ...");
+define("_AM_OLEDRION_DISCOUNT_HLP", "О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ (О©╫О©╫О©╫О©╫) О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_DISCOUNT_DESCR", "О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ (О©╫О©╫О©╫О©╫О©╫О©╫О©╫)");
+define("_AM_OLEDRION_DATE", "О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_CLIENT", "О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_TOTAL_SHIPP", "О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ / О©╫О©╫О©╫О©╫О©╫");
+define('_AM_OLEDRION_NEWSLETTER_BETWEEN', 'О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫');
+define('_AM_OLEDRION_EXPORT_AND', ' О©╫ ');
+define('_AM_OLEDRION_IN_CATEGORY', 'О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫');
+define('_AM_OLEDRION_REMOVE_BR', "О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫ О©╫О©╫ &lt;br&gt; О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫");
+define('_AM_OLEDRION_NEWSLETTER_HTML_TAGS', "О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫ О©╫О©╫");
+define('_AM_OLEDRION_NEWSLETTER_HEADER', "О©╫О©╫О©╫О©╫О©╫");
+define('_AM_OLEDRION_NEWSLETTER_FOOTER', "О©╫О©╫О©╫О©╫О©╫О©╫");
+define('_AM_OLEDRION_CSV_EXPORT', "О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ ");
+define('_AM_OLEDRION_EXPORT_READY', "О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫, О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫");
 define('_AM_OLEDRION_CSV_READY', "Your CSV file is ready for download, click on this link to get it");
-define('_AM_OLEDRION_NEW_QUANTITY', "ъЦМи лоМои");
-define('_AM_OLEDRION_UPDATE_QUANTITIES', "ймоМк гАъЦМгй");
-define('_AM_OLEDRION_NEWSLETTER_READY', "гАДтяи гАнгу хъ лгЕри, цДчя щФч Епг гАягхь АймуА зАМЕг");
-define('_AM_OLEDRION_DUPLICATED', "Цъяя");
+define('_AM_OLEDRION_NEW_QUANTITY', "О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫");
+define('_AM_OLEDRION_UPDATE_QUANTITIES', "О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define('_AM_OLEDRION_NEWSLETTER_READY', "О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫О©╫, О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫");
+define('_AM_OLEDRION_DUPLICATED', "О©╫О©╫О©╫О©╫");
 
 // Added on 14/04/2007 17:11
-define('_AM_OLEDRION_SORRY_NOREMOVE', "Цзпяи Аг ДсйьМз мпщ Епг гАЦДйл АцДЕ лра ЦД хзж гАьАхМгй");
-define('_AM_OLEDRION_CONF_VALIDATE', "ЕА мчгП йяМо цД йугоч зАЛ Епг гАьАх ©");
-define('_AM_OLEDRION_LAST_ORDERS', "гАьАхМгй гАцнМяи");
-define('_AM_OLEDRION_LAST_VOTES', "гАйуФМйгй гАцнМяи");
-define('_AM_OLEDRION_NOTE', "ЦАгмыи");
+define('_AM_OLEDRION_SORRY_NOREMOVE', "О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define('_AM_OLEDRION_CONF_VALIDATE', "О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫");
+define('_AM_OLEDRION_LAST_ORDERS', "О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define('_AM_OLEDRION_LAST_VOTES', "О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define('_AM_OLEDRION_NOTE', "О©╫О©╫О©╫О©╫О©╫О©╫");
 
-define('_AM_OLEDRION_RECOMMEND_IT', "ДДум хЕг");
-define('_AM_OLEDRION_DONOTRECOMMEND_IT', "ечгщ гАДуМми");
-define('_AM_OLEDRION_RECOMMENDED', "МДум хЕг");
-define('_AM_OLEDRION_RECOMM_TEXT', "гАДу гАпМ сМзяж щМ гАДуМми <br /> Аущмгй гАЦДйлгй");
-define('_AM_OLEDRION_META_KEYWORDS', "ъАЦгй ЦщйгмМи ААЦМйг");
-define('_AM_OLEDRION_META_DESCRIPTION', "Фущ гАЦМйг");
-define('_AM_OLEDRION_META_PAGETITLE', "зДФгД гАущми");
+define('_AM_OLEDRION_RECOMMEND_IT', "О©╫О©╫О©╫О©╫ О©╫О©╫О©╫");
+define('_AM_OLEDRION_DONOTRECOMMEND_IT', "О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define('_AM_OLEDRION_RECOMMENDED', "О©╫О©╫О©╫О©╫ О©╫О©╫О©╫");
+define('_AM_OLEDRION_RECOMM_TEXT', "О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ <br /> О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define('_AM_OLEDRION_META_KEYWORDS', "О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫");
+define('_AM_OLEDRION_META_DESCRIPTION', "О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫");
+define('_AM_OLEDRION_META_PAGETITLE', "О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫");
 
 // Added in March & April 2008
-define('_AM_OLEDRION_FILENAME', "гАЦАщ");
-define('_AM_OLEDRION_VISIBLE_FILENAME', "есЦ гАЦАщ ыгЕя ААЦсйноЦ");
-define('_AM_OLEDRION_OFFLINEPAY_TEXT', "гАДу гАпМ сМзяж ААЦсйноЦ зДоЦг МчФЦ хенйМгя зоЦ гАощз цФД АгМД©");
-define('_AM_OLEDRION_FOOTER', "гАДу гАпМ сМзяж щМ щФйя гАгчсгЦ");
+define('_AM_OLEDRION_FILENAME', "О©╫О©╫О©╫О©╫О©╫");
+define('_AM_OLEDRION_VISIBLE_FILENAME', "О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define('_AM_OLEDRION_OFFLINEPAY_TEXT', "О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫");
+define('_AM_OLEDRION_FOOTER', "О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
 
-define('_AM_OLEDRION_RESTRICT_TEXT', "гАДу гАпМ сзяж зДоЦг йъФД гАЦДйлгй ЦмуФяи зАЛ гАцзжга гАЦслАМД щчь");
+define('_AM_OLEDRION_RESTRICT_TEXT', "О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫");
 
-// Pour les rИductions
-define("_AM_OLEDRION_DISCOUNT_INFORMATION", "ЦзАФЦгй гАнуЦ");
-define("_AM_OLEDRION_DISCOUNT_TITLE", " зДФгД гАнуЦ (МсйноЦ огнАМгП)");
-define("_AM_OLEDRION_DISCOUNT_DESCRIPTION", "Фущ гАнуЦ (АрхгфДъ)");
-define("_AM_OLEDRION_DISCOUNT_PERIOD", "ААщйяи");
-define("_AM_OLEDRION_DISCOUNT_PERFROM", "ЦД");
-define("_AM_OLEDRION_DISCOUNT_PERTO", "мйЛ");
-define("_AM_OLEDRION_DISCOUNT_WHOWHAT", "АЦД цФ АЦгпг МчхА гАйнщМж ©");
-define("_AM_OLEDRION_DISCOUNT_XOOPS_GROUP", "епг ъгДй ЦлЦФзи рФФхс");
-define("_AM_OLEDRION_DISCOUNT_CATEGORY", "епг ъгДй гАЦлЦФзи");
-define("_AM_OLEDRION_DISCOUNT_MANUFACTURER", "угмх гАЦуДз");
-define("_AM_OLEDRION_DISCOUNT_VENDOR", "гАхгфз");
-define("_AM_OLEDRION_DISCOUNT_PRODUCT", "гАЦДйл");
-define("_AM_OLEDRION_DISCOUNT_REDUCTION_PRICE", "гАйнщМж хмсх сзя гАЦДйл цЦ хмсх ЦхАш гАьАхМи");
-define("_AM_OLEDRION_DISCOUNT_REDUCTION_TYPE", "чхФА гАйнщМж");
-define("_AM_OLEDRION_DISCOUNT_QUANTITY_FROM", "ЦД");
-define("_AM_OLEDRION_DISCOUNT_QUANTITY_TO", "еАЛ");
-define("_AM_OLEDRION_DISCOUNT_QUANTITY_INCLUDED", "гАЦДйлгй (Цящчи)");
+// Pour les rО©╫ductions
+define("_AM_OLEDRION_DISCOUNT_INFORMATION", "О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_DISCOUNT_TITLE", " О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ (О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫)");
+define("_AM_OLEDRION_DISCOUNT_DESCRIPTION", "О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ (О©╫О©╫О©╫О©╫О©╫О©╫О©╫)");
+define("_AM_OLEDRION_DISCOUNT_PERIOD", "О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_DISCOUNT_PERFROM", "О©╫О©╫");
+define("_AM_OLEDRION_DISCOUNT_PERTO", "О©╫О©╫О©╫");
+define("_AM_OLEDRION_DISCOUNT_WHOWHAT", "О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫");
+define("_AM_OLEDRION_DISCOUNT_XOOPS_GROUP", "О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_DISCOUNT_CATEGORY", "О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_DISCOUNT_MANUFACTURER", "О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_DISCOUNT_VENDOR", "О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_DISCOUNT_PRODUCT", "О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_DISCOUNT_REDUCTION_PRICE", "О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_DISCOUNT_REDUCTION_TYPE", "О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_DISCOUNT_QUANTITY_FROM", "О©╫О©╫");
+define("_AM_OLEDRION_DISCOUNT_QUANTITY_TO", "О©╫О©╫О©╫");
+define("_AM_OLEDRION_DISCOUNT_QUANTITY_INCLUDED", "О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ (О©╫О©╫О©╫О©╫О©╫)");
 define("_AM_OLEDRION_DISCOUNT_DEGRESSIV", "Degressiv");
-define("_AM_OLEDRION_DISCOUNT_AMOUNT_PERCENT", "гАЦхАш цФ гАДсхи гАЦфФМи ААнуЦ зАЛ гАсзя");
-define("_AM_OLEDRION_DISCOUNT_PERCENT", "щМ гАЦфи");
+define("_AM_OLEDRION_DISCOUNT_AMOUNT_PERCENT", "О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_DISCOUNT_PERCENT", "О©╫О©╫ О©╫О©╫О©╫О©╫О©╫");
 define("_AM_OLEDRION_DISCOUNT_ON", "Sur");
-define("_AM_OLEDRION_DISCOUNT_THE_PRODUCT", "гАЦДйл");
-define("_AM_OLEDRION_DISCOUNT_THE_CART", "сАи гАЦтйяМгй");
-define("_AM_OLEDRION_DISCOUNT_IN_WHICH_CASE", "щМ цМ мгАи ©");
-define("_AM_OLEDRION_DISCOUNT_ALL_CASES", "щМ ъА гАмгАгй");
-define("_AM_OLEDRION_DISCOUNT_FIRST_PURCHASE", "епг ъгДй ЕпЕ ЕМ гАЦяи гАцФАЛ гАйМ МтйяМ щМЕг гАрхФД ЦД гАЦФчз");
-define("_AM_OLEDRION_DISCOUNT_NEVER_BOUGHT", "епг гАЦДйл АЦ МйЦ тягаЕ цхогП");
-define("_AM_OLEDRION_DISCOUNT_QUANTITY_IS", "епг ъгДй ъЦМи гАЦДйл");
-define("_AM_OLEDRION_DISCOUNT_SHIPPING_REDUCTIONS", "гАйнщМж щМ гАтмД");
+define("_AM_OLEDRION_DISCOUNT_THE_PRODUCT", "О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_DISCOUNT_THE_CART", "О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_DISCOUNT_IN_WHICH_CASE", "О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫");
+define("_AM_OLEDRION_DISCOUNT_ALL_CASES", "О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_DISCOUNT_FIRST_PURCHASE", "О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_DISCOUNT_NEVER_BOUGHT", "О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_DISCOUNT_QUANTITY_IS", "О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_DISCOUNT_SHIPPING_REDUCTIONS", "О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫О©╫");
 define("_AM_OLEDRION_DISCOUNT_SHIPPINGS_ARE", "Porterages are");
-define("_AM_OLEDRION_DISCOUNT_FULL_PAY", "гАощз хгАъгЦА");
-define("_AM_OLEDRION_DISCOUNT_SHIPPING_FREE", "ЦлгДгП хгАъгЦА");
-define("_AM_OLEDRION_DISCOUNT_ORDER_OVER", "епг гАрхФД ьАх цъкя ЦД");
+define("_AM_OLEDRION_DISCOUNT_FULL_PAY", "О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_DISCOUNT_SHIPPING_FREE", "О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_DISCOUNT_ORDER_OVER", "О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫");
 define("_AM_OLEDRION_DISCOUNT_REDUCED_FOR", "Porterages are reduced by");
-define("_AM_OLEDRION_DISCOUNT_REDUCED_IF", "епг ъгДй гАьАхМи цъкя ЦД");
+define("_AM_OLEDRION_DISCOUNT_REDUCED_IF", "О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫");
 
-define("_AM_OLEDRION_DISCOUNT_HELP1", "АМс ЦД гАжяФяМ цД ймоо ЦлЦФзи Ф/цФ хгфз епг гнйяй ЦДйл");
-define("_AM_OLEDRION_DISCOUNT_HELP2", "епг енйяй ЦлЦФзи рФФхс гпг гАйнщМж сМчхА АЕЦ щчь.");
-define("_AM_OLEDRION_DISCOUNT_HELP3", "епг моой ЦлЦФзи епг гАйнщМж МчхА щчь ААЦДйлгй гАйгхзи АЕпЕ гАЦлЦФзи.");
-define("_AM_OLEDRION_DISCOUNT_HELP4", "епг моой хгфз епг гАЦДйлгй гАйгхзи АЕпг гАхгфз ЕМ щчь гАйМ сйсйщМо ЦД Епг гАйнщМж.");
-define("_AM_OLEDRION_DISCOUNT_HELP5", "епг моой хгфз ФЦлЦФзи, щчь гАЦДйлгй гАйгхзи АЕпг гАхгфз ФЕпЕ гАЦлЦФзи  ЕМ щчь гАйМ сйсйщМо ЦД Епг гАйнщМж.");
-define("_AM_OLEDRION_DISCOUNT_HELP6", "епг моой ЦДйл, щчь Епг гАЦДйл ЕФ гАпМ сМсйщМо ЦД Епг гАйнщМж.");
+define("_AM_OLEDRION_DISCOUNT_HELP1", "О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫/О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫");
+define("_AM_OLEDRION_DISCOUNT_HELP2", "О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫.");
+define("_AM_OLEDRION_DISCOUNT_HELP3", "О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫.");
+define("_AM_OLEDRION_DISCOUNT_HELP4", "О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫.");
+define("_AM_OLEDRION_DISCOUNT_HELP5", "О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫, О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫  О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫.");
+define("_AM_OLEDRION_DISCOUNT_HELP6", "О©╫О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫, О©╫О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫ О©╫О©╫ О©╫О©╫О©╫ О©╫О©╫О©╫О©╫О©╫О©╫О©╫.");
 ?>

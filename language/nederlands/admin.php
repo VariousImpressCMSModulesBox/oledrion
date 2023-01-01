@@ -11,67 +11,66 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Herv� Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			Herv� Thouzard of Instant Zero (http://www.instant-zero.com)
- *
- * Version : $Id:
- * ****************************************************************************
+ * @copyright Herv� Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author Herv� Thouzard of Instant Zero (http://www.instant-zero.com)
+ *        
+ *         Version : $Id:
+ *         ****************************************************************************
  */
-
-define("_AM_OLEDRION_GO_TO_MODULE","Ga naar de module");
-define("_AM_OLEDRION_PREFERENCES","Instellingen");
-define("_AM_OLEDRION_ADMINISTRATION","Administratie");
-define("_AM_OLEDRION_CATEGORIES","categorieen");
-define("_AM_OLEDRION_CATEG_CONFIG","Onderdelen-configuratie op de categoriepagina");
-define("_AM_OLEDRION_CHUNK","Onderdelen");
-define("_AM_OLEDRION_POSITION","Positie & Zichtbaarheid");
-define("_AM_OLEDRION_INVISIBLE","Onzichtbaar");
-define("_AM_OLEDRION_OK","Ok");
-define("_AM_OLEDRION_SAVE_OK","Data is succesvol opgeslagen");
-define("_AM_OLEDRION_SAVE_PB","er heeft zich een probleem voorgedaan tijdens het opslaan van de data");
-define("_AM_OLEDRION_ACTION","Actie");
-define("_AM_OLEDRION_ADD_ITEM","Voeg een item toe");
-define("_AM_OLEDRION_CONF_DELITEM","Weet u zeker dat u dit item wenst te verwijderen ?");
-define("_AM_OLEDRION_LIST","Opsommen");
-define("_AM_OLEDRION_ID","Id");
-define("_AM_OLEDRION_RATE","Tarief");
+define("_AM_OLEDRION_GO_TO_MODULE", "Ga naar de module");
+define("_AM_OLEDRION_PREFERENCES", "Instellingen");
+define("_AM_OLEDRION_ADMINISTRATION", "Administratie");
+define("_AM_OLEDRION_CATEGORIES", "categorieen");
+define("_AM_OLEDRION_CATEG_CONFIG", "Onderdelen-configuratie op de categoriepagina");
+define("_AM_OLEDRION_CHUNK", "Onderdelen");
+define("_AM_OLEDRION_POSITION", "Positie & Zichtbaarheid");
+define("_AM_OLEDRION_INVISIBLE", "Onzichtbaar");
+define("_AM_OLEDRION_OK", "Ok");
+define("_AM_OLEDRION_SAVE_OK", "Data is succesvol opgeslagen");
+define("_AM_OLEDRION_SAVE_PB", "er heeft zich een probleem voorgedaan tijdens het opslaan van de data");
+define("_AM_OLEDRION_ACTION", "Actie");
+define("_AM_OLEDRION_ADD_ITEM", "Voeg een item toe");
+define("_AM_OLEDRION_CONF_DELITEM", "Weet u zeker dat u dit item wenst te verwijderen ?");
+define("_AM_OLEDRION_LIST", "Opsommen");
+define("_AM_OLEDRION_ID", "Id");
+define("_AM_OLEDRION_RATE", "Tarief");
 define("_AM_OLEDRION_MAINTAIN", "Behoud tables en cache");
 
-define("_AM_OLEDRION_ADD_VAT","Voeg BTW-tarief toe");
-define("_AM_OLEDRION_EDIT_VAT","Aanpassen van BTW-tarief");
+define("_AM_OLEDRION_ADD_VAT", "Voeg BTW-tarief toe");
+define("_AM_OLEDRION_EDIT_VAT", "Aanpassen van BTW-tarief");
 
-define("_AM_OLEDRION_ADD_CATEG","Voeg een categorie toe");
-define("_AM_OLEDRION_EDIT_CATEG","Aanpassen van een categorie");
+define("_AM_OLEDRION_ADD_CATEG", "Voeg een categorie toe");
+define("_AM_OLEDRION_EDIT_CATEG", "Aanpassen van een categorie");
 
-define("_AM_OLEDRION_ADD_VENDOR","Voeg verkopers toe");
-define("_AM_OLEDRION_EDIT_VENDOR","Aanpassen van een verkoper");
+define("_AM_OLEDRION_ADD_VENDOR", "Voeg verkopers toe");
+define("_AM_OLEDRION_EDIT_VENDOR", "Aanpassen van een verkoper");
 
-define("_AM_OLEDRION_ADD_FILE","Voeg een file toe");
-define("_AM_OLEDRION_EDIT_FILE","aanpassen van een file");
+define("_AM_OLEDRION_ADD_FILE", "Voeg een file toe");
+define("_AM_OLEDRION_EDIT_FILE", "aanpassen van een file");
 
-define("_AM_OLEDRION_ADD_MANUFACTURER","Voeg een Producent toe");
-define("_AM_OLEDRION_EDIT_MANUFACTURER","Aanpassen van een producent");
+define("_AM_OLEDRION_ADD_MANUFACTURER", "Voeg een Producent toe");
+define("_AM_OLEDRION_EDIT_MANUFACTURER", "Aanpassen van een producent");
 
-define("_AM_OLEDRION_ADD_PRODUCT","Voeg een product toe");
-define("_AM_OLEDRION_EDIT_PRODUCT","aanpassen van een product");
+define("_AM_OLEDRION_ADD_PRODUCT", "Voeg een product toe");
+define("_AM_OLEDRION_EDIT_PRODUCT", "aanpassen van een product");
 
-define("_AM_OLEDRION_ADD_DSICOUNT","Voeg een korting toe");
-define("_AM_OLEDRION_EDIT_DISCOUNT","Aanpassen van een korting");
+define("_AM_OLEDRION_ADD_DSICOUNT", "Voeg een korting toe");
+define("_AM_OLEDRION_EDIT_DISCOUNT", "Aanpassen van een korting");
 
-define("_AM_OLEDRION_ERROR_1","Fout, geen ID gespecificeerd");
-define("_AM_OLEDRION_ERROR_2","Fout, Dit BTW-tarief kan niet verwijderd worden. Het is waarschijnlijk in gekoppeld aan een product");
-define("_AM_OLEDRION_ERROR_3","Fout tijdens het uploaden van een bestand ");
-define("_AM_OLEDRION_ERROR_4","Fout, het is onmogelijk deze categorie te verwijderen, deze wordt gebruikt door producten");
-define("_AM_OLEDRION_ERROR_5","Fout, het is onmogelijk deze producent te verwijderen, deze wordt gebruikt door producten");
-define("_AM_OLEDRION_ERROR_6","Fout, het is onmogelijk deze verkoper te verwijderen, deze wordt gebruikt door producten");
-define("_AM_OLEDRION_ERROR_7","Fout, het is niet mogelijk een export-file aan te maken");
-define("_AM_OLEDRION_ERROR_8","Fout, U dient eerst een categorie aan te maken alvorens u een product kan toevoegen.");
-define("_AM_OLEDRION_ERROR_9","Fout, U dient eerst een BTW-tarief aan te maken alvorens u een product kan toevoegen");
-define("_AM_OLEDRION_ERROR_10","Fout, Onbekende categorie");
-define("_AM_OLEDRION_ERROR_11","Fout, Onbekend export-formaat");
-define("_AM_OLEDRION_ERROR_12","Fout, Onbekende actie");
+define("_AM_OLEDRION_ERROR_1", "Fout, geen ID gespecificeerd");
+define("_AM_OLEDRION_ERROR_2", "Fout, Dit BTW-tarief kan niet verwijderd worden. Het is waarschijnlijk in gekoppeld aan een product");
+define("_AM_OLEDRION_ERROR_3", "Fout tijdens het uploaden van een bestand ");
+define("_AM_OLEDRION_ERROR_4", "Fout, het is onmogelijk deze categorie te verwijderen, deze wordt gebruikt door producten");
+define("_AM_OLEDRION_ERROR_5", "Fout, het is onmogelijk deze producent te verwijderen, deze wordt gebruikt door producten");
+define("_AM_OLEDRION_ERROR_6", "Fout, het is onmogelijk deze verkoper te verwijderen, deze wordt gebruikt door producten");
+define("_AM_OLEDRION_ERROR_7", "Fout, het is niet mogelijk een export-file aan te maken");
+define("_AM_OLEDRION_ERROR_8", "Fout, U dient eerst een categorie aan te maken alvorens u een product kan toevoegen.");
+define("_AM_OLEDRION_ERROR_9", "Fout, U dient eerst een BTW-tarief aan te maken alvorens u een product kan toevoegen");
+define("_AM_OLEDRION_ERROR_10", "Fout, Onbekende categorie");
+define("_AM_OLEDRION_ERROR_11", "Fout, Onbekend export-formaat");
+define("_AM_OLEDRION_ERROR_12", "Fout, Onbekende actie");
 define("_AM_OLEDRION_NOT_FOUND", "Fout, item is niet gevonden");
 define("_AM_OLEDRION_CONF_DEL_CATEG", "Weet u zeker dat u deze categorie en alle sub-categorieen die hieronder vallen wenst te verwijderen ?<br />%s");
 
@@ -108,7 +107,7 @@ define("_AM_OLEDRION_TOTAL_SHIPP", "Totaal / Verzendkosten");
 define('_AM_OLEDRION_NEWSLETTER_BETWEEN', 'Selecteer producten gepubliceerd tussen');
 define('_AM_OLEDRION_EXPORT_AND', ' en ');
 define('_AM_OLEDRION_IN_CATEGORY', 'In de volgende categorieen');
-define('_AM_OLEDRION_REMOVE_BR',"Converteer de html &lt;br&gt; tag naar een nieuwe regel ?");
+define('_AM_OLEDRION_REMOVE_BR', "Converteer de html &lt;br&gt; tag naar een nieuwe regel ?");
 define('_AM_OLEDRION_NEWSLETTER_HTML_TAGS', "Verwijder html tags ?");
 define('_AM_OLEDRION_NEWSLETTER_HEADER', "Header");
 define('_AM_OLEDRION_NEWSLETTER_FOOTER', "Footer");

@@ -2,7 +2,7 @@
 /**
  * ****************************************************************************
  * oledrion - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * Copyright (c) Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
  *
  * You may not change or alter any portion of this comment or credits
  * of supporting developers from this source code or any supporting source code
@@ -11,13 +11,13 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- *
- * Version : $Id:
- * ****************************************************************************
+ * @copyright Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ *        
+ *         Version : $Id:
+ *         ****************************************************************************
  */
 
 /**
@@ -25,37 +25,38 @@
  */
 require 'classheader.php';
 
-class oledrion_vendors extends Oledrion_Object
-{
-	function __construct()
-	{
-		$this->initVar('vendor_id',XOBJ_DTYPE_INT,null,false);
-		$this->initVar('vendor_name',XOBJ_DTYPE_TXTBOX,null,false);
+class oledrion_vendors extends Oledrion_Object {
+
+	function __construct() {
+		$this->initVar('vendor_id', XOBJ_DTYPE_INT, null, false);
+		$this->initVar('vendor_name', XOBJ_DTYPE_TXTBOX, null, false);
 	}
 }
 
+class OledrionOledrion_vendorsHandler extends Oledrion_XoopsPersistableObjectHandler {
 
-class OledrionOledrion_vendorsHandler extends Oledrion_XoopsPersistableObjectHandler
-{
-	function __construct($db)
-	{	//							Table				Classe		 	Id			Libellé
+	function __construct($db) { // Table Classe Id Libellï¿½
 		parent::__construct($db, 'oledrion_vendors', 'oledrion_vendors', 'vendor_id', 'vendor_name');
 	}
 
 	/**
 	 * Renvoie la liste de tous les vendeurs du module
 	 *
-	 * @param integer $start Position de départ
-	 * @param integer $limit Nombre total d'enregistrements à renvoyer
+	 * @param integer $start Position de dï¿½part
+	 * @param integer $limit Nombre total d'enregistrements ï¿½ renvoyer
 	 * @param string $order Champ sur lequel faire le tri
 	 * @param string $order Ordre du tri
-	 * @param boolean $idaskey Indique si le tableau renvoyé doit avoir pour clé l'identifiant unique de l'enregistrement
+	 * @param boolean $idaskey Indique si le tableau renvoyï¿½ doit avoir pour clï¿½ l'identifiant unique de l'enregistrement
 	 * @return array tableau d'objets de type vendors
 	 */
-	function getAllVendors(oledrion_parameters $parameters)
-	{
-		$parameters = $parameters->extend(new oledrion_parameters(array('start' => 0, 'limit' => 0, 'sort' => 'vendor_name', 'order' => 'ASC', 'idaskey' => true)));
-		$critere = new Criteria('vendor_id', 0 ,'<>');
+	function getAllVendors(oledrion_parameters $parameters) {
+		$parameters = $parameters->extend(new oledrion_parameters(array(
+			'start' => 0,
+			'limit' => 0,
+			'sort' => 'vendor_name',
+			'order' => 'ASC',
+			'idaskey' => true)));
+		$critere = new Criteria('vendor_id', 0, '<>');
 		$critere->setLimit($parameters['limit']);
 		$critere->setStart($parameters['start']);
 		$critere->setSort($parameters['sort']);
@@ -66,13 +67,12 @@ class OledrionOledrion_vendorsHandler extends Oledrion_XoopsPersistableObjectHan
 	}
 
 	/**
-	 * Retourne le nombre de produits associés à un vendeur
+	 * Retourne le nombre de produits associï¿½s ï¿½ un vendeur
 	 *
-	 * @param integer	$vendor_id	L'ID du vendeur
-	 * @return integer	Le nombre de produits du vendeur
+	 * @param integer $vendor_id L'ID du vendeur
+	 * @return integer Le nombre de produits du vendeur
 	 */
-	function getVendorProductsCount($vendor_id)
-	{
+	function getVendorProductsCount($vendor_id) {
 		global $h_oledrion_products;
 		return $h_oledrion_products->getVendorProductsCount($vendor_id);
 	}
@@ -81,24 +81,22 @@ class OledrionOledrion_vendorsHandler extends Oledrion_XoopsPersistableObjectHan
 	 * Supprime un vendeur
 	 *
 	 * @param oledrion_vendors $vendor
-	 * @return boolean	Le résultat de la suppression
+	 * @return boolean Le rï¿½sultat de la suppression
 	 */
-	function deleteVendor(oledrion_vendors $vendor)
-	{
+	function deleteVendor(oledrion_vendors $vendor) {
 		return $this->delete($vendor, true);
 	}
 
 	/**
 	 * Retourne des vendeurs selon leur ID
 	 *
-	 * @param array $ids	Les ID des vendeurs à retrouver
-	 * @return array	Objets de type oledrion_vendors
+	 * @param array $ids Les ID des vendeurs ï¿½ retrouver
+	 * @return array Objets de type oledrion_vendors
 	 */
-	function getVendorsFromIds($ids)
-	{
+	function getVendorsFromIds($ids) {
 		$ret = array();
-		if(is_array($ids) && count($ids) > 0) {
-			$criteria = new Criteria('vendor_id', '('.implode(',', $ids).')', 'IN');
+		if (is_array($ids) && count($ids) > 0) {
+			$criteria = new Criteria('vendor_id', '(' . implode(',', $ids) . ')', 'IN');
 			$ret = $this->getObjects($criteria, true, true, '*', false);
 		}
 		return $ret;

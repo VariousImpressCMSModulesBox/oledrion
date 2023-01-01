@@ -11,66 +11,65 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Herv� Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			Herv� Thouzard of Instant Zero (http://www.instant-zero.com<)
- *
- * Version : $Id:
- * ****************************************************************************
+ * @copyright Herv� Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author Herv� Thouzard of Instant Zero (http://www.instant-zero.com<)
+ *        
+ *         Version : $Id:
+ *         ****************************************************************************
  */
-
-define("_AM_OLEDRION_GO_TO_MODULE","Gehe zum Modul");
-define("_AM_OLEDRION_PREFERENCES","Einstellungen");
-define("_AM_OLEDRION_ADMINISTRATION","Administration");
-define("_AM_OLEDRION_CATEGORIES","Kategorien");
-define("_AM_OLEDRION_CATEG_CONFIG","Block Konfiguration auf den Kategorie Seiten");
-define("_AM_OLEDRION_CHUNK","Block");
-define("_AM_OLEDRION_POSITION","Position & Sichtbarkeit");
-define("_AM_OLEDRION_INVISIBLE","Unsichtbar");
-define("_AM_OLEDRION_OK","Ok");
-define("_AM_OLEDRION_SAVE_OK","Daten wurden gespeichert");
-define("_AM_OLEDRION_SAVE_PB","Beim speichern trat ein Fehler auf");
-define("_AM_OLEDRION_ACTION","Aktion");
-define("_AM_OLEDRION_ADD_ITEM","Absenden");
-define("_AM_OLEDRION_CONF_DELITEM","Wollen Sie das Produkt wirklich löschen?");
-define("_AM_OLEDRION_LIST","Liste");
-define("_AM_OLEDRION_ID","Id");
-define("_AM_OLEDRION_RATE","Rate");
+define("_AM_OLEDRION_GO_TO_MODULE", "Gehe zum Modul");
+define("_AM_OLEDRION_PREFERENCES", "Einstellungen");
+define("_AM_OLEDRION_ADMINISTRATION", "Administration");
+define("_AM_OLEDRION_CATEGORIES", "Kategorien");
+define("_AM_OLEDRION_CATEG_CONFIG", "Block Konfiguration auf den Kategorie Seiten");
+define("_AM_OLEDRION_CHUNK", "Block");
+define("_AM_OLEDRION_POSITION", "Position & Sichtbarkeit");
+define("_AM_OLEDRION_INVISIBLE", "Unsichtbar");
+define("_AM_OLEDRION_OK", "Ok");
+define("_AM_OLEDRION_SAVE_OK", "Daten wurden gespeichert");
+define("_AM_OLEDRION_SAVE_PB", "Beim speichern trat ein Fehler auf");
+define("_AM_OLEDRION_ACTION", "Aktion");
+define("_AM_OLEDRION_ADD_ITEM", "Absenden");
+define("_AM_OLEDRION_CONF_DELITEM", "Wollen Sie das Produkt wirklich löschen?");
+define("_AM_OLEDRION_LIST", "Liste");
+define("_AM_OLEDRION_ID", "Id");
+define("_AM_OLEDRION_RATE", "Rate");
 define("_AM_OLEDRION_MAINTAIN", "Cache und Tabellen bereinigen");
 
-define("_AM_OLEDRION_ADD_VAT","Erstelle MwSt");
-define("_AM_OLEDRION_EDIT_VAT","Bearbeite MwSt");
+define("_AM_OLEDRION_ADD_VAT", "Erstelle MwSt");
+define("_AM_OLEDRION_EDIT_VAT", "Bearbeite MwSt");
 
-define("_AM_OLEDRION_ADD_CATEG","Erstelle Kategorie");
-define("_AM_OLEDRION_EDIT_CATEG","Bearbeite Kategorie");
+define("_AM_OLEDRION_ADD_CATEG", "Erstelle Kategorie");
+define("_AM_OLEDRION_EDIT_CATEG", "Bearbeite Kategorie");
 
-define("_AM_OLEDRION_ADD_VENDOR","Erstelle Lieferanten");
-define("_AM_OLEDRION_EDIT_VENDOR","Bearbeite Lieferanten");
+define("_AM_OLEDRION_ADD_VENDOR", "Erstelle Lieferanten");
+define("_AM_OLEDRION_EDIT_VENDOR", "Bearbeite Lieferanten");
 
-define("_AM_OLEDRION_ADD_FILE","Erstelle Datei");
-define("_AM_OLEDRION_EDIT_FILE","Bearbeite Datei");
+define("_AM_OLEDRION_ADD_FILE", "Erstelle Datei");
+define("_AM_OLEDRION_EDIT_FILE", "Bearbeite Datei");
 
-define("_AM_OLEDRION_ADD_MANUFACTURER","Erstelle Hersteller");
-define("_AM_OLEDRION_EDIT_MANUFACTURER","Bearbeite Hersteller");
+define("_AM_OLEDRION_ADD_MANUFACTURER", "Erstelle Hersteller");
+define("_AM_OLEDRION_EDIT_MANUFACTURER", "Bearbeite Hersteller");
 
-define("_AM_OLEDRION_ADD_PRODUCT","Erstelle neues Produkt");
-define("_AM_OLEDRION_EDIT_PRODUCT","Bearbeite ein Produkt");
+define("_AM_OLEDRION_ADD_PRODUCT", "Erstelle neues Produkt");
+define("_AM_OLEDRION_EDIT_PRODUCT", "Bearbeite ein Produkt");
 
-define("_AM_OLEDRION_ADD_DSICOUNT","Erstelle einen Rabatt");
-define("_AM_OLEDRION_EDIT_DISCOUNT","Bearbeite einen Rabatt");
+define("_AM_OLEDRION_ADD_DSICOUNT", "Erstelle einen Rabatt");
+define("_AM_OLEDRION_EDIT_DISCOUNT", "Bearbeite einen Rabatt");
 
-define("_AM_OLEDRION_ERROR_1","Fehler, keine ID spezifiziert");
-define("_AM_OLEDRION_ERROR_2","Fehler, es ist nicht möglich diese MwST zu löschen, da sie noch von einigen Produkten verwendet wird");
-define("_AM_OLEDRION_ERROR_3","Fehler beim Dateiupload ");
-define("_AM_OLEDRION_ERROR_4","Fehler, es ist nicht möglich die Kategorie zu löschen, da sie noch von einigen Produkten verwendet wird");
-define("_AM_OLEDRION_ERROR_5","Fehler, es ist nicht möglich den Hersteller zu löschen, da er noch von einigen Produkten verwendet wird");
-define("_AM_OLEDRION_ERROR_6","Fehler, es ist nicht möglich den Lieferant zu löschen, da sie noch von einigen Produkten verwendet wird");
-define("_AM_OLEDRION_ERROR_7","Fehler, es ist nicht möglich die Exportdatei zu erstellen");
-define("_AM_OLEDRION_ERROR_8","Fehler, es muss zuerst eine Kategorie erstellt werden");
-define("_AM_OLEDRION_ERROR_9","Fehler, es muss zuerst eine MwSt angelegt werden bevor Produkte erstellt werden können.");
-define("_AM_OLEDRION_ERROR_10","Fehler, unbekannte Kategorie");
-define("_AM_OLEDRION_ERROR_11","Fehler, unbekanntes Export Format");
+define("_AM_OLEDRION_ERROR_1", "Fehler, keine ID spezifiziert");
+define("_AM_OLEDRION_ERROR_2", "Fehler, es ist nicht möglich diese MwST zu löschen, da sie noch von einigen Produkten verwendet wird");
+define("_AM_OLEDRION_ERROR_3", "Fehler beim Dateiupload ");
+define("_AM_OLEDRION_ERROR_4", "Fehler, es ist nicht möglich die Kategorie zu löschen, da sie noch von einigen Produkten verwendet wird");
+define("_AM_OLEDRION_ERROR_5", "Fehler, es ist nicht möglich den Hersteller zu löschen, da er noch von einigen Produkten verwendet wird");
+define("_AM_OLEDRION_ERROR_6", "Fehler, es ist nicht möglich den Lieferant zu löschen, da sie noch von einigen Produkten verwendet wird");
+define("_AM_OLEDRION_ERROR_7", "Fehler, es ist nicht möglich die Exportdatei zu erstellen");
+define("_AM_OLEDRION_ERROR_8", "Fehler, es muss zuerst eine Kategorie erstellt werden");
+define("_AM_OLEDRION_ERROR_9", "Fehler, es muss zuerst eine MwSt angelegt werden bevor Produkte erstellt werden können.");
+define("_AM_OLEDRION_ERROR_10", "Fehler, unbekannte Kategorie");
+define("_AM_OLEDRION_ERROR_11", "Fehler, unbekanntes Export Format");
 define("_AM_OLEDRION_NOT_FOUND", "Fehler, Produkt nicht gefunden");
 define("_AM_OLEDRION_CONF_DEL_CATEG", "Wollen Sie diese Kategorie mit allen Unterkategorien wirklich löschen?<br />%s");
 
@@ -107,7 +106,7 @@ define("_AM_OLEDRION_TOTAL_SHIPP", "Gesamt / Versand");
 define('_AM_OLEDRION_NEWSLETTER_BETWEEN', 'Wähle Produkte veröffentlich zwischen');
 define('_AM_OLEDRION_EXPORT_AND', ' und ');
 define('_AM_OLEDRION_IN_CATEGORY', 'In den folgenden Kategorien');
-define('_AM_OLEDRION_REMOVE_BR',"Konvertiere das html &lt;br&gt; Tag in einen neue Zeile ?");
+define('_AM_OLEDRION_REMOVE_BR', "Konvertiere das html &lt;br&gt; Tag in einen neue Zeile ?");
 define('_AM_OLEDRION_NEWSLETTER_HTML_TAGS', "Entferne html Tags ?");
 define('_AM_OLEDRION_NEWSLETTER_HEADER', "Kopfbereich");
 define('_AM_OLEDRION_NEWSLETTER_FOOTER', "Fußbereich");

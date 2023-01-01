@@ -2,7 +2,7 @@
 /**
  * ****************************************************************************
  * oledrion - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * Copyright (c) Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
  *
  * You may not change or alter any portion of this comment or credits
  * of supporting developers from this source code or any supporting source code
@@ -11,47 +11,46 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- *
- * Version : $Id:
- * ****************************************************************************
+ * @copyright Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ *        
+ *         Version : $Id:
+ *         ****************************************************************************
  */
 
 /**
- * Sélecteur de produits
+ * Sï¿½lecteur de produits
  */
 require_once '../../../include/cp_header.php';
 require_once '../include/common.php';
-require_once ICMS_ROOT_PATH.'/class/template.php';
-include_once OLEDRION_PATH.'class/tree.php';
+require_once ICMS_ROOT_PATH . '/class/template.php';
+include_once OLEDRION_PATH . 'class/tree.php';
 
-if(!isset($xoopsUser) || !is_object($xoopsUser)) {
-	exit;
+if (!isset($xoopsUser) || !is_object($xoopsUser)) {
+	exit();
 }
-if(!oledrion_utils::isAdmin()) {
-	exit;
+if (!oledrion_utils::isAdmin()) {
+	exit();
 }
 $xoopsTpl = new XoopsTpl();
-$ts =& MyTextSanitizer::getInstance();
-$limit = oledrion_utils::getModuleOption('items_count');	// Nombre maximum d'éléments à afficher dans l'admin
+$ts = &MyTextSanitizer::getInstance();
+$limit = oledrion_utils::getModuleOption('items_count'); // Nombre maximum d'ï¿½lï¿½ments ï¿½ afficher dans l'admin
 
 $oledrion_handlers = oledrion_handler::getInstance();
-$searchFields = array(	'product_title' => _OLEDRION_TITLE,
-						'product_summary' => _OLEDRION_SUMMARY,
-						'product_description' => _OLEDRION_DESCRIPTION,
-						'product_id' => _AM_OLEDRION_ID,
-						'product_sku' => _OLEDRION_NUMBER,
-						'product_extraid' => _OLEDRION_EXTRA_ID
-					);
+$searchFields = array(
+	'product_title' => _OLEDRION_TITLE,
+	'product_summary' => _OLEDRION_SUMMARY,
+	'product_description' => _OLEDRION_DESCRIPTION,
+	'product_id' => _AM_OLEDRION_ID,
+	'product_sku' => _OLEDRION_NUMBER,
+	'product_extraid' => _OLEDRION_EXTRA_ID);
 $searchCriterias = array(
-					XOOPS_MATCH_START => _STARTSWITH,
-					XOOPS_MATCH_END => _ENDSWITH,
-					XOOPS_MATCH_EQUAL => _MATCHES,
-					XOOPS_MATCH_CONTAIN => _CONTAINS
-				);
+	XOOPS_MATCH_START => _STARTSWITH,
+	XOOPS_MATCH_END => _ENDSWITH,
+	XOOPS_MATCH_EQUAL => _MATCHES,
+	XOOPS_MATCH_CONTAIN => _CONTAINS);
 
 $vendors = array();
 $vendors = $oledrion_handlers->h_oledrion_vendors->getList();
@@ -65,7 +64,7 @@ $start = isset($_REQUEST['start']) ? intval($_REQUEST['start']) : 0;
 $mutipleSelect = isset($_REQUEST['mutipleSelect']) ? intval($_REQUEST['mutipleSelect']) : 0;
 $callerName = isset($_REQUEST['callerName']) ? $_REQUEST['callerName'] : '';
 
-if(isset($_REQUEST['op']) && $_REQUEST['op'] == 'search') {
+if (isset($_REQUEST['op']) && $_REQUEST['op'] == 'search') {
 	$searchField = isset($_REQUEST['searchField']) ? $_REQUEST['searchField'] : '';
 	$searchCriteria = isset($_REQUEST['searchCriteria']) ? intval($_REQUEST['searchCriteria']) : '';
 	$searchText = isset($_REQUEST['searchText']) ? trim($_REQUEST['searchText']) : '';
@@ -89,51 +88,55 @@ if(isset($_REQUEST['op']) && $_REQUEST['op'] == 'search') {
 	$additionnalParameters['product_cid'] = $product_cid;
 
 	$criteria = new CriteriaCompo();
-	if($searchText != '') {
+	if ($searchText != '') {
 		$xoopsTpl->assign('searchTextValue', $ts->htmlSpecialChars($searchText));
-		if(array_key_exists($searchField, $searchFields)) {
-			switch($searchCriteria) {
+		if (array_key_exists($searchField, $searchFields)) {
+			switch ($searchCriteria) {
 				case XOOPS_MATCH_START:
-					$criteria->add(new Criteria($searchField, $searchText.'%', 'LIKE'));
+					$criteria->add(new Criteria($searchField, $searchText . '%', 'LIKE'));
 					break;
 				case XOOPS_MATCH_END:
-					$criteria->add(new Criteria($searchField, '%'.$searchText, 'LIKE'));
+					$criteria->add(new Criteria($searchField, '%' . $searchText, 'LIKE'));
 					break;
 				case XOOPS_MATCH_EQUAL:
 					$criteria->add(new Criteria($searchField, $searchText, '='));
 					break;
 				case XOOPS_MATCH_CONTAIN:
-					$criteria->add(new Criteria($searchField, '%'.$searchText.'%', 'LIKE'));
+					$criteria->add(new Criteria($searchField, '%' . $searchText . '%', 'LIKE'));
 					break;
 			}
 		}
 	}
 
-	if($searchVendor > 0) {
+	if ($searchVendor > 0) {
 		$criteria->add(new Criteria('product_vendor_id', $searchVendor, '='));
 	}
-	if($product_cid > 0) {
+	if ($product_cid > 0) {
 		$criteria->add(new Criteria('product_cid', $product_cid, '='));
 	}
 	$itemsCount = $oledrion_handlers->h_oledrion_products->getcount($criteria);
 	$xoopsTpl->assign('productsCount', $itemsCount);
-	if($itemsCount > $limit) {
-		require_once ICMS_ROOT_PATH.'/class/pagenav.php';
-		$pagenav = new XoopsPageNav( $itemsCount, $limit, $start, 'start', http_build_query($additionnalParameters));
+	if ($itemsCount > $limit) {
+		require_once ICMS_ROOT_PATH . '/class/pagenav.php';
+		$pagenav = new XoopsPageNav($itemsCount, $limit, $start, 'start', http_build_query($additionnalParameters));
 		$xoopsTpl->assign('pagenav', $pagenav->renderNav());
 	}
 	$criteria->setStart($start);
 	$criteria->setLimit($limit);
 	$products = array();
 	$products = $oledrion_handlers->h_oledrion_products->getObjects($criteria);
-	$javascriptSearch = array("'", '"');
-	$javascriptReplace = array(' ', ' ');
+	$javascriptSearch = array(
+		"'",
+		'"');
+	$javascriptReplace = array(
+		' ',
+		' ');
 
-	if(count($products) > 0) {
-		foreach($products as $product) {
+	if (count($products) > 0) {
+		foreach ($products as $product) {
 			$productData = $product->toArray();
 			$productData['product_title_javascript'] = str_replace($javascriptSearch, $javascriptReplace, $product->getVar('product_title', 'n'));
-			//$productData['product_title_javascript'] = $product->getVar('product_title', 'n');
+			// $productData['product_title_javascript'] = $product->getVar('product_title', 'n');
 			$xoopsTpl->append('products', $productData);
 		}
 	}
@@ -149,7 +152,7 @@ $xoopsTpl->assign('theme_set', xoops_getcss($xoopsConfig['theme_set']));
 $xoopsTpl->assign('xoopsConfig', $xoopsConfig);
 $xoopsTpl->assign('mutipleSelect', $mutipleSelect);
 $xoopsTpl->assign('searchVendorSelected', $searchVendorSelected);
-$xoopsTpl->assign('baseurl', OLEDRION_URL.'admin/'.basename(__FILE__));	// URL de ce script
+$xoopsTpl->assign('baseurl', OLEDRION_URL . 'admin/' . basename(__FILE__)); // URL de ce script
 $xoopsTpl->assign('searchVendor', $vendors);
 $xoopsTpl->assign('searchCriteria', $searchCriterias);
 $xoopsTpl->assign('searchField', $searchFields);

@@ -2,7 +2,7 @@
 /**
  * ****************************************************************************
  * oledrion - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * Copyright (c) Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
  *
  * You may not change or alter any portion of this comment or credits
  * of supporting developers from this source code or any supporting source code
@@ -11,13 +11,13 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- *
- * Version : $Id:
- * ****************************************************************************
+ * @copyright Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ *        
+ *         Version : $Id:
+ *         ****************************************************************************
  */
 
 /**
@@ -25,47 +25,42 @@
  */
 require 'classheader.php';
 
-class oledrion_votedata extends Oledrion_Object
-{
-	function __construct()
-	{
-		$this->initVar('vote_ratingid',XOBJ_DTYPE_INT,null,false);
-		$this->initVar('vote_product_id',XOBJ_DTYPE_INT,null,false);
-		$this->initVar('vote_uid',XOBJ_DTYPE_INT,null,false);
-		$this->initVar('vote_rating',XOBJ_DTYPE_INT,null,false);
-		$this->initVar('vote_ratinghostname',XOBJ_DTYPE_TXTBOX,null,false);
-		$this->initVar('vote_ratingtimestamp',XOBJ_DTYPE_INT,null,false);
+class oledrion_votedata extends Oledrion_Object {
+
+	function __construct() {
+		$this->initVar('vote_ratingid', XOBJ_DTYPE_INT, null, false);
+		$this->initVar('vote_product_id', XOBJ_DTYPE_INT, null, false);
+		$this->initVar('vote_uid', XOBJ_DTYPE_INT, null, false);
+		$this->initVar('vote_rating', XOBJ_DTYPE_INT, null, false);
+		$this->initVar('vote_ratinghostname', XOBJ_DTYPE_TXTBOX, null, false);
+		$this->initVar('vote_ratingtimestamp', XOBJ_DTYPE_INT, null, false);
 	}
 }
 
+class OledrionOledrion_votedataHandler extends Oledrion_XoopsPersistableObjectHandler {
 
-class OledrionOledrion_votedataHandler extends Oledrion_XoopsPersistableObjectHandler
-{
-	function __construct($db)
-	{	//								Table					Classe			 Id
+	function __construct($db) { // Table Classe Id
 		parent::__construct($db, 'oledrion_votedata', 'oledrion_votedata', 'vote_ratingid');
 	}
-
 
 	/**
 	 * Renvoie le nombre total de votes pour un produit ainsi que la sommes des votes
 	 *
 	 * @param integer $product_id Identifiant du produit
-	 * @param integer $totalVotes Variable passée par référence et devant contenir le nombre total de votes du produit
-	 * @param integer $sumRating Variable passée par référence et devant contenir le cumul des votes
+	 * @param integer $totalVotes Variable passï¿½e par rï¿½fï¿½rence et devant contenir le nombre total de votes du produit
+	 * @param integer $sumRating Variable passï¿½e par rï¿½fï¿½rence et devant contenir le cumul des votes
 	 * @return none Rien
 	 */
-	function getCountRecordSumRating($product_id, &$totalVotes, &$sumRating)
-	{
-		$sql = "SELECT count( * ) AS cpt, sum( vote_rating ) AS sum_rating FROM ".$this->table." WHERE vote_product_id = ".intval($product_id);
-        $result = $this->db->query($sql);
-        if (!$result) {
-            return 0;
-        } else {
-     		$myrow = $this->db->fetchArray($result);
+	function getCountRecordSumRating($product_id, &$totalVotes, &$sumRating) {
+		$sql = "SELECT count( * ) AS cpt, sum( vote_rating ) AS sum_rating FROM " . $this->table . " WHERE vote_product_id = " . intval($product_id);
+		$result = $this->db->query($sql);
+		if (!$result) {
+			return 0;
+		} else {
+			$myrow = $this->db->fetchArray($result);
 			$totalVotes = $myrow['cpt'];
 			$sumRating = $myrow['sum_rating'];
-        }
+		}
 	}
 
 	/**
@@ -75,8 +70,7 @@ class OledrionOledrion_votedataHandler extends Oledrion_XoopsPersistableObjectHa
 	 * @param integer $limit count of items to return
 	 * @return array Array of votedata objects
 	 */
-	function getLastVotes($start = 0, $limit = 0)
-	{
+	function getLastVotes($start = 0, $limit = 0) {
 		$tbl_datas = array();
 		$criteria = new Criteria('vote_ratingid', 0, '<>');
 		$criteria->setLimit($limit);
@@ -90,32 +84,30 @@ class OledrionOledrion_votedataHandler extends Oledrion_XoopsPersistableObjectHa
 	/**
 	 * Suppression des votes d'un produit
 	 *
-	 * @param integer $vote_product_id	L'identifiant du produit
-	 * @return le résultat de la suppression
+	 * @param integer $vote_product_id L'identifiant du produit
+	 * @return le rï¿½sultat de la suppression
 	 */
-	function deleteProductRatings($vote_product_id)
-	{
+	function deleteProductRatings($vote_product_id) {
 		$criteria = new Criteria('vote_product_id', $vote_product_id, '=');
 		return $this->deleteAll($criteria);
 	}
 
 	/**
-	 * Indique si un utilisateur a déjà voté pour un produit
+	 * Indique si un utilisateur a dï¿½jï¿½ votï¿½ pour un produit
 	 *
-	 * @param integer $vote_uid	L'identifiant de l'utilisateur
-	 * @param integer $vote_product_id	Le numéro du produit
-	 * @return boolean	True s'il a déjà voté sinon False
+	 * @param integer $vote_uid L'identifiant de l'utilisateur
+	 * @param integer $vote_product_id Le numï¿½ro du produit
+	 * @return boolean True s'il a dï¿½jï¿½ votï¿½ sinon False
 	 */
-	function hasUserAlreadyVoted($vote_uid, $vote_product_id)
-	{
-		if($vote_uid == 0) {
+	function hasUserAlreadyVoted($vote_uid, $vote_product_id) {
+		if ($vote_uid == 0) {
 			$vote_uid = oledrion_utils::getCurrentUserID();
 		}
 		$criteria = new CriteriaCompo();
 		$criteria->add(new Criteria('vote_product_id', $vote_product_id, '='));
 		$criteria->add(new Criteria('vote_uid', $vote_uid, '='));
 		$count = $this->getCount($criteria);
-		if($count > 0 ) {
+		if ($count > 0) {
 			return true;
 		} else {
 			return false;
@@ -123,26 +115,25 @@ class OledrionOledrion_votedataHandler extends Oledrion_XoopsPersistableObjectHa
 	}
 
 	/**
-	 * Indique si un utilisateur anonyme a déjà voté (d'après son adresse IP)
+	 * Indique si un utilisateur anonyme a dï¿½jï¿½ votï¿½ (d'aprï¿½s son adresse IP)
 	 *
-	 * @param string $ip	L'adresse IP
-	 * @param integer $vote_product_id	Ld'identifiant du produit
+	 * @param string $ip L'adresse IP
+	 * @param integer $vote_product_id Ld'identifiant du produit
 	 * @return boolean
 	 */
-	function hasAnonymousAlreadyVoted($ip = '', $vote_product_id = 0)
-	{
-		if($ip == '') {
+	function hasAnonymousAlreadyVoted($ip = '', $vote_product_id = 0) {
+		if ($ip == '') {
 			$ip = oledrion_utils::IP();
 		}
 		$anonwaitdays = 1;
-		$yesterday = (time()-(86400 * $anonwaitdays));
+		$yesterday = (time() - (86400 * $anonwaitdays));
 		$criteria = new CriteriaCompo();
 		$criteria->add(new Criteria('vote_product_id', $vote_product_id, '='));
 		$criteria->add(new Criteria('vote_uid', 0, '='));
 		$criteria->add(new Criteria('vote_ratinghostname', $ip, '='));
 		$criteria->add(new Criteria('vote_ratingtimestamp', $yesterday, '>'));
 		$count = $this->getCount($criteria);
-		if($count > 0 ) {
+		if ($count > 0) {
 			return true;
 		} else {
 			return false;
@@ -150,15 +141,14 @@ class OledrionOledrion_votedataHandler extends Oledrion_XoopsPersistableObjectHa
 	}
 
 	/**
-	 * Crée un vote pour un produit
+	 * Crï¿½e un vote pour un produit
 	 *
-	 * @param integer $vote_product_id	L'identifiant du produit
-	 * @param integer $vote_uid	L'identifiant de l'utilisateur
-	 * @param integer $vote_rating	Le vote
-	 * @return le résultat de la création du vote
+	 * @param integer $vote_product_id L'identifiant du produit
+	 * @param integer $vote_uid L'identifiant de l'utilisateur
+	 * @param integer $vote_rating Le vote
+	 * @return le rï¿½sultat de la crï¿½ation du vote
 	 */
-	function createRating($vote_product_id, $vote_uid, $vote_rating)
-	{
+	function createRating($vote_product_id, $vote_uid, $vote_rating) {
 		$product = $this->create(true);
 		$product->setVar('vote_product_id', $vote_product_id);
 		$product->setVar('vote_uid', $vote_uid);

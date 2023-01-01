@@ -17,7 +17,9 @@
 		}
 	},
 	"keywords": [
-		"validation", "validator", "forms"
+		"validation",
+		"validator",
+		"forms"
 	],
 	"meta-spec": {
 		"version": 1.3,

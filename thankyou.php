@@ -2,7 +2,7 @@
 /**
  * ****************************************************************************
  * oledrion - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * Copyright (c) Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
  *
  * You may not change or alter any portion of this comment or credits
  * of supporting developers from this source code or any supporting source code
@@ -11,42 +11,43 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- *
- * Version : $Id:
- * ****************************************************************************
+ * @copyright Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ *        
+ *         Version : $Id:
+ *         ****************************************************************************
  */
 
 /**
- * Page appelée par la passerelle après le paiement en ligne
+ * Page appelï¿½e par la passerelle aprï¿½s le paiement en ligne
  */
 require 'header.php';
 $GLOBALS['current_category'] = -1;
 $success = true;
 
 $xoopsOption['template_main'] = 'oledrion_thankyou.html';
-require_once ICMS_ROOT_PATH.'/header.php';
+require_once ICMS_ROOT_PATH . '/header.php';
 $h_oledrion_caddy->emptyCart();
 
-// On donne la possibilité à la passerelle de traiter la commande
+// On donne la possibilitï¿½ ï¿½ la passerelle de traiter la commande
 $gateway = null;
 $gateway = oledrion_gateways::getGatewayObject();
-if(is_object($gateway) && method_exists($gateway, 'thankYou')) {
-    if(!file_exists(OLEDRION_GATEWAY_LOG_PATH)) {
-        file_put_contents(OLEDRION_GATEWAY_LOG_PATH, '<?php exit(); ?>');
-    }
-    $gateway->thankYou(OLEDRION_GATEWAY_LOG_PATH);
-    unset($gateway);
+if (is_object($gateway) && method_exists($gateway, 'thankYou')) {
+	if (!file_exists(OLEDRION_GATEWAY_LOG_PATH)) {
+		file_put_contents(OLEDRION_GATEWAY_LOG_PATH, '<?php exit(); ?>');
+	}
+	$gateway->thankYou(OLEDRION_GATEWAY_LOG_PATH);
+	unset($gateway);
 }
 $xoopsTpl->assign('success', $success);
 $xoopsTpl->assign('global_advert', oledrion_utils::getModuleOption('advertisement'));
-$xoopsTpl->assign('breadcrumb', oledrion_utils::breadcrumb(array(OLEDRION_URL.basename(__FILE__) => _OLEDRION_PURCHASE_FINSISHED)));
+$xoopsTpl->assign('breadcrumb', oledrion_utils::breadcrumb(array(
+	OLEDRION_URL . basename(__FILE__) => _OLEDRION_PURCHASE_FINSISHED)));
 
-$title = _OLEDRION_PURCHASE_FINSISHED.' - '.oledrion_utils::getModuleName();
+$title = _OLEDRION_PURCHASE_FINSISHED . ' - ' . oledrion_utils::getModuleName();
 oledrion_utils::setMetas($title, $title);
 oledrion_utils::setCSS();
-require_once(ICMS_ROOT_PATH.'/footer.php');
+require_once (ICMS_ROOT_PATH . '/footer.php');
 ?>

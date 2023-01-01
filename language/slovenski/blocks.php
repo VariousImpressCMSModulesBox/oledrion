@@ -2,7 +2,7 @@
 /**
  * ****************************************************************************
  * Oledrion - MODULE FOR XOOPS
- * Copyright (c) Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
+ * Copyright (c) Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
  *
  * You may not change or alter any portion of this comment or credits
  * of supporting developers from this source code or any supporting source code
@@ -11,30 +11,29 @@
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  *
- * @copyright       Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- * @license         http://www.fsf.org/copyleft/gpl.html GNU public license
- * @package         oledrion
- * @author 			Hervé Thouzard of Instant Zero (http://www.instant-zero.com)
- *
- * Version : $Id:
- 
- * Translator : Srdan Crevar
- * ****************************************************************************
+ * @copyright Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ * @license http://www.fsf.org/copyleft/gpl.html GNU public license
+ * @package oledrion
+ * @author Hervï¿½ Thouzard of Instant Zero (http://www.instant-zero.com)
+ *        
+ *         Version : $Id:
+ *        
+ *         Translator : Srdan Crevar
+ *         ****************************************************************************
  */
-
-define("_MB_OLEDRION_DISP","Prikaz");
-define("_MB_OLEDRION_LINKS","Povezave");
-define("_MB_OLEDRION_CHARS","Dolžina naslova");
-define("_MB_OLEDRION_LENGTH","znaki");
-define("_MB_OLEDRION_MAX_ITEMS","Najveèje število prikazanih predmetov (0 = brez omejitve)");
-define("_MB_OLEDRION_PRODUCTS_CNT","Koliko artiklov prikazati");
-define("_MB_OLEDRION_SORT_ORDER","Razvrstitev");
-define("_MB_OLEDRION_SORT_1","Naziv");
-define("_MB_OLEDRION_SORT_2","Število");
-define("_MB_OLEDRION_CATEGORY","Kategorija");
-define("_MB_OLEDRION_ALL_CATEGORIES","* Vse kategorije *");
-define("_MB_OLEDRION_TYPE_BLOCK","Tip bloka");
-define("_MB_OLEDRION_TYPE_BLOCK1","Klasièen seznam kategorij");
-define("_MB_OLEDRION_TYPE_BLOCK2","Seznam kategorij v povezavi s trenutno stranjo");
-define("_MB_OLEDRION_THIS_MONTH","Le za ta mesec ?");
+define("_MB_OLEDRION_DISP", "Prikaz");
+define("_MB_OLEDRION_LINKS", "Povezave");
+define("_MB_OLEDRION_CHARS", "Dolï¿½ina naslova");
+define("_MB_OLEDRION_LENGTH", "znaki");
+define("_MB_OLEDRION_MAX_ITEMS", "Najveï¿½je ï¿½tevilo prikazanih predmetov (0 = brez omejitve)");
+define("_MB_OLEDRION_PRODUCTS_CNT", "Koliko artiklov prikazati");
+define("_MB_OLEDRION_SORT_ORDER", "Razvrstitev");
+define("_MB_OLEDRION_SORT_1", "Naziv");
+define("_MB_OLEDRION_SORT_2", "ï¿½tevilo");
+define("_MB_OLEDRION_CATEGORY", "Kategorija");
+define("_MB_OLEDRION_ALL_CATEGORIES", "* Vse kategorije *");
+define("_MB_OLEDRION_TYPE_BLOCK", "Tip bloka");
+define("_MB_OLEDRION_TYPE_BLOCK1", "Klasiï¿½en seznam kategorij");
+define("_MB_OLEDRION_TYPE_BLOCK2", "Seznam kategorij v povezavi s trenutno stranjo");
+define("_MB_OLEDRION_THIS_MONTH", "Le za ta mesec ?");
 ?>
